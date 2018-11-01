@@ -1,0 +1,4 @@
+14:43:24    16 -->                                                             [tcl] ucliGUI::connect -toolargs -ucligui -toolexe ./simv -pid 18825 -toolin /tmp/vcs_20181022204320_18824_ESTUDIANTESgcastro..stdin -toolout /tmp/vcs_20181022204320_18824_ESTUDIANTESgcastro..stdout  
+14:43:24    17 -->                                                                 [tcl] set ucliGUI::state
+14:43:24    18 -->                                                                     [tcl] set ucliGUI::state
+14:43:24    19 -->                                                                         [tcl] ucliCore::getToolPID
