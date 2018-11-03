@@ -1,9 +1,9 @@
 class sdrcMon;
-    sdrcSB _sb;
+    sdrcSB sb;
     
     function new(sdrcSB sb);
         $display("Creating SDRC Monitor");
-        this._sb = sb;
+        this.sb = sb;
         // TO DO implementation
 
     endfunction

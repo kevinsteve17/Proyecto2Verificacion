@@ -1,11 +1,15 @@
 class sdrcEnv;
-    sdrcSB _sb;
-    sdrcMon _mon;
-    sdrcDrv _drv;
+    sdrcSB sb;
+    sdrcMon mon;
+    sdrcDrv drv;
     
 
     function new (args);
       $$display("Creating SDRC Environment");
-            
+      sb = new();
+      drv = new (sb);
+      mon = new (sb);
+
+
     endfunction
 endclass
