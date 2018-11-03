@@ -1,0 +1,123 @@
+$date
+	Thu Sep 27 19:33:17 2018
+$end
+
+$version
+	Synopsys VCS version M-2017.03_Full64
+$end
+
+$timescale
+	1s
+$end
+
+$comment Csum: 1 a68a9eb458838be0 $end
+
+
+$scope module top $end
+$var reg 1 ! clk $end
+
+$scope module intf $end
+$var wire 1 " clk $end
+$var wire 1 # rst $end
+$var wire 1 $ wr_cs $end
+$var wire 1 % rd_cs $end
+$var wire 8 & data_in [7:0] $end
+$var wire 1 ' rd_en $end
+$var wire 1 ( wr_en $end
+$var wire 8 ) data_out [7:0] $end
+$var wire 1 * empty $end
+$var wire 1 + full $end
+$upscope $end
+
+
+$scope module dut $end
+$var wire 1 , clk $end
+$var wire 1 # rst $end
+$var wire 1 $ wr_cs $end
+$var wire 1 % rd_cs $end
+$var wire 1 ' rd_en $end
+$var wire 1 ( wr_en $end
+$var wire 8 & data_in [7:0] $end
+$var wire 1 + full $end
+$var wire 1 * empty $end
+$var reg 8 - data_out [7:0] $end
+$var reg 8 . wr_pointer [7:0] $end
+$var reg 8 / rd_pointer [7:0] $end
+$var reg 9 0 status_cnt [8:0] $end
+$var wire 8 1 data_ram [7:0] $end
+
+$scope begin WRITE_POINTER $end
+$upscope $end
+
+
+$scope begin READ_POINTER $end
+$upscope $end
+
+
+$scope begin READ_DATA $end
+$upscope $end
+
+
+$scope begin STATUS_COUNTER $end
+$upscope $end
+
+
+$scope module DP_RAM $end
+$var wire 8 2 address_0 [7:0] $end
+$var wire 1 $ cs_0 $end
+$var wire 1 ( we_0 $end
+$var wire 1 3 oe_0 $end
+$var wire 8 4 address_1 [7:0] $end
+$var wire 1 % cs_1 $end
+$var wire 1 5 we_1 $end
+$var wire 1 ' oe_1 $end
+$var wire 8 & data_0 [7:0] $end
+$var wire 8 1 data_1 [7:0] $end
+$var reg 8 6 data_0_out [7:0] $end
+$var reg 8 7 data_1_out [7:0] $end
+
+$scope begin MEM_WRITE $end
+$upscope $end
+
+
+$scope begin MEM_READ_0 $end
+$upscope $end
+
+
+$scope begin MEM_READ_1 $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+03
+05
+bxxxxxxxx 2
+bxxxxxxxx 4
+b00000000 6
+b00000000 7
+bxxxxxxxx -
+bzzzzzzzz 1
+bxxxxxxxx /
+bxxxxxxxxx 0
+bxxxxxxxx .
+0"
+0,
+x+
+x*
+b00000000 &
+bxxxxxxxx )
+0%
+0'
+0#
+0$
+0(
+$end
