@@ -1,0 +1,123 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "mt48lc8m8a2": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "tb_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "IS42VM16400K": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "mt48lc2m32b2": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "TzJKa_d": {
+            "mod": "IS42VM16400K",
+            "out": "TzJKa_d.o",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 282463,
+            "archive": "archive.0/_14409_archive_1.a"
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 8556
+        },
+        "reYIK_d": {
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 41766,
+            "archive": "archive.0/_14409_archive_1.a"
+        },
+        "jdPWL_d": {
+            "mod": "tb_top",
+            "out": "jdPWL_d.o",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 481815,
+            "archive": "archive.0/_14409_archive_1.a"
+        },
+        "a3mSN_d": {
+            "mod": "mt48lc2m32b2",
+            "out": "a3mSN_d.o",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 195818,
+            "archive": "archive.0/_14409_archive_1.a"
+        },
+        "Pj51K_d": {
+            "mod": "mt48lc8m8a2",
+            "out": "Pj51K_d.o",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 187671,
+            "archive": "archive.0/_14409_archive_1.a"
+        },
+        "ChjVu_d": {
+            "mod": "sdrc_bank_fsm",
+            "out": "ChjVu_d.o",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 48064,
+            "archive": "archive.0/_14409_archive_1.a"
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": [
+        {
+            "size": 1395477,
+            "archive": "archive.0/_14409_archive_1.a",
+            "objects": [
+                [
+                    "reYIK_d.o",
+                    41766
+                ],
+                [
+                    "jdPWL_d.o",
+                    481815
+                ],
+                [
+                    "TzJKa_d.o",
+                    282463
+                ],
+                [
+                    "a3mSN_d.o",
+                    195818
+                ],
+                [
+                    "Pj51K_d.o",
+                    187671
+                ],
+                [
+                    "ChjVu_d.o",
+                    48064
+                ],
+                [
+                    "amcQwB.o",
+                    157880
+                ]
+            ]
+        }
+    ]
+}

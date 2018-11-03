@@ -1,0 +1,14 @@
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/rtl/core/sdrc_bank_ctl.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/rtl/core/sdrc_bank_fsm.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/rtl/core/sdrc_bs_convert.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/rtl/core/sdrc_core.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/rtl/core/sdrc_define.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/rtl/core/sdrc_req_gen.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/rtl/core/sdrc_xfr_ctl.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/rtl/lib/async_fifo.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/rtl/top/sdrc_top.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/rtl/wb2sdrc/wb2sdrc.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/verif/model/IS42VM16400K.V
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/verif/model/mt48lc2m32b2.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/verif/model/mt48lc8m8a2.v
+/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/verif/tb/tb_top.sv
