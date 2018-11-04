@@ -1,0 +1,51 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.3/_3640_archive_1.a",
+            "objects": [
+                [
+                    "v5inm_d.o",
+                    30048
+                ],
+                [
+                    "amcQwB.o",
+                    99896
+                ]
+            ],
+            "size": 129944
+        }
+    ],
+    "reusePaths": {
+        "reYIK_d": {
+            "icPath": "csrc"
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "bytes": 7742,
+            "out": "objs/amcQw_d.o",
+            "mode": 4,
+            "checksum": 0
+        },
+        "v5inm_d": {
+            "mod": "_vcs_unit__449100453",
+            "archive": "archive.3/_3640_archive_1.a",
+            "bytes": 30048,
+            "out": "v5inm_d.o",
+            "mode": 4,
+            "checksum": 0
+        }
+    },
+    "Modules": {
+        "...MASTER...": {},
+        "_vcs_unit__449100453": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        }
+    }
+}

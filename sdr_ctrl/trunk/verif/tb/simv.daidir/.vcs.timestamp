@@ -1,7 +1,5 @@
-2        
-0 sdrc_define.v
-0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/etc/systemverilog/sdrc_define.v
-28
+0 
+34
 +itf+/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/vcsdp_lite.tab
 +vcsd1
 +vpi
@@ -22,7 +20,6 @@
 -Mvcsaceobjs=
 -Mxcflags= -pipe -fPIC -I/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/include
 -debug_access+all
--f filelist_top.f
 -full64
 -gen_obj
 -gui
@@ -30,11 +27,18 @@
 -sverilog
 -ucli
 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/bin/vcs1
+sdram_interterface.sv
+sdrc_driver.sv
+sdrc_environment.sv
+sdrc_interface.sv
+sdrc_monitor.sv
+sdrc_scoreboard.sv
+wsb_interface.sv
 47
-sysc_uni_pwd=/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/verif/tb
+sysc_uni_pwd=/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb
 XMODIFIERS=@im=none
-XDG_SESSION_COOKIE=7d1e713e61d13a600c6dc60900000019-1541035605.435216-1119632543
-XAUTHORITY=/var/run/gdm/auth-for-ESTUDIANTES\kviquez-CnHmU3/database
+XDG_SESSION_COOKIE=7d1e713e61d13a600c6dc60900000019-1541288086.282609-1347288565
+XAUTHORITY=/var/run/gdm/auth-for-ESTUDIANTES\fparis-7F0En2/database
 WINDOWPATH=1
 VMR_MODE_FLAG=64
 VCS_MX_HOME_INTERNAL=1
@@ -43,14 +47,14 @@ VCS_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03
 VCS_DEPTH=0
 VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH=linux64
-USERNAME=ESTUDIANTES\kviquez
+USERNAME=ESTUDIANTES\fparis
 UNAME=/bin/uname
 TOOL_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64
 SYNOPSYS_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/
-SSH_AUTH_SOCK=/tmp/keyring-aLwNYg/socket.ssh
+SSH_AUTH_SOCK=/tmp/keyring-nXwrU5/socket.ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/18118,unix/unix:/tmp/.ICE-unix/18118
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/6286,unix/unix:/tmp/.ICE-unix/6286
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QT_IM_MODULE=xim
@@ -58,47 +62,39 @@ QTLIB=/usr/lib64/qt-3.3/lib
 QTINC=/usr/lib64/qt-3.3/include
 QTDIR=/usr/lib64/qt-3.3
 OVA_UUM=0
-ORBIT_SOCKETDIR=/tmp/orbit-ESTUDIANTES\kviquez
+ORBIT_SOCKETDIR=/tmp/orbit-ESTUDIANTES\fparis
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_ALL=C
-KRB5CCNAME=FILE:/tmp/krb5cc_1160251957_89FGAJ
+KRB5CCNAME=FILE:/tmp/krb5cc_1160251947_g9ZeJC
 IMSETTINGS_MODULE=none
 IMSETTINGS_INTEGRATE_DESKTOP=yes
 HISTCONTROL=ignoredups
 G_BROKEN_FILENAMES=1
-GTK_RC_FILES=/etc/gtk/gtkrc:/home/local/ESTUDIANTES/kviquez/.gtkrc-1.2-gnome2
-GNOME_KEYRING_SOCKET=/tmp/keyring-aLwNYg/socket
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/local/ESTUDIANTES/fparis/.gtkrc-1.2-gnome2
+GNOME_KEYRING_SOCKET=/tmp/keyring-nXwrU5/socket
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
-GIO_LAUNCHED_DESKTOP_FILE_PID=19358
+GIO_LAUNCHED_DESKTOP_FILE_PID=7625
 GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/gnome-terminal.desktop
 GDM_LANG=en_US.UTF-8
 GDM_KEYBOARD_LAYOUT=us
 GDMSESSION=gnome
 DESKTOP_SESSION=gnome
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-x3QARnCfRx,guid=dd6d71b48f3ecde4145273bb0005ae83
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-fu2TLGAvIN,guid=37b8f5cf957c01da7cc207560002c41c
 CVS_RSH=ssh
 COLORTERM=gnome-terminal
 0
-16
-1328885705 ../../rtl/core/sdrc_define.v
-1366979865 ../../rtl/core/sdrc_xfr_ctl.v
-1366975919 ../../rtl/core/sdrc_req_gen.v
-1328610332 ../../rtl/core/sdrc_bs_convert.v
-1366975919 ../../rtl/core/sdrc_bank_fsm.v
-1366975919 ../../rtl/core/sdrc_bank_ctl.v
-1366975919 ../../rtl/core/sdrc_core.v
-1360933475 ../../rtl/lib/async_fifo.v
-1366975919 ../../rtl/wb2sdrc/wb2sdrc.v
-1366979865 ../../rtl/top/sdrc_top.v
-1327755533 ../model/mt48lc8m8a2.v
-1326802135 ../model/mt48lc2m32b2.v
-1541051661 ../model/IS42VM16400K.V
-1366979833 ../tb/tb_top.sv
-1541051570 filelist_top.f
+8
+1541290779 sdrc_interface.sv
+1541288204 sdram_interterface.sv
+1541289356 wsb_interface.sv
+1541289035 sdrc_environment.sv
+1541288978 sdrc_monitor.sv
+1541288876 sdrc_driver.sv
+1541288204 sdrc_scoreboard.sv
 1487217861 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/vcsdp_lite.tab
 4
 0 
 1487220396 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libvirsim.so
 1487219634 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/liberrorinf.so
 1487219608 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libsnpsmalloc.so
-1541051693 simv.daidir
+1541290784 simv.daidir
