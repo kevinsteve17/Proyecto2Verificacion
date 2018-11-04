@@ -2,13 +2,14 @@ class sdrcEnv;
     sdrcSB sb;
     sdrcMon mon;
     sdrcDrv drv;
-    
+    virtual inft_sdrcntrl inft;
 
-    function new (args);
+    function new (virtual inft_sdrcntrl inft);
       $display("Creating SDRC Environment");
+      this.inft = inft;
       sb = new();
-      drv = new (sb);
-      mon = new (sb);
+      drv = new (inft, sb);
+      mon = new (inft, sb);
 
 
     endfunction
