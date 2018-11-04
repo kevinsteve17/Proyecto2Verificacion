@@ -11,7 +11,7 @@ class sdrcDrv;
     endtask //
 
     task BurstWrite(port_list);
-        pass
+        //pass
     endtask
 
 endclass

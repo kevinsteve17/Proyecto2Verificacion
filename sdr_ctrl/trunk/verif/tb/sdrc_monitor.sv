@@ -15,5 +15,5 @@ class sdrcMon;
     task BurstWrite(arguments);
         // TO DO implementation
     endtask //
-    
+
 endclass
