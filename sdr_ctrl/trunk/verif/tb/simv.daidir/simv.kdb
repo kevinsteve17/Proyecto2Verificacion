@@ -1,13 +1,13 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/sdr_ctrl/trunk/verif/tb
+COMPILE_PATH=/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb
 SystemC=FALSE
 UUM=FALSE
 KDB=FALSE
 USE_NOVAS_HOME=FALSE
 COSIM=FALSE
-TOP=tb_top IS42VM16400K mt48lc2m32b2 
+TOP=
 
 [Value]
 WREALX=ffff534e50535f58

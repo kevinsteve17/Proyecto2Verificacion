@@ -1,0 +1,51 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "_vcs_unit__275274123": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        }
+    },
+    "reusePaths": {
+        "reYIK_d": {
+            "icPath": "csrc"
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "bytes": 7742,
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "mode": 4,
+            "checksum": 0
+        },
+        "LuwTS_d": {
+            "bytes": 29816,
+            "mod": "_vcs_unit__275274123",
+            "out": "LuwTS_d.o",
+            "mode": 4,
+            "archive": "archive.2/_4945_archive_1.a",
+            "checksum": 0
+        }
+    },
+    "ObjArchives": [
+        {
+            "size": 129688,
+            "archive": "archive.2/_4945_archive_1.a",
+            "objects": [
+                [
+                    "LuwTS_d.o",
+                    29816
+                ],
+                [
+                    "amcQwB.o",
+                    99872
+                ]
+            ]
+        }
+    ]
+}
