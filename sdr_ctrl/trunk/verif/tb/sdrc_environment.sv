@@ -5,7 +5,7 @@ class sdrcEnv;
     
 
     function new (args);
-      $$display("Creating SDRC Environment");
+      $display("Creating SDRC Environment");
       sb = new();
       drv = new (sb);
       mon = new (sb);
