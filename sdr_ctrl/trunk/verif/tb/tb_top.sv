@@ -17,9 +17,8 @@ class DuvConfigurationUtils;
     endfunction
 endclass
 
-
 // top module
-    module top();
+module top();
 
     DuvConfigurationUtils duvConfigUtils = new();
 
@@ -82,7 +81,7 @@ endclass
 
         // Parameters */
         .sdr_init_done      (sdrc_intf.sdram_intf.sdr_init_done),
-        .cfg_req_depth      (2'h3),	        //how many req. buffer should hold
+        .cfg_req_depth      (2'h3),  //how many req. buffer should hold
         .cfg_sdr_en         (1'b1),
         .cfg_sdr_mode_reg   (13'h033),
         .cfg_sdr_tras_d     (4'h4),
