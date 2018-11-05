@@ -1,7 +1,4 @@
 sdram_interterface.sv
 wsb_interface.sv
 sdrc_interface.sv
-sdrc_scoreboard.sv
-sdrc_monitor.sv
-sdrc_driver.sv
-sdrc_environment.sv
+tb_top.sv

@@ -1,0 +1,107 @@
+{
+    "CompUnits": {
+        "sTF2k_d": {
+            "archive": "archive.7/_32529_archive_1.a",
+            "checksum": 0,
+            "bytes": 8824,
+            "mod": "intf_WishBone",
+            "out": "sTF2k_d.o",
+            "mode": 4
+        },
+        "RuFh3_d": {
+            "archive": "archive.7/_32529_archive_1.a",
+            "checksum": 0,
+            "bytes": 8567,
+            "mod": "intf_sdram",
+            "out": "RuFh3_d.o",
+            "mode": 4
+        },
+        "amcQw_d": {
+            "checksum": 0,
+            "bytes": 7726,
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "mode": 4
+        },
+        "reYIK_d": {
+            "archive": "archive.7/_32529_archive_1.a",
+            "checksum": 0,
+            "bytes": 41675,
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "mode": 4
+        },
+        "Emx8S_d": {
+            "archive": "archive.7/_32529_archive_1.a",
+            "checksum": 0,
+            "bytes": 6586,
+            "mod": "top",
+            "out": "Emx8S_d.o",
+            "mode": 4
+        },
+        "xqeUE_d": {
+            "archive": "archive.7/_32529_archive_1.a",
+            "checksum": 0,
+            "bytes": 7216,
+            "mod": "inft_sdrcntrl",
+            "out": "xqeUE_d.o",
+            "mode": 4
+        }
+    },
+    "Modules": {
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "...MASTER...": {},
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 8
+        },
+        "intf_WishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": [
+        {
+            "archive": "archive.7/_32529_archive_1.a",
+            "objects": [
+                [
+                    "reYIK_d.o",
+                    41675
+                ],
+                [
+                    "RuFh3_d.o",
+                    8567
+                ],
+                [
+                    "sTF2k_d.o",
+                    8824
+                ],
+                [
+                    "xqeUE_d.o",
+                    7216
+                ],
+                [
+                    "Emx8S_d.o",
+                    6586
+                ],
+                [
+                    "amcQwB.o",
+                    100844
+                ]
+            ],
+            "size": 173712
+        }
+    ]
+}

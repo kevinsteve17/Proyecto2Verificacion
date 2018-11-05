@@ -1,33 +1,15 @@
 {
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        7
-    ],
-    "$dummyOvSvModule": [
-        "0x24dummyOvSvModule",
-        "QAfa9",
-        "module",
-        6
-    ],
-    "_vcs_unit__449100453": [
-        "_vcs_unit__449100453",
-        "v5inm",
-        "module",
-        5
-    ],
     "std": [
         "std",
         "reYIK",
         "module",
         1
     ],
-    "inft_sdrcntrl": [
-        "inft_sdrcntrl",
-        "xqeUE",
+    "intf_WishBone": [
+        "intf_WishBone",
+        "sTF2k",
         "module",
-        2
+        3
     ],
     "intf_sdram": [
         "intf_sdram",
@@ -35,10 +17,22 @@
         "module",
         4
     ],
-    "intf_WishBone": [
-        "intf_WishBone",
-        "sTF2k",
+    "inft_sdrcntrl": [
+        "inft_sdrcntrl",
+        "xqeUE",
         "module",
-        3
+        2
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        7
+    ],
+    "top": [
+        "top",
+        "Emx8S",
+        "module",
+        8
     ]
 }
