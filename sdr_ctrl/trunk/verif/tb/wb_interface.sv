@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-interface intf_wishBone #(parameter dw = 32,
+interface intf_wishBone #(parameter dw = 16,
                           parameter APP_AW = 26);
 
     logic wb_rst_i;
