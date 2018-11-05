@@ -1,0 +1,155 @@
+{
+    "CompUnits": {
+        "Emx8S_d": {
+            "archive": "archive.3/_7930_archive_1.a",
+            "checksum": 0,
+            "mod": "top",
+            "out": "Emx8S_d.o",
+            "bytes": 16004,
+            "mode": 4
+        },
+        "amcQw_d": {
+            "checksum": 0,
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 7908,
+            "mode": 4
+        },
+        "reYIK_d": {
+            "archive": "archive.3/_7930_archive_1.a",
+            "checksum": 0,
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "bytes": 41675,
+            "mode": 4
+        },
+        "NTNU2_d": {
+            "archive": "archive.3/_7930_archive_1.a",
+            "checksum": 0,
+            "mod": "sdrc_top",
+            "out": "NTNU2_d.o",
+            "bytes": 384449,
+            "mode": 4
+        },
+        "rTVSK_d": {
+            "archive": "archive.3/_7930_archive_1.a",
+            "checksum": 0,
+            "mod": "_vcs_unit__2496855327",
+            "out": "rTVSK_d.o",
+            "bytes": 16603,
+            "mode": 4
+        },
+        "RuFh3_d": {
+            "archive": "archive.3/_7930_archive_1.a",
+            "checksum": 0,
+            "mod": "intf_sdram",
+            "out": "RuFh3_d.o",
+            "bytes": 8306,
+            "mode": 4
+        },
+        "ypVrV_d": {
+            "archive": "archive.3/_7930_archive_1.a",
+            "checksum": 0,
+            "mod": "intf_wishBone",
+            "out": "ypVrV_d.o",
+            "bytes": 8850,
+            "mode": 4
+        },
+        "xqeUE_d": {
+            "archive": "archive.3/_7930_archive_1.a",
+            "checksum": 0,
+            "mod": "inft_sdrcntrl",
+            "out": "xqeUE_d.o",
+            "bytes": 7167,
+            "mode": 4
+        },
+        "ChjVu_d": {
+            "archive": "archive.3/_7930_archive_1.a",
+            "checksum": 0,
+            "mod": "sdrc_bank_fsm",
+            "out": "ChjVu_d.o",
+            "bytes": 48133,
+            "mode": 4
+        }
+    },
+    "Modules": {
+        "...MASTER...": {},
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        },
+        "_vcs_unit__2496855327": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": [
+        {
+            "size": 638255,
+            "archive": "archive.3/_7930_archive_1.a",
+            "objects": [
+                [
+                    "rTVSK_d.o",
+                    16603
+                ],
+                [
+                    "reYIK_d.o",
+                    41675
+                ],
+                [
+                    "RuFh3_d.o",
+                    8306
+                ],
+                [
+                    "ypVrV_d.o",
+                    8850
+                ],
+                [
+                    "xqeUE_d.o",
+                    7167
+                ],
+                [
+                    "Emx8S_d.o",
+                    16004
+                ],
+                [
+                    "NTNU2_d.o",
+                    384449
+                ],
+                [
+                    "ChjVu_d.o",
+                    48133
+                ],
+                [
+                    "amcQwB.o",
+                    107068
+                ]
+            ]
+        }
+    ]
+}

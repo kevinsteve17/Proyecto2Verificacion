@@ -1,0 +1,104 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.2/_18107_archive_1.a",
+            "objects": [
+                [
+                    "Emx8S_d.o",
+                    15923
+                ],
+                [
+                    "NTNU2_d.o",
+                    379651
+                ],
+                [
+                    "ChjVu_d.o",
+                    48052
+                ],
+                [
+                    "amcQwB.o",
+                    105779
+                ]
+            ],
+            "size": 549405
+        }
+    ],
+    "CompUnits": {
+        "ChjVu_d": {
+            "mode": 4,
+            "out": "ChjVu_d.o",
+            "mod": "sdrc_bank_fsm",
+            "bytes": 48052,
+            "checksum": 0,
+            "archive": "archive.2/_18107_archive_1.a"
+        },
+        "amcQw_d": {
+            "mode": 4,
+            "out": "objs/amcQw_d.o",
+            "mod": "...MASTER...",
+            "bytes": 7726,
+            "checksum": 0
+        },
+        "Emx8S_d": {
+            "mode": 4,
+            "out": "Emx8S_d.o",
+            "mod": "top",
+            "bytes": 15923,
+            "checksum": 0,
+            "archive": "archive.2/_18107_archive_1.a"
+        },
+        "NTNU2_d": {
+            "mode": 4,
+            "out": "NTNU2_d.o",
+            "mod": "sdrc_top",
+            "bytes": 379651,
+            "checksum": 0,
+            "archive": "archive.2/_18107_archive_1.a"
+        }
+    },
+    "reusePaths": {
+        "ypVrV_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "RuFh3_d": {
+            "icPath": "csrc"
+        },
+        "xqeUE_d": {
+            "icPath": "csrc"
+        }
+    }
+}

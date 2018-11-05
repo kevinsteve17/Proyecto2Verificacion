@@ -1,0 +1,220 @@
+{
+    "Misc": {
+        "daidir": "simv.daidir",
+        "cwd": "/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/run",
+        "csrc": "csrc",
+        "csrc_abs": "/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/run/csrc",
+        "daidir_abs": "/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/run/simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.2"
+    },
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "intf_wishBone": {
+            "ypVrV_d": {
+                "bytes": 8769,
+                "out": "ypVrV_d.o",
+                "mode": 4,
+                "mod": "intf_wishBone",
+                "checksum": 0,
+                "archive": "archive.2/_prev_archive_1.a"
+            }
+        },
+        "intf_sdram": {
+            "RuFh3_d": {
+                "bytes": 8225,
+                "out": "RuFh3_d.o",
+                "mode": 4,
+                "mod": "intf_sdram",
+                "checksum": 0,
+                "archive": "archive.2/_prev_archive_1.a"
+            }
+        },
+        "sdrc_bank_fsm": {
+            "ChjVu_d": {
+                "bytes": 48052,
+                "out": "ChjVu_d.o",
+                "mode": 4,
+                "mod": "sdrc_bank_fsm",
+                "checksum": 0,
+                "archive": "archive.2/_18107_archive_1.a"
+            }
+        },
+        "inft_sdrcntrl": {
+            "xqeUE_d": {
+                "bytes": 7086,
+                "out": "xqeUE_d.o",
+                "mode": 4,
+                "mod": "inft_sdrcntrl",
+                "checksum": 0,
+                "archive": "archive.2/_prev_archive_1.a"
+            }
+        },
+        "top": {
+            "Emx8S_d": {
+                "bytes": 15923,
+                "out": "Emx8S_d.o",
+                "mode": 4,
+                "mod": "top",
+                "checksum": 0,
+                "archive": "archive.2/_18107_archive_1.a"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 41766,
+                "out": "reYIK_d.o",
+                "mode": 4,
+                "mod": "std",
+                "checksum": 0,
+                "archive": "archive.2/_prev_archive_1.a"
+            }
+        },
+        "sdrc_top": {
+            "NTNU2_d": {
+                "bytes": 379651,
+                "out": "NTNU2_d.o",
+                "mode": 4,
+                "mod": "sdrc_top",
+                "checksum": 0,
+                "archive": "archive.2/_18107_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 8812,
+                "out": "objs/amcQw_d.o",
+                "mode": 4,
+                "mod": "...MASTER...",
+                "checksum": 0
+            }
+        }
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "...MASTER...",
+        "std",
+        "intf_sdram",
+        "intf_wishBone",
+        "inft_sdrcntrl",
+        "top",
+        "top",
+        "sdrc_top",
+        "sdrc_top",
+        "sdrc_bank_fsm",
+        "sdrc_bank_fsm"
+    ],
+    "CurCompileUdps": {},
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module",
+            1
+        ],
+        "top": [
+            "top",
+            "Emx8S",
+            "module",
+            5
+        ],
+        "inft_sdrcntrl": [
+            "inft_sdrcntrl",
+            "xqeUE",
+            "module",
+            4
+        ],
+        "sdrc_bank_fsm": [
+            "sdrc_bank_fsm",
+            "ChjVu",
+            "module",
+            10
+        ],
+        "intf_sdram": [
+            "intf_sdram",
+            "RuFh3",
+            "module",
+            2
+        ],
+        "intf_wishBone": [
+            "intf_wishBone",
+            "ypVrV",
+            "module",
+            3
+        ],
+        "sdrc_top": [
+            "sdrc_top",
+            "NTNU2",
+            "module",
+            9
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module",
+            11
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_utime_sec": 0.266959,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 75084,
+            "ru_stime_sec": 0.063990000000000005,
+            "ru_minflt": 24336,
+            "ru_nvcsw": 419,
+            "ru_nivcsw": 29
+        },
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.003999,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 20560,
+            "ru_stime_sec": 0.0069979999999999999,
+            "ru_minflt": 3614,
+            "ru_nvcsw": 22,
+            "ru_nivcsw": 12
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.003999,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 27368,
+            "ru_stime_sec": 0.0089980000000000008,
+            "ru_minflt": 4126,
+            "ru_nvcsw": 27,
+            "ru_nivcsw": 14
+        },
+        "quadSpeed": 71623.100472371138,
+        "totalObjSize": 557131,
+        "nMops": 70226,
+        "nQuads": 25852,
+        "ru_self_end": {
+            "ru_utime_sec": 0.62790400000000002,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 85120,
+            "ru_stime_sec": 0.078987000000000002,
+            "ru_minflt": 28637,
+            "ru_nvcsw": 535,
+            "ru_nivcsw": 46
+        },
+        "mopSpeed": 194561.49828921302,
+        "mop/quad": 2.7164629429057712,
+        "outputSizePerQuad": 21.550789107225746,
+        "Frontend(%)": 42.51589414942412,
+        "CodeGen(%)": 57.484105850575887,
+        "peak_mem_kb": 239420
+    },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 105779,
+        "archive": "archive.2/_18107_archive_1.a"
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileStatus": "Successful",
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.18107.json"
+    ]
+}
