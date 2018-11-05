@@ -1,3 +1,5 @@
 class sdrcSB;
-    logic [7:0] store[$];
+    int store[$];
+    int dir[$];
+    int burstLenght[$];
 endclass
