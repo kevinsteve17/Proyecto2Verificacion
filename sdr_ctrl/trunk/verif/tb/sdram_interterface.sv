@@ -12,5 +12,6 @@ interface intf_sdram #(parameter SDR_DW = 16,
     logic sdr_cs_n;
     logic sdram_clk;
     logic sdram_resetn;
+    logic sdr_init_done;
 
 endinterface
