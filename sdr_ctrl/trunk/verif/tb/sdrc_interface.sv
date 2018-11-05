@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-interface inft_sdrcntrl #(parameter SDR_DW = 16,
+interface inft_sdrcntrl #(parameter SDR_DW = 32,
                           parameter SDR_BW = 2,
                           parameter APP_AW = 26)
                           (input sys_clk, sdram_clk);

@@ -98,18 +98,17 @@ module top();
     // to fix the sdram interface timing issue
     wire #(2.0) sdram_clk_d   = sdrc_intf.sdram_clk;
 
-    mt48lc2m32b2 #(.data_bits(32)) u_sdram32 (
-          .Dq                 (sdrc_intf.sdram_intf.sdr_dq) , 
-          .Addr               (sdrc_intf.sdram_intf.sdr_addr[10:0]     ), 
-          .Ba                 (sdrc_intf.sdram_intf.sdr_ba             ), 
-          .Clk                (sdram_clk_d        ), 
-          .Cke                (sdrc_intf.sdram_intf.sdr_cke            ), 
-          .Cs_n               (sdrc_intf.sdram_intf.sdr_cs_n           ), 
-          .Ras_n              (sdrc_intf.sdram_intf.sdr_ras_n          ), 
-          .Cas_n              (sdrc_intf.sdram_intf.sdr_cas_n          ), 
-          .We_n               (sdrc_intf.sdram_intf.sdr_we_n           ), 
-          .Dqm                (sdrc_intf.sdram_intf.sdr_dqm            )
-     );
+    IS42VM16400K u_sdram16 (
+          .dq                 (sdrc_intf.sdram_intf.sdr_dq), 
+          .addr               (sdrc_intf.sdram_intf.sdr_addr[11:0]), 
+          .ba                 (sdrc_intf.sdram_intf.sdr_ba), 
+          .clk                (sdram_clk_d), 
+          .cke                (sdrc_intf.sdram_intf.sdr_cke), 
+          .rasb               (sdrc_intf.sdram_intf.sdr_ras_n), 
+          .casb               (sdrc_intf.sdram_intf.sdr_cas_n), 
+          .web                (sdrc_intf.sdram_intf.sdr_we_n), 
+          .dqm                (sdrc_intf.sdram_intf.sdr_dqm)
+    );
 
     //--------------------
     // data/address/burst length FIFO
