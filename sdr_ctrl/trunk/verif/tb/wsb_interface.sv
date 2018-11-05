@@ -1,11 +1,11 @@
 interface intf_WishBone #(parameter dw = 32,
-                          parameter app_addr_w = 26);
+                          parameter APP_AW = 26);
 
     logic wb_rst_i;
     logic wb_clk_i;
     logic wb_stb_i;
     logic wb_ack_o;
-    logic [app_addr_w-1:0] wb_addr_i;
+    logic [APP_AW-1:0] wb_addr_i;
     logic wb_we_i;
     logic [dw-1:0]   wb_dat_i;
     logic [dw/8-1:0] wb_sel_i;
