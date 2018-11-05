@@ -2,6 +2,9 @@
 
     module top();
 
+    DuvConfigurationUtils duvConfigUtils;
+    duvConfigUtils = new();
+
     parameter P_SYS  = 10;     //    200MHz
     parameter P_SDR  = 20;     //    100MHz
 
@@ -30,7 +33,7 @@
 
     sdrc_top #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW)) duv(
         // system
-        .cfg_sdr_width      (2'b00),    // TODO: 2'b00 just for 32 BIT case
+        .cfg_sdr_width      (duvConfigUtils.getSdrWidth(SDR_DW)),
         .cfg_colbits        (2'b00),    // double check, org top mentioned only 8bit case
         
         // wish bone
