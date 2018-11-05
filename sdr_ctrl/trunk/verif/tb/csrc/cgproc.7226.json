@@ -1,0 +1,123 @@
+{
+    "Modules": {
+        "$dummyOvSvModule": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "...MASTER...": {},
+        "_vcs_unit__449100453": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "std": {
+            "Compiled Times": 7,
+            "Compiled": "Yes"
+        },
+        "inft_sdrcntrl": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "intf_sdram": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "intf_WishBone": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 7924,
+            "mode": 4,
+            "checksum": 0
+        },
+        "xqeUE_d": {
+            "mod": "inft_sdrcntrl",
+            "out": "xqeUE_d.o",
+            "bytes": 11689,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.6/_7226_archive_1.a"
+        },
+        "QAfa9_d": {
+            "mod": "$dummyOvSvModule",
+            "out": "QAfa9_d.o",
+            "bytes": 6371,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.6/_7226_archive_1.a"
+        },
+        "sTF2k_d": {
+            "mod": "intf_WishBone",
+            "out": "sTF2k_d.o",
+            "bytes": 13504,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.6/_7226_archive_1.a"
+        },
+        "v5inm_d": {
+            "mod": "_vcs_unit__449100453",
+            "out": "v5inm_d.o",
+            "bytes": 30934,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.6/_7226_archive_1.a"
+        },
+        "reYIK_d": {
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "bytes": 41675,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.6/_7226_archive_1.a"
+        },
+        "RuFh3_d": {
+            "mod": "intf_sdram",
+            "out": "RuFh3_d.o",
+            "bytes": 13364,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.6/_7226_archive_1.a"
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": [
+        {
+            "archive": "archive.6/_7226_archive_1.a",
+            "objects": [
+                [
+                    "QAfa9_d.o",
+                    6371
+                ],
+                [
+                    "v5inm_d.o",
+                    30934
+                ],
+                [
+                    "reYIK_d.o",
+                    41675
+                ],
+                [
+                    "RuFh3_d.o",
+                    13364
+                ],
+                [
+                    "sTF2k_d.o",
+                    13504
+                ],
+                [
+                    "xqeUE_d.o",
+                    11689
+                ],
+                [
+                    "amcQwB.o",
+                    102217
+                ]
+            ],
+            "size": 219754
+        }
+    ]
+}

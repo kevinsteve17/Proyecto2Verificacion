@@ -1,33 +1,64 @@
 {
-    "MlibObjs": {},
-    "CompileStrategy": "fullobj",
     "SIMBData": {
-        "archive": "archive.3/_3640_archive_1.a",
-        "bytes": 99896,
-        "out": "amcQwB.o"
+        "out": "amcQwB.o",
+        "bytes": 102217,
+        "archive": "archive.6/_7226_archive_1.a"
     },
+    "MlibObjs": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "...MASTER...",
+        "$dummyOvSvModule",
+        "$dummyOvSvModule",
+        "_vcs_unit__449100453",
+        "_vcs_unit__449100453",
+        "std",
+        "std",
+        "intf_sdram",
+        "intf_sdram",
+        "intf_WishBone",
+        "intf_WishBone",
+        "inft_sdrcntrl",
+        "inft_sdrcntrl"
+    ],
     "PrevCompiledModules": {
         "std": {
             "reYIK_d": {
-                "out": "reYIK_d.o",
-                "archive": "archive.3/_prev_archive_1.a",
                 "bytes": 41675,
                 "mod": "std",
+                "out": "reYIK_d.o",
                 "mode": 4,
-                "checksum": 0
+                "checksum": 0,
+                "archive": "archive.6/_7226_archive_1.a"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "out": "objs/amcQw_d.o",
-                "bytes": 7742,
+                "bytes": 7734,
                 "mod": "...MASTER...",
+                "out": "objs/amcQw_d.o",
                 "mode": 4,
                 "checksum": 0
             }
         }
     },
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileStrategy": "fullobj",
     "NameTable": {
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module",
+            7
+        ],
+        "$dummyOvSvModule": [
+            "0x24dummyOvSvModule",
+            "QAfa9",
+            "module",
+            6
+        ],
         "_vcs_unit__449100453": [
             "_vcs_unit__449100453",
             "v5inm",
@@ -40,84 +71,86 @@
             "module",
             1
         ],
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
+        "inft_sdrcntrl": [
+            "inft_sdrcntrl",
+            "xqeUE",
             "module",
-            7
+            2
+        ],
+        "intf_sdram": [
+            "intf_sdram",
+            "RuFh3",
+            "module",
+            4
+        ],
+        "intf_WishBone": [
+            "intf_WishBone",
+            "sTF2k",
+            "module",
+            3
         ]
     },
-    "LVLData": [
-        "SIM"
-    ],
-    "CurCompileUdps": {},
     "stat": {
-        "Frontend(%)": 77.550645506965353,
-        "totalObjSize": 137686,
+        "Frontend(%)": 70.967325638605914,
         "ru_self_cgstart": {
-            "ru_utime_sec": 0.075988,
-            "ru_stime_sec": 0.058991000000000002,
-            "ru_maxrss_kb": 64180,
-            "ru_nvcsw": 262,
-            "ru_minflt": 21544,
-            "ru_majflt": 0,
-            "ru_nivcsw": 92
+            "ru_stime_sec": 0.065989000000000006,
+            "ru_utime_sec": 0.087985999999999995,
+            "ru_maxrss_kb": 65832,
+            "ru_minflt": 21833,
+            "ru_nvcsw": 333,
+            "ru_majflt": 6,
+            "ru_nivcsw": 82
         },
+        "CodeGen(%)": 29.032674361394086,
+        "mop/quad": 2.1377633711507293,
         "ru_childs_cgstart": {
-            "ru_utime_sec": 0.005999,
-            "ru_stime_sec": 0.0099979999999999999,
-            "ru_maxrss_kb": 19420,
-            "ru_nvcsw": 22,
-            "ru_minflt": 3613,
+            "ru_stime_sec": 0.0069979999999999999,
+            "ru_utime_sec": 0.0069979999999999999,
+            "ru_maxrss_kb": 19544,
+            "ru_minflt": 3614,
+            "ru_nvcsw": 28,
             "ru_majflt": 0,
             "ru_nivcsw": 3
         },
-        "nQuads": 293,
-        "nMops": 787,
-        "ru_self_end": {
-            "ru_utime_sec": 0.097985000000000003,
-            "ru_stime_sec": 0.074987999999999999,
-            "ru_maxrss_kb": 71188,
-            "ru_nvcsw": 364,
-            "ru_minflt": 24226,
-            "ru_majflt": 0,
-            "ru_nivcsw": 96
-        },
-        "outputSizePerQuad": 469.91808873720134,
-        "quadSpeed": 13319.998181570212,
+        "mopSpeed": 36643.978330323655,
+        "nMops": 1319,
+        "nQuads": 617,
         "ru_childs_end": {
-            "ru_utime_sec": 0.005999,
-            "ru_stime_sec": 0.012997999999999999,
-            "ru_maxrss_kb": 20752,
-            "ru_nvcsw": 27,
+            "ru_stime_sec": 0.0089980000000000008,
+            "ru_utime_sec": 0.0079979999999999999,
+            "ru_maxrss_kb": 21500,
             "ru_minflt": 4125,
-            "ru_majflt": 0,
+            "ru_nvcsw": 41,
+            "ru_majflt": 1,
             "ru_nivcsw": 5
         },
-        "mopSpeed": 35777.606037186888,
-        "mop/quad": 2.6860068259385668,
-        "CodeGen(%)": 22.449354493034651,
-        "peak_mem_kb": 232144
+        "totalObjSize": 227678,
+        "ru_self_end": {
+            "ru_stime_sec": 0.082987000000000005,
+            "ru_utime_sec": 0.12398099999999999,
+            "ru_maxrss_kb": 73280,
+            "ru_minflt": 24688,
+            "ru_nvcsw": 466,
+            "ru_majflt": 12,
+            "ru_nivcsw": 144
+        },
+        "quadSpeed": 17141.269620780666,
+        "outputSizePerQuad": 369.00810372771474,
+        "peak_mem_kb": 232696
     },
+    "CurCompileUdps": {},
     "PEModules": [],
-    "CurCompileModules": [
-        "...MASTER...",
-        "...MASTER...",
-        "_vcs_unit__449100453",
-        "_vcs_unit__449100453",
-        "std"
-    ],
     "CompileProcesses": [
-        "cgproc.3640.json"
+        "cgproc.7226.json"
     ],
     "Misc": {
-        "daidir_abs": "/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv.daidir",
-        "csrc": "csrc",
         "cwd": "/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb",
-        "csrc_abs": "/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/csrc",
+        "daidir_abs": "/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv.daidir",
         "daidir": "simv.daidir",
-        "default_output_dir": "csrc",
-        "archive_dir": "archive.3"
+        "csrc": "csrc",
+        "csrc_abs": "/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/csrc",
+        "archive_dir": "archive.6",
+        "default_output_dir": "csrc"
     },
     "CompileStatus": "Successful"
 }
