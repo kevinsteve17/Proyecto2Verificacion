@@ -42,7 +42,7 @@ module top();
     parameter APP_AW = 26;
 
     // Interface instance
-    inft_sdrcntrl #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW), .dw(SDR_DW), .APP_AW(APP_AW)) sdrc_intf(
+    inft_sdrcntrl #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW), .APP_AW(APP_AW)) sdrc_intf(
         sys_clk,
         sdram_clk
     );
