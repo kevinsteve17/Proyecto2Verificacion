@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-interface intf_sdram #(parameter SDR_DW = 16,
+interface intf_sdram #(parameter SDR_DW = 32,
                        parameter SDR_BW = 2);
 
     logic [SDR_BW-1:0]  sdr_dqm;

@@ -36,7 +36,7 @@ module top();
     always #(P_SYS/2) sys_clk = !sys_clk;
     always #(P_SDR/2) sdram_clk = !sdram_clk;
 
-    parameter SDR_DW = 16;
+    parameter SDR_DW = 32;
     parameter SDR_BW = 2;
     //parameter dw = 32;
     parameter APP_AW = 26;
