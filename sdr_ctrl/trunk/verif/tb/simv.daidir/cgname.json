@@ -1,15 +1,15 @@
 {
-    "inft_sdrcntrl": [
-        "inft_sdrcntrl",
-        "xqeUE",
-        "module",
-        2
-    ],
     "intf_sdram": [
         "intf_sdram",
         "RuFh3",
         "module",
         4
+    ],
+    "_vcs_unit__2496855327": [
+        "_vcs_unit__2496855327",
+        "rTVSK",
+        "module",
+        5
     ],
     "std": [
         "std",
@@ -17,11 +17,17 @@
         "module",
         1
     ],
-    "top": [
-        "top",
-        "Emx8S",
+    "inft_sdrcntrl": [
+        "inft_sdrcntrl",
+        "xqeUE",
         "module",
-        8
+        2
+    ],
+    "sdrc_top": [
+        "sdrc_top",
+        "NTNU2",
+        "module",
+        3
     ],
     "intf_wishBone": [
         "intf_wishBone",
@@ -34,5 +40,17 @@
         "amcQw",
         "module",
         7
+    ],
+    "top": [
+        "top",
+        "Emx8S",
+        "module",
+        8
+    ],
+    "sdrc_bank_fsm": [
+        "sdrc_bank_fsm",
+        "ChjVu",
+        "module",
+        9
     ]
 }
