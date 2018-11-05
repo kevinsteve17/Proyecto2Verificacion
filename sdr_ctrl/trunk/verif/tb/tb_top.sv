@@ -1,10 +1,14 @@
 //`timescale 1ns/1ps
 
     module top();
+
+    parameter P_SYS  = 10;     //    200MHz
+    parameter P_SDR  = 20;     //    100MHz
+
     // General
     reg  RESETN;
-    //reg  sdram_clk;
     reg  sys_clk;
+    //reg  sdram_clk;
 
     initial sys_clk = 0;
     //initial sdram_clk = 0;
