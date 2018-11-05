@@ -1,4 +1,16 @@
 {
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        7
+    ],
+    "$dummyOvSvModule": [
+        "0x24dummyOvSvModule",
+        "QAfa9",
+        "module",
+        6
+    ],
     "_vcs_unit__449100453": [
         "_vcs_unit__449100453",
         "v5inm",
@@ -11,10 +23,22 @@
         "module",
         1
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
+    "inft_sdrcntrl": [
+        "inft_sdrcntrl",
+        "xqeUE",
         "module",
-        7
+        2
+    ],
+    "intf_sdram": [
+        "intf_sdram",
+        "RuFh3",
+        "module",
+        4
+    ],
+    "intf_WishBone": [
+        "intf_WishBone",
+        "sTF2k",
+        "module",
+        3
     ]
 }
