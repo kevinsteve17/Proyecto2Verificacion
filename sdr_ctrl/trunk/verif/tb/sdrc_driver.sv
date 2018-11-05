@@ -1,8 +1,6 @@
 class sdrcDrv;
     sdrcSB sb;
     virtual inft_sdrcntrl inft;
-    // General
-    reg            RESETN;
 
     function new(virtual inft_sdrcntrl inft,sdrcSB sb);
         $display("Creating SDRC Driver");
@@ -11,7 +9,7 @@ class sdrcDrv;
 
     endfunction
 
-    task reset(arguments);
+    task reset();
     input reg RESETN;
     begin
         this.inft.sdram_intf.sdram_resetn = RESETN;
