@@ -1,4 +1,4 @@
-interface intf_WishBone #(parameter dw = 32,
+interface intf_wishBone #(parameter dw = 32,
                           parameter APP_AW = 26);
 
     logic wb_rst_i;
