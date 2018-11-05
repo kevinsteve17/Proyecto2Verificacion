@@ -1,5 +1,3 @@
-`timescale 1ns/1ps
-
 interface inft_sdrcntrl #(parameter SDR_DW = 16,
                           parameter SDR_BW = 2,
                           parameter dw = 32,

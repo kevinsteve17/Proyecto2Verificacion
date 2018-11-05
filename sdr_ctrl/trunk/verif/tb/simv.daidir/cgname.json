@@ -1,15 +1,9 @@
 {
-    "std": [
-        "std",
-        "reYIK",
+    "inft_sdrcntrl": [
+        "inft_sdrcntrl",
+        "xqeUE",
         "module",
-        1
-    ],
-    "intf_WishBone": [
-        "intf_WishBone",
-        "sTF2k",
-        "module",
-        3
+        2
     ],
     "intf_sdram": [
         "intf_sdram",
@@ -17,22 +11,28 @@
         "module",
         4
     ],
-    "inft_sdrcntrl": [
-        "inft_sdrcntrl",
-        "xqeUE",
+    "std": [
+        "std",
+        "reYIK",
         "module",
-        2
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        7
+        1
     ],
     "top": [
         "top",
         "Emx8S",
         "module",
         8
+    ],
+    "intf_wishBone": [
+        "intf_wishBone",
+        "ypVrV",
+        "module",
+        6
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        7
     ]
 }

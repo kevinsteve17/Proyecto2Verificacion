@@ -1,0 +1,86 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 9
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "xqeUE_d": {
+            "mod": "inft_sdrcntrl",
+            "out": "xqeUE_d.o",
+            "bytes": 7086,
+            "mode": 4,
+            "archive": "archive.8/_4941_archive_1.a",
+            "checksum": 0
+        },
+        "ypVrV_d": {
+            "mod": "intf_wishBone",
+            "out": "ypVrV_d.o",
+            "bytes": 8816,
+            "mode": 4,
+            "archive": "archive.8/_4941_archive_1.a",
+            "checksum": 0
+        },
+        "Emx8S_d": {
+            "mod": "top",
+            "out": "Emx8S_d.o",
+            "bytes": 8695,
+            "mode": 4,
+            "archive": "archive.8/_4941_archive_1.a",
+            "checksum": 0
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.8/_4941_archive_1.a",
+            "size": 124650,
+            "objects": [
+                [
+                    "ypVrV_d.o",
+                    8816
+                ],
+                [
+                    "xqeUE_d.o",
+                    7086
+                ],
+                [
+                    "Emx8S_d.o",
+                    8695
+                ],
+                [
+                    "amcQwB.o",
+                    100053
+                ]
+            ]
+        }
+    ],
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "RuFh3_d": {
+            "icPath": "csrc"
+        }
+    }
+}

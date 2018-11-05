@@ -85,7 +85,7 @@ class DuvConfigurationUtils;
         end
         else if (dw == 16) begin
             return 2'b01;
-        end if (dw == 8)begin
+        end if (dw = 8)begin
             return 2'b10;
         end
 
