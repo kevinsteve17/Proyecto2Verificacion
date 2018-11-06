@@ -26,7 +26,6 @@ module top();
     parameter P_SDR  = 20;     //    100MHz
 
     // General
-    reg  RESETN;
     reg  sys_clk;
     reg  sdram_clk;
 
@@ -153,11 +152,13 @@ module top();
 
     burst_write(32'h4_0000,8'h4);  
     #1000;
-    burst_read();  
+    burst_read(); 
+    
+    end 
 
     // Repeat one more time to analysis the 
     // SDRAM state change for same col/row address
-    $display("-------------------------------------- ");
+    /*$display("-------------------------------------- ");
     $display(" Case-2: Repeat same transfer once again ");
     $display("----------------------------------------");
     burst_write(32'h4_0000,8'h4);  
@@ -315,7 +316,7 @@ module top();
             $display("###############################");
 
         $finish;
-    end
+    end*/
 
     task burst_write;
     input [31:0] Address;
