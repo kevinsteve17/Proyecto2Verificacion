@@ -35,6 +35,7 @@ module top();
     always #(P_SYS/2) sys_clk = !sys_clk;
     always #(P_SDR/2) sdram_clk = !sdram_clk;
 
+
 `ifdef SDR_32BIT
     parameter SDR_DW = 32;
     parameter SDR_BW = 4;
@@ -121,32 +122,32 @@ module top();
      );
 `elsif SDR_16BIT
    IS42VM16400K u_sdram16 (
-          .dq                 (Dq                 ), 
-          .addr               (sdr_addr[11:0]     ), 
-          .ba                 (sdr_ba             ), 
+          .dq                 (sdrc_intf.sdram_intf.sdr_dq), 
+          .addr               (sdrc_intf.sdram_intf.sdr_addr[11:0]), 
+          .ba                 (sdrc_intf.sdram_intf.sdr_ba), 
           .clk                (sdram_clk_d        ), 
-          .cke                (sdr_cke            ), 
-          .csb                (sdr_cs_n           ), 
-          .rasb               (sdr_ras_n          ), 
-          .casb               (sdr_cas_n          ), 
-          .web                (sdr_we_n           ), 
-          .dqm                (sdr_dqm            )
+          .cke                (sdrc_intf.sdram_intf.sdr_cke), 
+          .csb                (sdrc_intf.sdram_intf.sdr_cs_n), 
+          .rasb               (sdrc_intf.sdram_intf.sdr_ras_n), 
+          .casb               (sdrc_intf.sdram_intf.sdr_cas_n), 
+          .web                (sdrc_intf.sdram_intf.sdr_we_n), 
+          .dqm                (sdrc_intf.sdram_intf.sdr_dqm)
     );
 `elsif SDR_8BIT
     mt48lc8m8a2 #(.data_bits(8)) u_sdram8 (
-          .Dq                 (Dq                 ) , 
-          .Addr               (sdr_addr[11:0]     ), 
-          .Ba                 (sdr_ba             ), 
+          .Dq                 (sdrc_intf.sdram_intf.sdr_dq) , 
+          .Addr               (sdrc_intf.sdram_intf.sdr_addr[11:0]), 
+          .Ba                 (sdrc_intf.sdram_intf.sdr_ba), 
           .Clk                (sdram_clk_d        ), 
-          .Cke                (sdr_cke            ), 
-          .Cs_n               (sdr_cs_n           ), 
-          .Ras_n              (sdr_ras_n          ), 
-          .Cas_n              (sdr_cas_n          ), 
-          .We_n               (sdr_we_n           ), 
-          .Dqm                (sdr_dqm            )
+          .Cke                (sdrc_intf.sdram_intf.sdr_cke), 
+          .Cs_n               (sdrc_intf.sdram_intf.sdr_cs_n), 
+          .Ras_n              (sdrc_intf.sdram_intf.sdr_ras_n), 
+          .Cas_n              (sdrc_intf.sdram_intf.sdr_cas_n), 
+          .We_n               (sdrc_intf.sdram_intf.sdr_we_n), 
+          .Dqm                (sdrc_intf.sdram_intf.sdr_dqm)
      );
-`endif         
-    
+`endif 
+
     /////////////////////////////////////////////////////////////////////////
     // Run Test Cases
     /////////////////////////////////////////////////////////////////////////
