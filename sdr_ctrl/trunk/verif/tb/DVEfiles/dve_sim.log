@@ -1,147 +1,308 @@
-00:50:40    16 -->                                                             [tcl] ucliGUI::connect -toolargs -ucligui -toolexe ./simv -pid 17340 -toolin /tmp/vcs_20181108065036_17339_kviquez..stdin -toolout /tmp/vcs_20181108065036_17339_kviquez..stdout  
-00:50:40    17 -->                                                                 [tcl] set ucliGUI::state
-00:50:40    18 -->                                                                     [tcl] gui_update_simulator_buttons
-00:50:41    19 -->                                                                         [tcl] set ucliGUI::state
-00:50:41    20 -->                                                                             [tcl] ucliCore::getToolPID
-00:50:41    21 -->                                                                                 [tcl] synopsys::env hasTB
-00:50:41    22 -->                                                                                     [tcl] trigger_hier_stack_context_switch 0
-00:50:41    23 -->                                                                                         [tcl] synopsys::xml set_array_limit <data limit="50" />
-00:50:41    24 -->                                                                                             [tcl] synopsys::xml set_depth_limit <data limit="100" />
-00:50:41    25 --> ...  [tcl] synopsys::xml set_string_limit <data limit="1000" />
-00:50:41    26 --> ...      [tcl] synopsys::xml set_only_active_frame <data value="1" />
-00:50:41    27 --> ...          [tcl] synopsys::xml set_variable_frame_id <data value="1" />
-00:50:41    28 --> ...              [tcl] synUtils::setDVEInitPhase 1
-00:50:41    29 --> ...                  [tcl] gui_get_env SIMSETUP::SIMVPD
-00:50:41    30 --> ...                      [tcl] synopsys::dump -type VPD -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd -locking
-00:50:41    31 --> ...                          [tcl] synopsys::dump -autoflush on -fid VPD0
-00:50:41    32 --> ...                              [tcl] set ::dve_fid VPD0
-00:50:41    33 --> ...                                  [tcl] synUtils::setDVEInitPhase 0
-00:50:41    34 --> ...                                      [tcl] ucliCore::getToolPID
-00:50:41    35 --> ...                                          [tcl] synUtils::sendTool -active _icl_setToolSocket /tmp/smlnprI5Ix9
-00:50:41    36 --> ...                                              [tcl] synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.kviquez.17340}
-00:50:41    37 --> ...                                                  [tcl] synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.kviquez.17340}
-00:50:41    38 --> ...                                                      [tcl] dveMisc::vbusExpand top
-00:50:41    39 --> ...                                                          [tcl] dveMisc::vbusExpand _vcs_unit__204873936
-00:50:42    40 --> ...                                                              [tcl] config endofsim noexit
-00:50:42    41 --> ...                                                                  [tcl] config onfail enable all
-00:50:42    42 --> ...                                                                      [tcl] config syscaddplainmembers
-00:50:42    43 --> ...                                                                          [tcl] config syscaddsourcenames
-00:50:42    44 --> ...                                                                              [tcl] config syscaddstructtypes
-00:50:42    45 --> ...                                                                                  [tcl] synopsys::listing -disable
-00:50:47    46 --> ...                                                                                      [tcl] dveMisc::vbusExpand top.test1
-00:50:50    47 --> ...                                                                                          [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  7
-00:50:50    48 --> ...                                                                                              [tcl] synopsys::watch -raw
-00:50:50    49 --> ...                                                                                                  [tcl] gui_postwatch -bpid 1  -line 7 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
-00:50:51    50 --> ...  [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  9
-00:50:51    51 --> ...      [tcl] synopsys::watch -raw
-00:50:51    52 --> ...          [tcl] gui_postwatch -bpid 2  -line 9 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
-00:50:52    53 --> ...              [tcl] synopsys::watch  -disable {2}
-00:50:52    54 --> ...                  [tcl] synopsys::watch -raw
-00:50:52    55 --> ...                      [tcl] gui_postwatch -bpid 2 -disable 2
-00:50:54    56 --> ...                          [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  11
-00:50:54    57 --> ...                              [tcl] synopsys::watch -raw
-00:50:54    58 --> ...                                  [tcl] gui_postwatch -bpid 3  -line 11 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
-00:50:55    59 --> ...                                      [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  14
-00:50:55    60 --> ...                                          [tcl] synopsys::watch -raw
-00:50:55    61 --> ...                                              [tcl] gui_postwatch -bpid 4  -line 14 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
-00:50:56    62 --> ...                                                  [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  16
-00:50:56    63 --> ...                                                      [tcl] synopsys::watch -raw
-00:50:56    64 --> ...                                                          [tcl] gui_postwatch -bpid 5  -line 16 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
-00:50:56    65 --> ...                                                              [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  19
-00:50:56    66 --> ...                                                                  [tcl] synopsys::watch -raw
-00:50:56    67 --> ...                                                                      [tcl] gui_postwatch -bpid 6  -line 19 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
-00:50:59    68 --> ...                                                                          [tcl] synopsys::run
-00:50:59    69 --> ...                                                                              [tcl] set ucliGUI::state
-00:50:59    70 --> ...                                                                                  [tcl] gui_update_simulator_buttons
-00:50:59    71 --> ...                                                                                      [tcl] set ucliGUI::state
-00:50:59    72 --> ...                                                                                          [tcl] set ucliGUI::state
-00:50:59    73 --> ...                                                                                              [tcl] set ucliGUI::state
-00:50:59    74 --> ...                                                                                                  [tcl] set ucliGUI::state
-00:50:59    75 --> ...  [tcl] catch {senv activeDomain} dveMisc::result 
-00:50:59    76 --> ...      [tcl] set dveMisc::result
-00:50:59    77 --> ...          [tcl] gui_update_simulator_buttons
-00:50:59    78 --> ...              [tcl] synopsys::xml get_stop_data
-00:50:59    79 --> ...                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
-00:50:59    80 --> ...                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
-00:51:00    81 --> ...                          [tcl] trigger_hier_stack_context_switch 1
-00:51:03    82 --> ...                              [tcl] synopsys::run
-00:51:03    83 --> ...                                  [tcl] set ucliGUI::state
-00:51:03    84 --> ...                                      [tcl] gui_update_simulator_buttons
-00:51:03    85 --> ...                                          [tcl] set ucliGUI::state
-00:51:03    86 --> ...                                              [tcl] set ucliGUI::state
-00:51:03    87 --> ...                                                  [tcl] set ucliGUI::state
-00:51:03    88 --> ...                                                      [tcl] set ucliGUI::state
-00:51:03    89 --> ...                                                          [tcl] catch {senv activeDomain} dveMisc::result 
-00:51:03    90 --> ...                                                              [tcl] set dveMisc::result
-00:51:03    91 --> ...                                                                  [tcl] gui_update_simulator_buttons
-00:51:03    92 --> ...                                                                      [tcl] synopsys::xml get_stop_data
-00:51:03    93 --> ...                                                                          [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-00:51:03    94 --> ...                                                                              [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
-00:51:03    95 --> ...                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114167168" frame_id="frame(top.test1)" viewId="Hidden 1" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
-00:51:03    96 --> ...                                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114221728" frame_id="frame(top.test1)" viewId="Hidden 2" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
-00:51:05    97 --> ...                                                                                          [tcl] synopsys::run
-00:51:05    98 --> ...                                                                                              [tcl] set ucliGUI::state
-00:51:05    99 --> ...                                                                                                  [tcl] gui_update_simulator_buttons
-00:51:05    100 --> ...  [tcl] set ucliGUI::state
-00:51:05    101 --> ...      [tcl] set ucliGUI::state
-00:51:05    102 --> ...          [tcl] set ucliGUI::state
-00:51:05    103 --> ...              [tcl] set ucliGUI::state
-00:51:05    104 --> ...                  [tcl] catch {senv activeDomain} dveMisc::result 
-00:51:05    105 --> ...                      [tcl] set dveMisc::result
-00:51:05    106 --> ...                          [tcl] gui_update_simulator_buttons
-00:51:05    107 --> ...                              [tcl] synopsys::xml get_stop_data
-00:51:05    108 --> ...                                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-00:51:05    109 --> ...                                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
-00:51:05    110 --> ...                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114221728" frame_id="frame(top.test1)" viewId="Hidden 3" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
-00:51:06    111 --> ...                                              [tcl] synopsys::run
-00:51:06    112 --> ...                                                  [tcl] set ucliGUI::state
-00:51:06    113 --> ...                                                      [tcl] gui_update_simulator_buttons
-00:51:06    114 --> ...                                                          [tcl] set ucliGUI::state
-00:51:06    115 --> ...                                                              [tcl] set ucliGUI::state
-00:51:06    116 --> ...                                                                  [tcl] set ucliGUI::state
-00:51:06    117 --> ...                                                                      [tcl] set ucliGUI::state
-00:51:06    118 --> ...                                                                          [tcl] catch {senv activeDomain} dveMisc::result 
-00:51:06    119 --> ...                                                                              [tcl] set dveMisc::result
-00:51:06    120 --> ...                                                                                  [tcl] gui_update_simulator_buttons
-00:51:06    121 --> ...                                                                                      [tcl] synopsys::xml get_stop_data
-00:51:06    122 --> ...                                                                                          [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-00:51:06    123 --> ...                                                                                              [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
-00:51:06    124 --> ...                                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114232208" frame_id="frame(top.test1)" viewId="Hidden 4" > <item separator="." expr="env.mon" open="1" name="mon" depth="1" /></data>}
-00:51:06    125 --> ...  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114167168" frame_id="frame(top.test1)" viewId="Hidden 5" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
-00:51:08    126 --> ...      [tcl] synopsys::run
-00:51:08    127 --> ...          [tcl] set ucliGUI::state
-00:51:08    128 --> ...              [tcl] gui_update_simulator_buttons
-00:51:08    129 --> ...                  [tcl] set ucliGUI::state
-00:51:08    130 --> ...                      [tcl] set ucliGUI::state
-00:51:08    131 --> ...                          [tcl] set ucliGUI::state
-00:51:08    132 --> ...                              [tcl] set ucliGUI::state
-00:51:08    133 --> ...                                  [tcl] catch {senv activeDomain} dveMisc::result 
-00:51:08    134 --> ...                                      [tcl] set dveMisc::result
-00:51:08    135 --> ...                                          [tcl] gui_update_simulator_buttons
-00:51:08    136 --> ...                                              [tcl] synopsys::xml get_stop_data
-00:51:08    137 --> ...                                                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-00:51:08    138 --> ...                                                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
-00:51:24    139 --> ...                                                          [tcl] synopsys::run
-00:51:24    140 --> ...                                                              [tcl] set ucliGUI::state
-00:51:24    141 --> ...                                                                  [tcl] gui_update_simulator_buttons
-00:51:24    142 --> ...                                                                      [tcl] set ucliGUI::state
-00:51:24    143 --> ...                                                                          [tcl] set ucliGUI::state
-00:51:24    144 --> ...                                                                              [tcl] set ucliGUI::state
-00:51:24    145 --> ...                                                                                  [tcl] catch {senv activeDomain} dveMisc::result 
-00:51:24    146 --> ...                                                                                      [tcl] set dveMisc::result
-00:51:24    147 --> ...                                                                                          [tcl] gui_update_simulator_buttons
-00:51:24    148 --> ...                                                                                              [tcl] synopsys::xml get_stop_data
-00:51:24    149 --> ...                                                                                                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-00:51:24    150 --> ...  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(17:0:4)" viewId="Local.1" />}
-00:51:25    151 --> ...      [tcl] trigger_hier_stack_context_switch 0
-00:55:01    152 --> ...          [tcl] if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
-00:55:01    153 --> ...              [tcl] synopsys::finish
-00:55:01    154 --> ...                  [tcl] set ucliGUI::state
-00:55:01    155 --> ...                      [tcl] gui_update_simulator_buttons
-00:55:01    156 --> ...                          [tcl] set ucliGUI::state
-00:55:01    157 --> ...                              [tcl] catch {senv activeDomain} dveMisc::result 
-00:55:01    158 --> ...                                  [tcl] set dveMisc::result
-00:55:01    159 --> ...                                      [tcl] gui_update_simulator_buttons
-00:55:01    160 --> ...                                          [tcl] catch {senv activeDomain} dveMisc::result 
-00:55:01    161 --> ...                                              [tcl] set dveMisc::result
-00:55:01    162 --> ...                                                  [tcl] ucli_exit
+01:59:30    16 -->                                                             [tcl] ucliGUI::connect -toolargs -ucligui -toolexe ./simv -pid 13029 -toolin /tmp/vcs_20181108075926_13028_kviquez..stdin -toolout /tmp/vcs_20181108075926_13028_kviquez..stdout  
+01:59:30    17 -->                                                                 [tcl] set ucliGUI::state
+01:59:30    18 -->                                                                     [tcl] gui_update_simulator_buttons
+01:59:31    19 -->                                                                         [tcl] set ucliGUI::state
+01:59:31    20 -->                                                                             [tcl] ucliCore::getToolPID
+01:59:31    21 -->                                                                                 [tcl] synopsys::env hasTB
+01:59:31    22 -->                                                                                     [tcl] trigger_hier_stack_context_switch 0
+01:59:31    23 -->                                                                                         [tcl] synopsys::xml set_array_limit <data limit="50" />
+01:59:31    24 -->                                                                                             [tcl] synopsys::xml set_depth_limit <data limit="100" />
+01:59:31    25 --> ...  [tcl] synopsys::xml set_string_limit <data limit="1000" />
+01:59:31    26 --> ...      [tcl] synopsys::xml set_only_active_frame <data value="1" />
+01:59:32    27 --> ...          [tcl] synopsys::xml set_variable_frame_id <data value="1" />
+01:59:32    28 --> ...              [tcl] synUtils::setDVEInitPhase 1
+01:59:32    29 --> ...                  [tcl] gui_get_env SIMSETUP::SIMVPD
+01:59:32    30 --> ...                      [tcl] synopsys::dump -type VPD -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd -locking
+01:59:32    31 --> ...                          [tcl] synopsys::dump -autoflush on -fid VPD0
+01:59:32    32 --> ...                              [tcl] set ::dve_fid VPD0
+01:59:32    33 --> ...                                  [tcl] synUtils::setDVEInitPhase 0
+01:59:32    34 --> ...                                      [tcl] ucliCore::getToolPID
+01:59:32    35 --> ...                                          [tcl] synUtils::sendTool -active _icl_setToolSocket /tmp/smlnprcrVyt
+01:59:32    36 --> ...                                              [tcl] synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.kviquez.13029}
+01:59:32    37 --> ...                                                  [tcl] synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.kviquez.13029}
+01:59:32    38 --> ...                                                      [tcl] dveMisc::vbusExpand top
+01:59:32    39 --> ...                                                          [tcl] dveMisc::vbusExpand _vcs_unit__204873936
+01:59:32    40 --> ...                                                              [tcl] config endofsim noexit
+01:59:32    41 --> ...                                                                  [tcl] config onfail enable all
+01:59:32    42 --> ...                                                                      [tcl] config syscaddplainmembers
+01:59:32    43 --> ...                                                                          [tcl] config syscaddsourcenames
+01:59:32    44 --> ...                                                                              [tcl] config syscaddstructtypes
+01:59:32    45 --> ...                                                                                  [tcl] synopsys::listing -disable
+01:59:52    46 --> ...                                                                                      [tcl] dveMisc::vbusExpand top.test1
+01:59:55    47 --> ...                                                                                          [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  10
+01:59:55    48 --> ...                                                                                              [tcl] synopsys::watch -raw
+01:59:55    49 --> ...                                                                                                  [tcl] gui_postwatch -bpid 1  -line 10 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+01:59:56    50 --> ...  [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  11
+01:59:56    51 --> ...      [tcl] synopsys::watch -raw
+01:59:56    52 --> ...          [tcl] gui_postwatch -bpid 2  -line 11 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+01:59:57    53 --> ...              [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  12
+01:59:57    54 --> ...                  [tcl] synopsys::watch -raw
+01:59:57    55 --> ...                      [tcl] gui_postwatch -bpid 3  -line 12 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+01:59:57    56 --> ...                          [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  13
+01:59:57    57 --> ...                              [tcl] synopsys::watch -raw
+01:59:57    58 --> ...                                  [tcl] gui_postwatch -bpid 4  -line 13 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+01:59:58    59 --> ...                                      [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  14
+01:59:58    60 --> ...                                          [tcl] synopsys::watch -raw
+01:59:58    61 --> ...                                              [tcl] gui_postwatch -bpid 5  -line 14 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+01:59:59    62 --> ...                                                  [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  15
+01:59:59    63 --> ...                                                      [tcl] synopsys::watch -raw
+01:59:59    64 --> ...                                                          [tcl] gui_postwatch -bpid 6  -line 15 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+02:00:01    65 --> ...                                                              [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  28
+02:00:01    66 --> ...                                                                  [tcl] synopsys::watch -raw
+02:00:01    67 --> ...                                                                      [tcl] gui_postwatch -bpid 7  -line 28 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+02:00:02    68 --> ...                                                                          [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  30
+02:00:02    69 --> ...                                                                              [tcl] synopsys::watch -raw
+02:00:02    70 --> ...                                                                                  [tcl] gui_postwatch -bpid 8  -line 30 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+02:00:03    71 --> ...                                                                                      [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  32
+02:00:03    72 --> ...                                                                                          [tcl] synopsys::watch -raw
+02:00:03    73 --> ...                                                                                              [tcl] gui_postwatch -bpid 9  -line 32 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+02:00:09    74 --> ...                                                                                                  [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  40
+02:00:09    75 --> ...  [tcl] synopsys::watch -raw
+02:00:09    76 --> ...      [tcl] gui_postwatch -bpid 10  -line 40 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+02:00:11    77 --> ...          [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  44
+02:00:11    78 --> ...              [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  46
+02:00:11    79 --> ...                  [tcl] synopsys::watch -raw
+02:00:11    80 --> ...                      [tcl] gui_postwatch -bpid 11  -line 46 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+02:00:13    81 --> ...                          [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  45
+02:00:13    82 --> ...                              [tcl] synopsys::watch -raw
+02:00:13    83 --> ...                                  [tcl] gui_postwatch -bpid 12  -line 45 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+02:00:14    84 --> ...                                      [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  48
+02:00:14    85 --> ...                                          [tcl] synopsys::watch -raw
+02:00:14    86 --> ...                                              [tcl] gui_postwatch -bpid 13  -line 48 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+02:00:15    87 --> ...                                                  [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  49
+02:00:15    88 --> ...                                                      [tcl] synopsys::watch -raw
+02:00:15    89 --> ...                                                          [tcl] gui_postwatch -bpid 14  -line 49 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+02:00:17    90 --> ...                                                              [tcl] synopsys::watch  -file  $::env(PWD)/Test.sv  -line  51
+02:00:17    91 --> ...                                                                  [tcl] synopsys::watch -raw
+02:00:17    92 --> ...                                                                      [tcl] gui_postwatch -bpid 15  -line 51 -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+02:00:19    93 --> ...                                                                          [tcl] synopsys::run
+02:00:19    94 --> ...                                                                              [tcl] set ucliGUI::state
+02:00:19    95 --> ...                                                                                  [tcl] gui_update_simulator_buttons
+02:00:19    96 --> ...                                                                                      [tcl] set ucliGUI::state
+02:00:19    97 --> ...                                                                                          [tcl] set ucliGUI::state
+02:00:19    98 --> ...                                                                                              [tcl] set ucliGUI::state
+02:00:19    99 --> ...                                                                                                  [tcl] set ucliGUI::state
+02:00:19    100 --> ...  [tcl] catch {senv activeDomain} dveMisc::result 
+02:00:19    101 --> ...      [tcl] set dveMisc::result
+02:00:19    102 --> ...          [tcl] gui_update_simulator_buttons
+02:00:19    103 --> ...              [tcl] synopsys::xml get_stop_data
+02:00:19    104 --> ...                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
+02:00:19    105 --> ...                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
+02:00:19    106 --> ...                          [tcl] trigger_hier_stack_context_switch 1
+02:00:22    107 --> ...                              [tcl] synopsys::next
+02:00:22    108 --> ...                                  [tcl] set ucliGUI::state
+02:00:22    109 --> ...                                      [tcl] gui_update_simulator_buttons
+02:00:22    110 --> ...                                          [tcl] set ucliGUI::state
+02:00:22    111 --> ...                                              [tcl] set ucliGUI::state
+02:00:22    112 --> ...                                                  [tcl] catch {senv activeDomain} dveMisc::result 
+02:00:22    113 --> ...                                                      [tcl] set dveMisc::result
+02:00:22    114 --> ...                                                          [tcl] gui_update_simulator_buttons
+02:00:22    115 --> ...                                                              [tcl] synopsys::xml get_stop_data
+02:00:22    116 --> ...                                                                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
+02:00:22    117 --> ...                                                                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:2:3)" viewId="Local.1" />}
+02:00:22    118 --> ...                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114121568" frame_id="frame(top.test1)" viewId="Hidden 1" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
+02:00:22    119 --> ...                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114352016" frame_id="frame(top.test1)" viewId="Hidden 2" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
+02:00:22    120 --> ...                                                                                  [tcl] dveMisc::vbusExpand top.test1.tc1_single_read
+02:00:25    121 --> ...                                                                                      [tcl] synopsys::next
+02:00:25    122 --> ...                                                                                          [tcl] set ucliGUI::state
+02:00:25    123 --> ...                                                                                              [tcl] gui_update_simulator_buttons
+02:00:25    124 --> ...                                                                                                  [tcl] set ucliGUI::state
+02:00:25    125 --> ...  [tcl] catch {senv activeDomain} dveMisc::result 
+02:00:25    126 --> ...      [tcl] set dveMisc::result
+02:00:25    127 --> ...          [tcl] gui_update_simulator_buttons
+02:00:25    128 --> ...              [tcl] synopsys::xml get_stop_data
+02:00:25    129 --> ...                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:00:25    130 --> ...                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
+02:00:25    131 --> ...                          [tcl] synopsys::dump -add {top.sdrc_intf } -aggregates  -fid VPD0
+02:00:25    132 --> ...                              [tcl] dveMisc::vbusExpand top.u_sdram32
+02:00:25    133 --> ...                                  [tcl] trigger_hier_stack_context_switch 0
+02:00:27    134 --> ...                                      [tcl] synopsys::run
+02:00:27    135 --> ...                                          [tcl] set ucliGUI::state
+02:00:27    136 --> ...                                              [tcl] gui_update_simulator_buttons
+02:00:27    137 --> ...                                                  [tcl] set ucliGUI::state
+02:00:27    138 --> ...                                                      [tcl] set ucliGUI::state
+02:00:27    139 --> ...                                                          [tcl] set ucliGUI::state
+02:00:27    140 --> ...                                                              [tcl] set ucliGUI::state
+02:00:27    141 --> ...                                                                  [tcl] catch {senv activeDomain} dveMisc::result 
+02:00:27    142 --> ...                                                                      [tcl] set dveMisc::result
+02:00:27    143 --> ...                                                                          [tcl] gui_update_simulator_buttons
+02:00:27    144 --> ...                                                                              [tcl] synopsys::xml get_stop_data
+02:00:27    145 --> ...                                                                                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
+02:00:27    146 --> ...                                                                                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:2:3)" viewId="Local.1" />}
+02:00:27    147 --> ...                                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114211808" frame_id="frame(top.test1)" viewId="Hidden 3" > <item separator="." expr="env.mon" open="1" name="mon" depth="1" /></data>}
+02:00:27    148 --> ...                                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114121568" frame_id="frame(top.test1)" viewId="Hidden 4" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
+02:00:27    149 --> ...                                                                                                  [tcl] trigger_hier_stack_context_switch 1
+02:00:29    150 --> ...  [tcl] synopsys::run
+02:00:29    151 --> ...      [tcl] set ucliGUI::state
+02:00:29    152 --> ...          [tcl] gui_update_simulator_buttons
+02:00:29    153 --> ...              [tcl] set ucliGUI::state
+02:00:29    154 --> ...                  [tcl] set ucliGUI::state
+02:00:29    155 --> ...                      [tcl] set ucliGUI::state
+02:00:29    156 --> ...                          [tcl] set ucliGUI::state
+02:00:29    157 --> ...                              [tcl] catch {senv activeDomain} dveMisc::result 
+02:00:29    158 --> ...                                  [tcl] set dveMisc::result
+02:00:29    159 --> ...                                      [tcl] gui_update_simulator_buttons
+02:00:29    160 --> ...                                          [tcl] synopsys::xml get_stop_data
+02:00:29    161 --> ...                                              [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:00:29    162 --> ...                                                  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:2:3)" viewId="Local.1" />}
+02:00:36    163 --> ...                                                      [tcl] synopsys::run
+02:00:36    164 --> ...                                                          [tcl] set ucliGUI::state
+02:00:36    165 --> ...                                                              [tcl] gui_update_simulator_buttons
+02:00:36    166 --> ...                                                                  [tcl] set ucliGUI::state
+02:00:36    167 --> ...                                                                      [tcl] set ucliGUI::state
+02:00:36    168 --> ...                                                                          [tcl] set ucliGUI::state
+02:00:36    169 --> ...                                                                              [tcl] set ucliGUI::state
+02:00:36    170 --> ...                                                                                  [tcl] catch {senv activeDomain} dveMisc::result 
+02:00:36    171 --> ...                                                                                      [tcl] set dveMisc::result
+02:00:36    172 --> ...                                                                                          [tcl] gui_update_simulator_buttons
+02:00:36    173 --> ...                                                                                              [tcl] synopsys::xml get_stop_data
+02:00:36    174 --> ...                                                                                                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:00:36    175 --> ...  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
+02:00:38    176 --> ...      [tcl] synopsys::run
+02:00:38    177 --> ...          [tcl] set ucliGUI::state
+02:00:38    178 --> ...              [tcl] gui_update_simulator_buttons
+02:00:38    179 --> ...                  [tcl] set ucliGUI::state
+02:00:38    180 --> ...                      [tcl] set ucliGUI::state
+02:00:38    181 --> ...                          [tcl] set ucliGUI::state
+02:00:38    182 --> ...                              [tcl] set ucliGUI::state
+02:00:38    183 --> ...                                  [tcl] catch {senv activeDomain} dveMisc::result 
+02:00:38    184 --> ...                                      [tcl] set dveMisc::result
+02:00:38    185 --> ...                                          [tcl] gui_update_simulator_buttons
+02:00:38    186 --> ...                                              [tcl] synopsys::xml get_stop_data
+02:00:38    187 --> ...                                                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
+02:00:38    188 --> ...                                                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+02:00:39    189 --> ...                                                          [tcl] synopsys::run
+02:00:39    190 --> ...                                                              [tcl] set ucliGUI::state
+02:00:39    191 --> ...                                                                  [tcl] gui_update_simulator_buttons
+02:00:39    192 --> ...                                                                      [tcl] set ucliGUI::state
+02:00:39    193 --> ...                                                                          [tcl] set ucliGUI::state
+02:00:39    194 --> ...                                                                              [tcl] set ucliGUI::state
+02:00:39    195 --> ...                                                                                  [tcl] set ucliGUI::state
+02:00:39    196 --> ...                                                                                      [tcl] catch {senv activeDomain} dveMisc::result 
+02:00:39    197 --> ...                                                                                          [tcl] set dveMisc::result
+02:00:39    198 --> ...                                                                                              [tcl] gui_update_simulator_buttons
+02:00:39    199 --> ...                                                                                                  [tcl] synopsys::xml get_stop_data
+02:00:39    200 --> ...  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:00:39    201 --> ...      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+02:00:39    202 --> ...          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114352016" frame_id="frame(top.test1)" viewId="Hidden 5" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
+02:00:39    203 --> ...              [tcl] dveMisc::vbusExpand top.test1.tc2_single_read
+02:00:42    204 --> ...                  [tcl] synopsys::run
+02:00:42    205 --> ...                      [tcl] set ucliGUI::state
+02:00:42    206 --> ...                          [tcl] gui_update_simulator_buttons
+02:00:42    207 --> ...                              [tcl] set ucliGUI::state
+02:00:42    208 --> ...                                  [tcl] set ucliGUI::state
+02:00:42    209 --> ...                                      [tcl] set ucliGUI::state
+02:00:42    210 --> ...                                          [tcl] set ucliGUI::state
+02:00:42    211 --> ...                                              [tcl] catch {senv activeDomain} dveMisc::result 
+02:00:42    212 --> ...                                                  [tcl] set dveMisc::result
+02:00:42    213 --> ...                                                      [tcl] gui_update_simulator_buttons
+02:00:42    214 --> ...                                                          [tcl] synopsys::xml get_stop_data
+02:00:42    215 --> ...                                                              [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:00:42    216 --> ...                                                                  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+02:00:42    217 --> ...                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114211808" frame_id="frame(top.test1)" viewId="Hidden 6" > <item separator="." expr="env.mon" open="1" name="mon" depth="1" /></data>}
+02:00:42    218 --> ...                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114121568" frame_id="frame(top.test1)" viewId="Hidden 7" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
+02:00:43    219 --> ...                                                                              [tcl] synopsys::run
+02:00:43    220 --> ...                                                                                  [tcl] set ucliGUI::state
+02:00:43    221 --> ...                                                                                      [tcl] gui_update_simulator_buttons
+02:00:43    222 --> ...                                                                                          [tcl] set ucliGUI::state
+02:00:43    223 --> ...                                                                                              [tcl] set ucliGUI::state
+02:00:43    224 --> ...                                                                                                  [tcl] set ucliGUI::state
+02:00:43    225 --> ...  [tcl] set ucliGUI::state
+02:00:43    226 --> ...      [tcl] catch {senv activeDomain} dveMisc::result 
+02:00:43    227 --> ...          [tcl] set dveMisc::result
+02:00:43    228 --> ...              [tcl] gui_update_simulator_buttons
+02:00:44    229 --> ...                  [tcl] synopsys::xml get_stop_data
+02:00:44    230 --> ...                      [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:00:44    231 --> ...                          [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+02:00:44    232 --> ...                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114352016" frame_id="frame(top.test1)" viewId="Hidden 8" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
+02:01:01    233 --> ...                                  [tcl] synopsys::run
+02:01:01    234 --> ...                                      [tcl] set ucliGUI::state
+02:01:01    235 --> ...                                          [tcl] gui_update_simulator_buttons
+02:01:01    236 --> ...                                              [tcl] set ucliGUI::state
+02:01:01    237 --> ...                                                  [tcl] set ucliGUI::state
+02:01:01    238 --> ...                                                      [tcl] set ucliGUI::state
+02:01:01    239 --> ...                                                          [tcl] set ucliGUI::state
+02:01:01    240 --> ...                                                              [tcl] catch {senv activeDomain} dveMisc::result 
+02:01:01    241 --> ...                                                                  [tcl] set dveMisc::result
+02:01:01    242 --> ...                                                                      [tcl] gui_update_simulator_buttons
+02:01:01    243 --> ...                                                                          [tcl] synopsys::xml get_stop_data
+02:01:01    244 --> ...                                                                              [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:01:01    245 --> ...                                                                                  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+02:01:01    246 --> ...                                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114211808" frame_id="frame(top.test1)" viewId="Hidden 9" > <item separator="." expr="env.mon" open="1" name="mon" depth="1" /></data>}
+02:01:01    247 --> ...                                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="114121568" frame_id="frame(top.test1)" viewId="Hidden 10" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
+02:01:04    248 --> ...                                                                                              [tcl] synopsys::run
+02:01:04    249 --> ...                                                                                                  [tcl] set ucliGUI::state
+02:01:04    250 --> ...  [tcl] gui_update_simulator_buttons
+02:01:04    251 --> ...      [tcl] set ucliGUI::state
+02:01:04    252 --> ...          [tcl] set ucliGUI::state
+02:01:04    253 --> ...              [tcl] set ucliGUI::state
+02:01:04    254 --> ...                  [tcl] set ucliGUI::state
+02:01:04    255 --> ...                      [tcl] catch {senv activeDomain} dveMisc::result 
+02:01:04    256 --> ...                          [tcl] set dveMisc::result
+02:01:04    257 --> ...                              [tcl] gui_update_simulator_buttons
+02:01:04    258 --> ...                                  [tcl] synopsys::xml get_stop_data
+02:01:04    259 --> ...                                      [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:01:04    260 --> ...                                          [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+02:01:17    261 --> ...                                              [tcl] synopsys::next
+02:01:17    262 --> ...                                                  [tcl] set ucliGUI::state
+02:01:17    263 --> ...                                                      [tcl] gui_update_simulator_buttons
+02:01:17    264 --> ...                                                          [tcl] set ucliGUI::state
+02:01:17    265 --> ...                                                              [tcl] catch {senv activeDomain} dveMisc::result 
+02:01:17    266 --> ...                                                                  [tcl] set dveMisc::result
+02:01:17    267 --> ...                                                                      [tcl] gui_update_simulator_buttons
+02:01:17    268 --> ...                                                                          [tcl] synopsys::xml get_stop_data
+02:01:17    269 --> ...                                                                              [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:01:17    270 --> ...                                                                                  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+02:01:18    271 --> ...                                                                                      [tcl] synopsys::next
+02:01:18    272 --> ...                                                                                          [tcl] set ucliGUI::state
+02:01:18    273 --> ...                                                                                              [tcl] gui_update_simulator_buttons
+02:01:18    274 --> ...                                                                                                  [tcl] set ucliGUI::state
+02:01:18    275 --> ...  [tcl] catch {senv activeDomain} dveMisc::result 
+02:01:18    276 --> ...      [tcl] set dveMisc::result
+02:01:18    277 --> ...          [tcl] gui_update_simulator_buttons
+02:01:18    278 --> ...              [tcl] synopsys::xml get_stop_data
+02:01:18    279 --> ...                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:01:18    280 --> ...                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+02:01:19    281 --> ...                          [tcl] synopsys::next
+02:01:19    282 --> ...                              [tcl] set ucliGUI::state
+02:01:19    283 --> ...                                  [tcl] gui_update_simulator_buttons
+02:01:19    284 --> ...                                      [tcl] set ucliGUI::state
+02:01:19    285 --> ...                                          [tcl] catch {senv activeDomain} dveMisc::result 
+02:01:19    286 --> ...                                              [tcl] set dveMisc::result
+02:01:19    287 --> ...                                                  [tcl] gui_update_simulator_buttons
+02:01:19    288 --> ...                                                      [tcl] synopsys::xml get_stop_data
+02:01:19    289 --> ...                                                          [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+02:01:19    290 --> ...                                                              [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
+02:01:19    291 --> ...                                                                  [tcl] synopsys::next
+02:01:19    292 --> ...                                                                      [tcl] set ucliGUI::state
+02:01:19    293 --> ...                                                                          [tcl] gui_update_simulator_buttons
+02:01:19    294 --> ...                                                                              [tcl] set ucliGUI::state
+02:01:19    295 --> ...                                                                                  [tcl] set ucliGUI::state
+02:01:19    296 --> ...                                                                                      [tcl] catch {senv activeDomain} dveMisc::result 
+02:01:19    297 --> ...                                                                                          [tcl] set dveMisc::result
+02:01:19    298 --> ...                                                                                              [tcl] gui_update_simulator_buttons
+02:01:19    299 --> ...                                                                                                  [tcl] synopsys::xml get_stop_data
+02:01:19    300 --> ...  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
+02:01:19    301 --> ...      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
+02:01:20    302 --> ...          [tcl] synopsys::next
+02:01:20    303 --> ...              [tcl] set ucliGUI::state
+02:01:20    304 --> ...                  [tcl] gui_update_simulator_buttons
+02:01:20    305 --> ...                      [tcl] set ucliGUI::state
+02:01:20    306 --> ...                          [tcl] catch {senv activeDomain} dveMisc::result 
+02:01:20    307 --> ...                              [tcl] set dveMisc::result
+02:01:20    308 --> ...                                  [tcl] gui_update_simulator_buttons
+02:01:20    309 --> ...                                      [tcl] synopsys::xml get_stop_data
+02:01:20    310 --> ...                                          [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
+02:01:20    311 --> ...                                              [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
+02:01:21    312 --> ...                                                  [tcl] dveMisc::vbusExpand top.duv
+02:01:21    313 --> ...                                                      [tcl] dveMisc::vbusExpand top.duv.u_wb2sdrc
+02:01:21    314 --> ...                                                          [tcl] trigger_hier_stack_context_switch 0
+02:01:28    315 --> ...                                                              [tcl] synopsys::finish
+02:01:28    316 --> ...                                                                  [tcl] set ucliGUI::state
+02:01:28    317 --> ...                                                                      [tcl] gui_update_simulator_buttons
+02:01:28    318 --> ...                                                                          [tcl] set ucliGUI::state
+02:01:28    319 --> ...                                                                              [tcl] catch {senv activeDomain} dveMisc::result 
+02:01:28    320 --> ...                                                                                  [tcl] set dveMisc::result
+02:01:28    321 --> ...                                                                                      [tcl] gui_update_simulator_buttons
+02:01:59    322 --> ...                                                                                          [tcl] if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+02:01:59    323 --> ...                                                                                              [tcl] ucli_exit

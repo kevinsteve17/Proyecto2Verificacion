@@ -3,14 +3,26 @@ program testcase(inft_sdrcntrl intf);
   sdrcEnv env = new(intf);
   int k;
   reg [31:0] StartAddr;
+  
+  initial 
+  begin
+    env.drv.reset();
+    tc1_single_read();
+    tc2_single_read();
+    tc3_single_read();
+    tc4_4Write_4Read();
+    tc5_24Write_24Read();
+    tc4_6rndm_Write_2rndm_Read();
+
+  end
      
-    task tc1_single_read;
+    task tc1_single_read();
       begin
         $display("-------------------------------------- ");
         $display(" Case-1: Single Write/Read Case        ");
         $display("-------------------------------------- ");
     
-        env.drv.reset();
+        
         
         // single write and single read
         env.drv.BurstWrite(32'h4_0000,8'h4);
@@ -23,7 +35,7 @@ program testcase(inft_sdrcntrl intf);
       end
     endtask
 
-    task tc2_single_read;
+    task tc2_single_read();
       begin
         $display("-------------------------------------- ");
         $display(" Case-1: Single Write/Read Case        ");
@@ -42,7 +54,7 @@ program testcase(inft_sdrcntrl intf);
       end
     endtask
 
-    task tc3_single_read;
+    task tc3_single_read();
       begin
        
         $display("----------------------------------------");
@@ -104,7 +116,7 @@ program testcase(inft_sdrcntrl intf);
 
 
     // Case:4 4 Write & 4 Read
-    task tc4_4Write_4Read;
+    task tc4_4Write_4Read();
       begin
         $display("----------------------------------------");
         $display(" Case:4 4 Write & 4 Read                ");
@@ -121,7 +133,7 @@ program testcase(inft_sdrcntrl intf);
     endtask
 
     // Case:5 24 Write & 24 Read With Different Bank and Row
-    task tc5_24Write_24Read;
+    task tc5_24Write_24Read();
       begin
         $display("---------------------------------------");
         $display(" Case:5 24 Write & 24 Read With Different Bank and Row ");
@@ -182,7 +194,7 @@ program testcase(inft_sdrcntrl intf);
     endtask
 
     // Case: 6 Random 2 write and 2 read random
-    task tc4_6rndm_Write_2rndm_Read;
+    task tc4_6rndm_Write_2rndm_Read();
       begin
         $display("---------------------------------------------------");
         $display(" Case: 6 Random 2 write and 2 read random");

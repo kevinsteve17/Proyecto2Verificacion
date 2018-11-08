@@ -1,0 +1,112 @@
+{
+    "Modules": {
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 12
+        },
+        "...MASTER...": {},
+        "_vcs_unit__204873936": {
+            "Compiled": "Yes",
+            "Compiled Times": 8
+        },
+        "testcase": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 12
+        },
+        "mt48lc2m32b2": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 12
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 12
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 12
+        },
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 12
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 12
+        }
+    },
+    "CompUnits": {
+        "U5R3s_d": {
+            "mod": "_vcs_unit__204873936",
+            "out": "U5R3s_d.o",
+            "checksum": 0,
+            "bytes": 90364,
+            "mode": 4,
+            "archive": "archive.11/_12711_archive_1.a"
+        },
+        "PATxq_d": {
+            "mod": "testcase",
+            "out": "PATxq_d.o",
+            "checksum": 0,
+            "bytes": 102122,
+            "mode": 4,
+            "archive": "archive.11/_12711_archive_1.a"
+        }
+    },
+    "reusePaths": {
+        "a3mSN_d": {
+            "icPath": "csrc"
+        },
+        "ChjVu_d": {
+            "icPath": "csrc"
+        },
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "RuFh3_d": {
+            "icPath": "csrc"
+        },
+        "Emx8S_d": {
+            "icPath": "csrc"
+        },
+        "NTNU2_d": {
+            "icPath": "csrc"
+        },
+        "ypVrV_d": {
+            "icPath": "csrc"
+        },
+        "xqeUE_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.11/_12711_archive_1.a",
+            "objects": [
+                [
+                    "U5R3s_d.o",
+                    90364
+                ],
+                [
+                    "PATxq_d.o",
+                    102122
+                ],
+                [
+                    "amcQwB.o",
+                    126058
+                ]
+            ],
+            "size": 318544
+        }
+    ]
+}

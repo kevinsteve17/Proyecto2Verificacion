@@ -3,21 +3,21 @@ gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_typ
 
 # State setting overrides
 gui_state_default_create -off -ini
-gui_set_state_value -category Layout -key child_console_size_x -value 1905
-gui_set_state_value -category Layout -key child_console_size_y -value 255
-gui_set_state_value -category Layout -key child_data_size_x -value 162
+gui_set_state_value -category Layout -key child_console_size_x -value 1902
+gui_set_state_value -category Layout -key child_console_size_y -value 252
+gui_set_state_value -category Layout -key child_data_size_x -value 159
 gui_set_state_value -category Layout -key child_data_size_y -value 498
 gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
 gui_set_state_value -category Layout -key child_hier_colpd -value 0
-gui_set_state_value -category Layout -key child_hier_size_x -value 162
+gui_set_state_value -category Layout -key child_hier_size_x -value 159
 gui_set_state_value -category Layout -key child_hier_size_y -value 498
 gui_set_state_value -category Layout -key child_source_docknewline -value false
 gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
 gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
-gui_set_state_value -category Layout -key child_source_size_x -value 1584
+gui_set_state_value -category Layout -key child_source_size_x -value 1587
 gui_set_state_value -category Layout -key child_source_size_y -value 493
-gui_set_state_value -category Layout -key main_pos_x -value 12
-gui_set_state_value -category Layout -key main_pos_y -value 61
+gui_set_state_value -category Layout -key main_pos_x -value 15
+gui_set_state_value -category Layout -key main_pos_y -value 64
 gui_set_state_value -category Layout -key main_size_x -value 1917
 gui_set_state_value -category Layout -key main_size_y -value 921
 gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
@@ -36,17 +36,40 @@ gui_set_pref_value -category {Globals} -key {smart_resize} -value {true}
 gui_sim_run Ucli -exe ./simv -args {-ucligui  } -dir .
 gui_list_expand -id  Hier.1   top
 gui_list_select -id Hier.1 -current_item_name top.test1 -current_item_type Scope  -selected  { top.test1   }
+gui_list_expand -id Hier.1   top.test1
 gui_list_action -id  Hier.1 top.test1
-gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  7  }
-gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  9  }
-gui_sim_watch { -disable {2}}
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  10  }
 gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  11  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  12  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  13  }
 gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  14  }
-gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  16  }
-gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  19  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  15  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  28  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  30  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  32  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  40  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  44  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  46  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  45  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  48  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  49  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  51  }
+gui_sim_continue  
+gui_sim_next 
+gui_sim_next 
 gui_sim_continue  
 gui_sim_continue  
 gui_sim_continue  
 gui_sim_continue  
 gui_sim_continue  
 gui_sim_continue  
+gui_sim_continue  
+gui_sim_continue  
+gui_sim_continue  
+gui_src_highlight_item -id Source.1 -lfrom 57 -idxfrom 9 -fileIdFrom 0 -lto 57 -idxto 24 -fileIdTo 0 -selection {tc3_single_read} -selectionId 0 -replace 0
+gui_sim_next 
+gui_sim_next 
+gui_sim_next 
+gui_sim_next 
+gui_sim_next 
+gui_sim_terminate 

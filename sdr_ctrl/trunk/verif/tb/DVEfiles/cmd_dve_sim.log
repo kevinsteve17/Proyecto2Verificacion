@@ -14,28 +14,45 @@ synopsys::dump -autoflush on -fid VPD0
 set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket /tmp/smlnprI5Ix9
-synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.kviquez.17340}
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.kviquez.17340}
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnprcrVyt
+synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.kviquez.13029}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.kviquez.13029}
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
 config syscaddsourcenames
 config syscaddstructtypes
 synopsys::listing -disable
-synopsys::watch  -file  $::env(PWD)/Test.sv  -line  7
-synopsys::watch -raw
-synopsys::watch  -file  $::env(PWD)/Test.sv  -line  9
-synopsys::watch -raw
-synopsys::watch  -disable {2}
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  10
 synopsys::watch -raw
 synopsys::watch  -file  $::env(PWD)/Test.sv  -line  11
 synopsys::watch -raw
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  12
+synopsys::watch -raw
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  13
+synopsys::watch -raw
 synopsys::watch  -file  $::env(PWD)/Test.sv  -line  14
 synopsys::watch -raw
-synopsys::watch  -file  $::env(PWD)/Test.sv  -line  16
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  15
 synopsys::watch -raw
-synopsys::watch  -file  $::env(PWD)/Test.sv  -line  19
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  28
+synopsys::watch -raw
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  30
+synopsys::watch -raw
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  32
+synopsys::watch -raw
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  40
+synopsys::watch -raw
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  44
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  46
+synopsys::watch -raw
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  45
+synopsys::watch -raw
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  48
+synopsys::watch -raw
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  49
+synopsys::watch -raw
+synopsys::watch  -file  $::env(PWD)/Test.sv  -line  51
 synopsys::watch -raw
 synopsys::run
 set ucliGUI::state
@@ -47,58 +64,147 @@ synopsys::xml get_stop_data
 synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
 synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
 trigger_hier_stack_context_switch 1
-synopsys::run
-set ucliGUI::state
-set ucliGUI::state
+synopsys::next
 set ucliGUI::state
 set ucliGUI::state
 set ucliGUI::state
 synopsys::xml get_stop_data
 synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:2:3)" viewId="Local.1" />}
+synopsys::xml {evaluate <data updateType="increment" itemId="114121568" frame_id="frame(top.test1)" viewId="Hidden 1" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
+synopsys::xml {evaluate <data updateType="increment" itemId="114352016" frame_id="frame(top.test1)" viewId="Hidden 2" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
+synopsys::next
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
 synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
-synopsys::xml {evaluate <data updateType="increment" itemId="114167168" frame_id="frame(top.test1)" viewId="Hidden 1" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
-synopsys::xml {evaluate <data updateType="increment" itemId="114221728" frame_id="frame(top.test1)" viewId="Hidden 2" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
-synopsys::run
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-synopsys::xml get_stop_data
-synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
-synopsys::xml {evaluate <data updateType="increment" itemId="114221728" frame_id="frame(top.test1)" viewId="Hidden 3" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
-synopsys::run
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-synopsys::xml get_stop_data
-synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
-synopsys::xml {evaluate <data updateType="increment" itemId="114232208" frame_id="frame(top.test1)" viewId="Hidden 4" > <item separator="." expr="env.mon" open="1" name="mon" depth="1" /></data>}
-synopsys::xml {evaluate <data updateType="increment" itemId="114167168" frame_id="frame(top.test1)" viewId="Hidden 5" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
-synopsys::run
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-synopsys::xml get_stop_data
-synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
-synopsys::run
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-synopsys::xml get_stop_data
-synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(17:0:4)" viewId="Local.1" />}
+synopsys::dump -add {top.sdrc_intf } -aggregates  -fid VPD0
 trigger_hier_stack_context_switch 0
-if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:2:3)" viewId="Local.1" />}
+synopsys::xml {evaluate <data updateType="increment" itemId="114211808" frame_id="frame(top.test1)" viewId="Hidden 3" > <item separator="." expr="env.mon" open="1" name="mon" depth="1" /></data>}
+synopsys::xml {evaluate <data updateType="increment" itemId="114121568" frame_id="frame(top.test1)" viewId="Hidden 4" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
+trigger_hier_stack_context_switch 1
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:2:3)" viewId="Local.1" />}
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+synopsys::xml {evaluate <data updateType="increment" itemId="114352016" frame_id="frame(top.test1)" viewId="Hidden 5" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+synopsys::xml {evaluate <data updateType="increment" itemId="114211808" frame_id="frame(top.test1)" viewId="Hidden 6" > <item separator="." expr="env.mon" open="1" name="mon" depth="1" /></data>}
+synopsys::xml {evaluate <data updateType="increment" itemId="114121568" frame_id="frame(top.test1)" viewId="Hidden 7" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+synopsys::xml {evaluate <data updateType="increment" itemId="114352016" frame_id="frame(top.test1)" viewId="Hidden 8" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+synopsys::xml {evaluate <data updateType="increment" itemId="114211808" frame_id="frame(top.test1)" viewId="Hidden 9" > <item separator="." expr="env.mon" open="1" name="mon" depth="1" /></data>}
+synopsys::xml {evaluate <data updateType="increment" itemId="114121568" frame_id="frame(top.test1)" viewId="Hidden 10" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+synopsys::next
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+synopsys::next
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:5:4)" viewId="Local.1" />}
+synopsys::next
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(12:0:2)" /> <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
+synopsys::next
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
+synopsys::next
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
+synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(12:0:2)" viewId="Local.1" />}
+trigger_hier_stack_context_switch 0
 synopsys::finish
 set ucliGUI::state
 set ucliGUI::state
+if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
 ucli_exit

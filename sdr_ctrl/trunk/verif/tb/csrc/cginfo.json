@@ -1,167 +1,141 @@
 {
-    "PEModules": [],
     "MlibObjs": {},
-    "CurCompileUdps": {},
-    "CompileStrategy": "fullobj",
+    "PEModules": [],
+    "CurCompileModules": [
+        "...MASTER...",
+        "_vcs_unit__204873936",
+        "_vcs_unit__204873936",
+        "std",
+        "intf_sdram",
+        "intf_wishBone",
+        "inft_sdrcntrl",
+        "testcase",
+        "testcase",
+        "top",
+        "mt48lc2m32b2",
+        "sdrc_top",
+        "sdrc_bank_fsm"
+    ],
     "PrevCompiledModules": {
         "intf_wishBone": {
             "ypVrV_d": {
-                "out": "ypVrV_d.o",
-                "bytes": 14211,
                 "checksum": 0,
+                "bytes": 14211,
                 "mod": "intf_wishBone",
                 "mode": 4,
-                "archive": "archive.9/_prev_archive_1.a"
-            }
-        },
-        "...MASTER...": {
-            "amcQw_d": {
-                "out": "objs/amcQw_d.o",
-                "bytes": 7908,
-                "checksum": 0,
-                "mod": "...MASTER...",
-                "mode": 4
-            }
-        },
-        "sdrc_top": {
-            "NTNU2_d": {
-                "out": "NTNU2_d.o",
-                "bytes": 384347,
-                "checksum": 0,
-                "mod": "sdrc_top",
-                "mode": 4,
-                "archive": "archive.9/_prev_archive_1.a"
-            }
-        },
-        "mt48lc2m32b2": {
-            "a3mSN_d": {
-                "out": "a3mSN_d.o",
-                "bytes": 196218,
-                "checksum": 0,
-                "mod": "mt48lc2m32b2",
-                "mode": 4,
-                "archive": "archive.9/_prev_archive_1.a"
-            }
-        },
-        "_vcs_unit__204873936": {
-            "U5R3s_d": {
-                "out": "U5R3s_d.o",
-                "bytes": 90364,
-                "checksum": 0,
-                "mod": "_vcs_unit__204873936",
-                "mode": 4,
-                "archive": "archive.9/_prev_archive_1.a"
-            }
-        },
-        "std": {
-            "reYIK_d": {
-                "out": "reYIK_d.o",
-                "bytes": 41766,
-                "checksum": 0,
-                "mod": "std",
-                "mode": 4,
-                "archive": "archive.9/_prev_archive_1.a"
-            }
-        },
-        "inft_sdrcntrl": {
-            "xqeUE_d": {
-                "out": "xqeUE_d.o",
-                "bytes": 13319,
-                "checksum": 0,
-                "mod": "inft_sdrcntrl",
-                "mode": 4,
-                "archive": "archive.9/_prev_archive_1.a"
-            }
-        },
-        "top": {
-            "Emx8S_d": {
-                "out": "Emx8S_d.o",
-                "bytes": 23424,
-                "checksum": 0,
-                "mod": "top",
-                "mode": 4,
-                "archive": "archive.9/_16985_archive_1.a"
-            }
-        },
-        "sdrc_bank_fsm": {
-            "ChjVu_d": {
-                "out": "ChjVu_d.o",
-                "bytes": 49192,
-                "checksum": 0,
-                "mod": "sdrc_bank_fsm",
-                "mode": 4,
-                "archive": "archive.9/_prev_archive_1.a"
+                "archive": "archive.11/_prev_archive_1.a",
+                "out": "ypVrV_d.o"
             }
         },
         "testcase": {
             "PATxq_d": {
-                "out": "PATxq_d.o",
-                "bytes": 18546,
                 "checksum": 0,
+                "bytes": 97799,
                 "mod": "testcase",
+                "out": "PATxq_d.o",
                 "mode": 4,
-                "archive": "archive.9/_prev_archive_1.a"
+                "archive": "archive.11/_12711_archive_1.a"
+            }
+        },
+        "_vcs_unit__204873936": {
+            "U5R3s_d": {
+                "checksum": 0,
+                "bytes": 90364,
+                "mod": "_vcs_unit__204873936",
+                "out": "U5R3s_d.o",
+                "mode": 4,
+                "archive": "archive.11/_12711_archive_1.a"
+            }
+        },
+        "top": {
+            "Emx8S_d": {
+                "checksum": 0,
+                "bytes": 23891,
+                "mod": "top",
+                "out": "Emx8S_d.o",
+                "mode": 4,
+                "archive": "archive.11/_prev_archive_1.a"
+            }
+        },
+        "inft_sdrcntrl": {
+            "xqeUE_d": {
+                "checksum": 0,
+                "bytes": 13319,
+                "mod": "inft_sdrcntrl",
+                "mode": 4,
+                "archive": "archive.11/_prev_archive_1.a",
+                "out": "xqeUE_d.o"
+            }
+        },
+        "sdrc_top": {
+            "NTNU2_d": {
+                "checksum": 0,
+                "bytes": 384347,
+                "mod": "sdrc_top",
+                "mode": 4,
+                "archive": "archive.11/_prev_archive_1.a",
+                "out": "NTNU2_d.o"
+            }
+        },
+        "sdrc_bank_fsm": {
+            "ChjVu_d": {
+                "checksum": 0,
+                "bytes": 49192,
+                "mod": "sdrc_bank_fsm",
+                "mode": 4,
+                "archive": "archive.11/_prev_archive_1.a",
+                "out": "ChjVu_d.o"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "checksum": 0,
+                "bytes": 41766,
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.11/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+            }
+        },
+        "mt48lc2m32b2": {
+            "a3mSN_d": {
+                "checksum": 0,
+                "bytes": 196218,
+                "mod": "mt48lc2m32b2",
+                "mode": 4,
+                "archive": "archive.11/_prev_archive_1.a",
+                "out": "a3mSN_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "checksum": 0,
+                "bytes": 7908,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "out": "objs/amcQw_d.o"
             }
         },
         "intf_sdram": {
             "RuFh3_d": {
-                "out": "RuFh3_d.o",
-                "bytes": 14387,
                 "checksum": 0,
+                "bytes": 14387,
                 "mod": "intf_sdram",
                 "mode": 4,
-                "archive": "archive.9/_prev_archive_1.a"
+                "archive": "archive.11/_prev_archive_1.a",
+                "out": "RuFh3_d.o"
             }
         }
     },
+    "CompileProcesses": [
+        "cgproc.12711.json"
+    ],
     "NameTable": {
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
-            "module",
-            9
-        ],
-        "sdrc_top": [
-            "sdrc_top",
-            "NTNU2",
-            "module",
-            7
-        ],
-        "mt48lc2m32b2": [
-            "mt48lc2m32b2",
-            "a3mSN",
-            "module",
-            13
-        ],
         "_vcs_unit__204873936": [
             "_vcs_unit__204873936",
             "U5R3s",
             "module",
             1
-        ],
-        "std": [
-            "std",
-            "reYIK",
-            "module",
-            2
-        ],
-        "intf_sdram": [
-            "intf_sdram",
-            "RuFh3",
-            "module",
-            3
-        ],
-        "intf_wishBone": [
-            "intf_wishBone",
-            "ypVrV",
-            "module",
-            4
-        ],
-        "inft_sdrcntrl": [
-            "inft_sdrcntrl",
-            "xqeUE",
-            "module",
-            5
         ],
         "testcase": [
             "testcase",
@@ -175,94 +149,121 @@
             "module",
             6
         ],
+        "std": [
+            "std",
+            "reYIK",
+            "module",
+            2
+        ],
+        "mt48lc2m32b2": [
+            "mt48lc2m32b2",
+            "a3mSN",
+            "module",
+            13
+        ],
+        "intf_sdram": [
+            "intf_sdram",
+            "RuFh3",
+            "module",
+            3
+        ],
+        "intf_wishBone": [
+            "intf_wishBone",
+            "ypVrV",
+            "module",
+            4
+        ],
         "sdrc_bank_fsm": [
             "sdrc_bank_fsm",
             "ChjVu",
             "module",
             8
+        ],
+        "sdrc_top": [
+            "sdrc_top",
+            "NTNU2",
+            "module",
+            7
+        ],
+        "inft_sdrcntrl": [
+            "inft_sdrcntrl",
+            "xqeUE",
+            "module",
+            5
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module",
+            9
         ]
     },
+    "CompileStatus": "Successful",
+    "Misc": {
+        "cwd": "/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb",
+        "default_output_dir": "csrc",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/csrc",
+        "csrc": "csrc",
+        "archive_dir": "archive.11",
+        "daidir_abs": "/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv.daidir"
+    },
+    "CompileStrategy": "fullobj",
     "stat": {
-        "peak_mem_kb": 240120,
         "ru_self_cgstart": {
-            "ru_utime_sec": 0.342947,
-            "ru_minflt": 24574,
-            "ru_stime_sec": 0.074987999999999999,
-            "ru_maxrss_kb": 76628,
             "ru_majflt": 0,
-            "ru_nvcsw": 769,
-            "ru_nivcsw": 249
+            "ru_utime_sec": 0.376942,
+            "ru_maxrss_kb": 76880,
+            "ru_stime_sec": 0.067988999999999994,
+            "ru_minflt": 24713,
+            "ru_nvcsw": 711,
+            "ru_nivcsw": 52
         },
-        "totalObjSize": 145684,
-        "ru_self_end": {
-            "ru_utime_sec": 0.51192199999999999,
-            "ru_minflt": 28817,
-            "ru_stime_sec": 0.090985999999999997,
-            "ru_maxrss_kb": 86360,
-            "ru_majflt": 0,
-            "ru_nvcsw": 881,
-            "ru_nivcsw": 257
-        },
-        "outputSizePerQuad": 8.0041755947475419,
-        "nQuads": 18201,
-        "Frontend(%)": 66.992041756361317,
         "ru_childs_end": {
-            "ru_utime_sec": 0.003999,
-            "ru_minflt": 4122,
-            "ru_stime_sec": 0.0089980000000000008,
-            "ru_maxrss_kb": 27764,
             "ru_majflt": 0,
+            "ru_utime_sec": 0.0069979999999999999,
+            "ru_maxrss_kb": 28016,
+            "ru_stime_sec": 0.003999,
+            "ru_minflt": 4122,
             "ru_nvcsw": 28,
             "ru_nivcsw": 18
         },
-        "CodeGen(%)": 33.007958243638676,
+        "quadSpeed": 90442.852119269111,
+        "nQuads": 19804,
+        "outputSizePerQuad": 16.084831347202584,
         "ru_childs_cgstart": {
-            "ru_utime_sec": 0.0019989999999999999,
-            "ru_minflt": 3610,
-            "ru_stime_sec": 0.0089980000000000008,
-            "ru_maxrss_kb": 21108,
             "ru_majflt": 0,
+            "ru_utime_sec": 0.005999,
+            "ru_maxrss_kb": 21380,
+            "ru_stime_sec": 0.0029989999999999999,
+            "ru_minflt": 3610,
             "ru_nvcsw": 23,
             "ru_nivcsw": 16
         },
-        "nMops": 55132,
-        "mopSpeed": 326273.11732504814,
-        "quadSpeed": 107714.15889924546,
-        "mop/quad": 3.0290643371243338
+        "mopSpeed": 282695.56599852943,
+        "peak_mem_kb": 240280,
+        "CodeGen(%)": 36.745039930593435,
+        "nMops": 61901,
+        "totalObjSize": 318544,
+        "ru_self_end": {
+            "ru_majflt": 0,
+            "ru_utime_sec": 0.59590900000000002,
+            "ru_maxrss_kb": 86880,
+            "ru_stime_sec": 0.085986000000000007,
+            "ru_minflt": 29145,
+            "ru_nvcsw": 827,
+            "ru_nivcsw": 206
+        },
+        "mop/quad": 3.1256816804685923,
+        "Frontend(%)": 63.254960069406572
     },
-    "CurCompileModules": [
-        "...MASTER...",
-        "_vcs_unit__204873936",
-        "std",
-        "intf_sdram",
-        "intf_wishBone",
-        "inft_sdrcntrl",
-        "testcase",
-        "top",
-        "top",
-        "mt48lc2m32b2",
-        "sdrc_top",
-        "sdrc_bank_fsm"
-    ],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 126058,
+        "archive": "archive.11/_12711_archive_1.a"
+    },
     "LVLData": [
         "SIM"
-    ],
-    "SIMBData": {
-        "bytes": 121748,
-        "out": "amcQwB.o",
-        "archive": "archive.9/_16985_archive_1.a"
-    },
-    "CompileProcesses": [
-        "cgproc.16985.json"
-    ],
-    "CompileStatus": "Successful",
-    "Misc": {
-        "default_output_dir": "csrc",
-        "cwd": "/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb",
-        "csrc": "csrc",
-        "daidir": "simv.daidir",
-        "csrc_abs": "/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/csrc",
-        "daidir_abs": "/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv.daidir",
-        "archive_dir": "archive.9"
-    }
+    ]
 }

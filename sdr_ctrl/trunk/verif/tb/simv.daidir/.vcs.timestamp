@@ -96,8 +96,8 @@ COLORTERM=gnome-terminal
 1541272424 ../../rtl/wb2sdrc/wb2sdrc.v
 1541272424 ../../rtl/top/sdrc_top.v
 1541272425 ../model/mt48lc2m32b2.v
-1541659890 ../tb/tb_top_test.sv
-1541658083 ../tb/Test.sv
+1541664022 ../tb/tb_top_test.sv
+1541664014 ../tb/Test.sv
 1541649798 ../tb/sdrc_environment.sv
 1541653193 ../tb/sdrc_driver.sv
 1541652698 ../tb/sdrc_monitor.sv
@@ -112,4 +112,4 @@ COLORTERM=gnome-terminal
 1487220396 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libvirsim.so
 1487219634 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/liberrorinf.so
 1487219608 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libsnpsmalloc.so
-1541659896 simv.daidir
+1541664028 simv.daidir

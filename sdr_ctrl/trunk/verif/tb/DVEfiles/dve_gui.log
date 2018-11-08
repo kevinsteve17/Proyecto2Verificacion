@@ -4,21 +4,28 @@ If you would like to temporarily disable this message, set
 before expiration that you want this message to start (the minimum is 0).
 Chronologic VCS simulator copyright 1991-2017
 Contains Synopsys proprietary information.
-Compiler version M-2017.03_Full64; Runtime version M-2017.03_Full64;  Nov  8 00:50 2018
+Compiler version M-2017.03_Full64; Runtime version M-2017.03_Full64;  Nov  8 01:59 2018
 VCD+ Writer M-2017.03_Full64 Copyright (c) 1991-2017 by Synopsys Inc.
 The file '/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd' was opened successfully.
+Error-[UCLI-STOP-UNABLE-SET-STOP-POINT] Unable to set breakpoint
+  The setting of line breakpoint in file 
+  /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv
+  line 44 due to 'stop' command was not successful. 
+  Please verify that the 'stop' command arguments are valid and that the 
+  statement/enclosing subprogram at file/line is complete and used in the 
+  design.  Also verify that the statement on which the BP is being added is in
+  a module compiled with line debug capability.  Please recompile using the 
+  '-debug_access<+options>' switch and incremental options as required.  
+  Recommended options are '-debug_access' for post-process debug, 
+  '-debug_access+classdbg' for testbench debug, and '-debug_access+all' for 
+  all debug capabilities.  Refer the VCS user guide for more granular options 
+  for debug control under the switch '-debug_access' and refer to 
+  '-debug_region' for region control.
 
-Stop point #1 @ 0 ps;  
+Stop point #1 @ 13090000 ps;  
 Creating SDRC Environment
 Creating SDRC Driver
 Creating SDRC Monitor
-
-Stop point #3 @ 0 ps;  
--------------------------------------- 
- Case-1: Single Write/Read Case        
--------------------------------------- 
-
-Stop point #4 @ 13090000 ps;  
 top.u_sdram32 : at time   10212.0 ns AREF : Auto Refresh
 top.u_sdram32 : at time   10392.0 ns AREF : Auto Refresh
 top.u_sdram32 : at time   10572.0 ns AREF : Auto Refresh
@@ -40,7 +47,12 @@ top.u_sdram32 :                             Burst Length     = 8
 top.u_sdram32 :                             Burst Type       = Sequential
 top.u_sdram32 :                             Write Burst Mode = Programmed Burst Length
 
-Stop point #5 @ 14200000 ps;  
+Stop point #7 @ 13090000 ps;  
+-------------------------------------- 
+ Case-1: Single Write/Read Case        
+-------------------------------------- 
+
+Stop point #8 @ 14200000 ps;  
 Write Address: 00040000, Burst Size:   4
 Status: Burst-No:           0  Write Address: 0010000  WriteData: 12153524 
 Status: Burst-No:           1  Write Address: 0010001  WriteData: c0895e81 
@@ -56,7 +68,7 @@ top.u_sdram32 : at time   13472.0 ns BST  : Burst Terminate
 top.u_sdram32 : at time   13492.0 ns WRITE: Bank = 0 Row =   64, Col =   3, Data = b1f05663
 top.u_sdram32 : at time   13512.0 ns BST  : Burst Terminate
 
-Stop point #6 @ 15180000 ps;  
+Stop point #9 @ 15180000 ps;  
 top.u_sdram32 : at time   14352.0 ns BST  : Burst Terminate
 top.u_sdram32 : at time   14378.0 ns READ : Bank = 0 Row =   64, Col =   0, Data = 12153524
 READ STATUS: Burst-No:           0 Addr: 0010000 Rxd: 12153524
@@ -69,12 +81,92 @@ READ STATUS: Burst-No:           2 Addr: 0010002 Rxd: 8484d609
 top.u_sdram32 : at time   15072.0 ns BST  : Burst Terminate
 top.u_sdram32 : at time   15098.0 ns READ : Bank = 0 Row =   64, Col =   3, Data = b1f05663
 READ STATUS: Burst-No:           3 Addr: 0010003 Rxd: b1f05663
+
+Stop point #2 @ 15180000 ps;  
 -------------------------------------- 
  End-1: Single Write/Read Case        
 -------------------------------------- 
-$finish at simulation time   15180.0 ns
-Simulation complete, time is 15180000 ps.
+
+Stop point #10 @ 15180000 ps;  
+
+Stop point #12 @ 15180000 ps;  
+-------------------------------------- 
+ Case-1: Single Write/Read Case        
+-------------------------------------- 
+
+Stop point #11 @ 15300000 ps;  
+Write Address: 00040000, Burst Size:   4
+Status: Burst-No:           0  Write Address: 0010000  WriteData: 06b97b0d 
+Status: Burst-No:           1  Write Address: 0010001  WriteData: 46df998d 
+Status: Burst-No:           2  Write Address: 0010002  WriteData: b2c28465 
+Status: Burst-No:           3  Write Address: 0010003  WriteData: 89375212 
+
+Stop point #13 @ 16320000 ps;  
+top.u_sdram32 : at time   15312.0 ns WRITE: Bank = 0 Row =   64, Col =   0, Data = 06b97b0d
+top.u_sdram32 : at time   15332.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   15352.0 ns WRITE: Bank = 0 Row =   64, Col =   1, Data = 46df998d
+top.u_sdram32 : at time   15372.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   15392.0 ns WRITE: Bank = 0 Row =   64, Col =   2, Data = b2c28465
+top.u_sdram32 : at time   15412.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   15432.0 ns WRITE: Bank = 0 Row =   64, Col =   3, Data = 89375212
+top.u_sdram32 : at time   15452.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   15492.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   15518.0 ns READ : Bank = 0 Row =   64, Col =   0, Data = 06b97b0d
+READ STATUS: Burst-No:           0 Addr: 0010000 Rxd: 06b97b0d
+top.u_sdram32 : at time   15732.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   15758.0 ns READ : Bank = 0 Row =   64, Col =   1, Data = 46df998d
+READ STATUS: Burst-No:           1 Addr: 0010001 Rxd: 46df998d
+top.u_sdram32 : at time   15972.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   15998.0 ns READ : Bank = 0 Row =   64, Col =   2, Data = b2c28465
+READ STATUS: Burst-No:           2 Addr: 0010002 Rxd: b2c28465
+top.u_sdram32 : at time   16212.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   16238.0 ns READ : Bank = 0 Row =   64, Col =   3, Data = 89375212
+READ STATUS: Burst-No:           3 Addr: 0010003 Rxd: 89375212
+
+Stop point #14 @ 16480000 ps;  
+Write Address: 00400000, Burst Size:   5
+Status: Burst-No:           0  Write Address: 0100000  WriteData: 00f3e301 
+Status: Burst-No:           1  Write Address: 0100001  WriteData: 06d7cd0d 
+Status: Burst-No:           2  Write Address: 0100002  WriteData: 3b23f176 
+Status: Burst-No:           3  Write Address: 0100003  WriteData: 1e8dcd3d 
+Status: Burst-No:           4  Write Address: 0100004  WriteData: 76d457ed 
+
+Stop point #15 @ 17900000 ps;  
+top.u_sdram32 : at time   16532.0 ns ACT  : Bank = 0 Row = 1024
+top.u_sdram32 : at time   16612.0 ns WRITE: Bank = 0 Row = 1024, Col =   0, Data = 00f3e301
+top.u_sdram32 : at time   16632.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   16652.0 ns WRITE: Bank = 0 Row = 1024, Col =   1, Data = 06d7cd0d
+top.u_sdram32 : at time   16672.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   16692.0 ns WRITE: Bank = 0 Row = 1024, Col =   2, Data = 3b23f176
+top.u_sdram32 : at time   16712.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   16732.0 ns WRITE: Bank = 0 Row = 1024, Col =   3, Data = 1e8dcd3d
+top.u_sdram32 : at time   16752.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   16772.0 ns WRITE: Bank = 0 Row = 1024, Col =   4, Data = 76d457ed
+top.u_sdram32 : at time   16792.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   16832.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   16858.0 ns READ : Bank = 0 Row = 1024, Col =   0, Data = 00f3e301
+READ STATUS: Burst-No:           0 Addr: 0100000 Rxd: 00f3e301
+top.u_sdram32 : at time   17072.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   17098.0 ns READ : Bank = 0 Row = 1024, Col =   1, Data = 06d7cd0d
+READ STATUS: Burst-No:           1 Addr: 0100001 Rxd: 06d7cd0d
+top.u_sdram32 : at time   17312.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   17338.0 ns READ : Bank = 0 Row = 1024, Col =   2, Data = 3b23f176
+READ STATUS: Burst-No:           2 Addr: 0100002 Rxd: 3b23f176
+top.u_sdram32 : at time   17552.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   17578.0 ns READ : Bank = 0 Row = 1024, Col =   3, Data = 1e8dcd3d
+READ STATUS: Burst-No:           3 Addr: 0100003 Rxd: 1e8dcd3d
+top.u_sdram32 : at time   17792.0 ns BST  : Burst Terminate
+top.u_sdram32 : at time   17818.0 ns READ : Bank = 0 Row = 1024, Col =   4, Data = 76d457ed
+READ STATUS: Burst-No:           4 Addr: 0100004 Rxd: 76d457ed
+-------------------------------------- 
+ End-1: Single Write/Read Case        
+-------------------------------------- 
+
+Stop point #3 @ 17900000 ps;  
+----------------------------------------
+ Case-3 Create a Page Cross Over        
+----------------------------------------
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 15180000 ps
-CPU Time:      0.380 seconds;       Data structure size:   0.1Mb
-Thu Nov  8 00:55:01 2018
+Time: 17900000 ps
+CPU Time:      0.630 seconds;       Data structure size:   0.1Mb
+Thu Nov  8 02:01:28 2018
