@@ -1,22 +1,5 @@
 `timescale 1ns/1ps
 
-// Helper methods to configure DUV BW configuration
-class DuvConfigurationUtils;
-
-    function bit[1:0] getSdrWidth(int dw);
-        if (dw == 32) begin
-            return 2'b00;
-        end
-        else if (dw == 16) begin
-            return 2'b01;
-        end if (dw == 8) begin
-            return 2'b10;
-        end
-        return 2'b01;
-
-    endfunction
-endclass
-
 // top module
 module top();
 
