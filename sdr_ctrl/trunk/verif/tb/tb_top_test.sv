@@ -35,13 +35,21 @@ module top();
     always #(P_SYS/2) sys_clk = !sys_clk;
     always #(P_SDR/2) sdram_clk = !sdram_clk;
 
+`ifdef SDR_32BIT
     parameter SDR_DW = 32;
     parameter SDR_BW = 4;
-    //parameter dw = 32;
+    parameter CNFG_SDR_WDITH = 2'b00;
+ `elsif SDR_16BIT    
+    parameter SDR_DW = 16;
+    parameter SDR_BW = 2;
+    parameter CNFG_SDR_WDITH = 2'b01;
+ `elsif SDR_8BIT
+    parameter SDR_DW = 8;
+    parameter SDR_BW = 1;
+    parameter CNFG_SDR_WDITH = 2'b00;
+`endif
+
     parameter APP_AW = 26;
-
-
-
 
     // Interface instance
     inft_sdrcntrl #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW), .APP_AW(APP_AW)) sdrc_intf(
@@ -51,7 +59,7 @@ module top();
 
     sdrc_top #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW)) duv(
         // system
-        .cfg_sdr_width      (duvConfigUtils.getSdrWidth(SDR_DW)),
+        .cfg_sdr_width      (CNFG_SDR_WDITH),
         .cfg_colbits        (2'b00),    // double check, org top mentioned only 8bit case
         
         // wish bone
@@ -95,11 +103,10 @@ module top();
         .cfg_sdr_rfmax      (3'h6)
     );
 
-    ///////////////////////// TEST /////////////////////////////
-    
     // to fix the sdram interface timing issue
     wire #(2.0) sdram_clk_d   = sdram_clk;
 
+`ifdef SDR_32BIT
     mt48lc2m32b2 #(.data_bits(32)) u_sdram32 (
           .Dq                 (sdrc_intf.sdram_intf.sdr_dq) , 
           .Addr               (sdrc_intf.sdram_intf.sdr_addr[10:0]     ), 
@@ -112,23 +119,39 @@ module top();
           .We_n               (sdrc_intf.sdram_intf.sdr_we_n           ), 
           .Dqm                (sdrc_intf.sdram_intf.sdr_dqm            )
      );
-
-    //--------------------
-    // data/address/burst length FIFO
-    //--------------------
-    int dfifo[$]; // data fifo
-    int afifo[$]; // address  fifo
-    int bfifo[$]; // Burst Length fifo
-
-    reg [31:0] read_data;
-    reg [31:0] ErrCnt;
-    int k;
-    reg [31:0] StartAddr;
+`elsif SDR_16BIT
+   IS42VM16400K u_sdram16 (
+          .dq                 (Dq                 ), 
+          .addr               (sdr_addr[11:0]     ), 
+          .ba                 (sdr_ba             ), 
+          .clk                (sdram_clk_d        ), 
+          .cke                (sdr_cke            ), 
+          .csb                (sdr_cs_n           ), 
+          .rasb               (sdr_ras_n          ), 
+          .casb               (sdr_cas_n          ), 
+          .web                (sdr_we_n           ), 
+          .dqm                (sdr_dqm            )
+    );
+`elsif SDR_8BIT
+    mt48lc8m8a2 #(.data_bits(8)) u_sdram8 (
+          .Dq                 (Dq                 ) , 
+          .Addr               (sdr_addr[11:0]     ), 
+          .Ba                 (sdr_ba             ), 
+          .Clk                (sdram_clk_d        ), 
+          .Cke                (sdr_cke            ), 
+          .Cs_n               (sdr_cs_n           ), 
+          .Ras_n              (sdr_ras_n          ), 
+          .Cas_n              (sdr_cas_n          ), 
+          .We_n               (sdr_we_n           ), 
+          .Dqm                (sdr_dqm            )
+     );
+`endif         
     
     /////////////////////////////////////////////////////////////////////////
-    // Test Case
+    // Run Test Cases
     /////////////////////////////////////////////////////////////////////////
 
     testcase test1(sdrc_intf);
+    
 
 endmodule
