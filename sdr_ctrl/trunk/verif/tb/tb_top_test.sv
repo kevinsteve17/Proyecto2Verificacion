@@ -317,7 +317,7 @@ module top();
         $finish;
     end
 
-    task burst_write;
+    /*task burst_write;
     input [31:0] Address;
     input [7:0]  bl;
     int i;
@@ -388,6 +388,6 @@ module top();
     sdrc_intf.wb_intf.wb_we_i         = 'hx;
     sdrc_intf.wb_intf.wb_addr_i       = 'hx;
     end
-    endtask
+    endtask*/
 
 endmodule
