@@ -11,7 +11,9 @@
 ../tb/sdrc_environment.sv
 ../tb/Test.sv
 ../tb/tb_top_test.sv
-../model/mt48lc2m32b2.v 
+../model/mt48lc2m32b2.v
+../model/mt48lc8m8a2.v
+../model/IS42VM16400K.V
 ../../rtl/top/sdrc_top.v 
 ../../rtl/wb2sdrc/wb2sdrc.v 
 ../../rtl/lib/async_fifo.v  
