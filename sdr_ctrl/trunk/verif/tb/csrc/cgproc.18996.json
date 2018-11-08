@@ -1,0 +1,143 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "_vcs_unit__2496855327": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        }
+    },
+    "CompUnits": {
+        "rTVSK_d": {
+            "mode": 4,
+            "mod": "_vcs_unit__2496855327",
+            "out": "rTVSK_d.o",
+            "bytes": 37884,
+            "checksum": 0,
+            "archive": "archive.1/_18996_archive_1.a"
+        },
+        "RuFh3_d": {
+            "mode": 4,
+            "mod": "intf_sdram",
+            "out": "RuFh3_d.o",
+            "bytes": 13692,
+            "checksum": 0,
+            "archive": "archive.1/_18996_archive_1.a"
+        },
+        "ypVrV_d": {
+            "mode": 4,
+            "mod": "intf_wishBone",
+            "out": "ypVrV_d.o",
+            "bytes": 13715,
+            "checksum": 0,
+            "archive": "archive.1/_18996_archive_1.a"
+        },
+        "xqeUE_d": {
+            "mode": 4,
+            "mod": "inft_sdrcntrl",
+            "out": "xqeUE_d.o",
+            "bytes": 12823,
+            "checksum": 0,
+            "archive": "archive.1/_18996_archive_1.a"
+        },
+        "NTNU2_d": {
+            "mode": 4,
+            "mod": "sdrc_top",
+            "out": "NTNU2_d.o",
+            "bytes": 301260,
+            "checksum": 0,
+            "archive": "archive.1/_18996_archive_1.a"
+        },
+        "Emx8S_d": {
+            "mode": 4,
+            "mod": "top",
+            "out": "Emx8S_d.o",
+            "bytes": 21037,
+            "checksum": 0,
+            "archive": "archive.1/_18996_archive_1.a"
+        },
+        "ChjVu_d": {
+            "mode": 4,
+            "mod": "sdrc_bank_fsm",
+            "out": "ChjVu_d.o",
+            "bytes": 38650,
+            "checksum": 0,
+            "archive": "archive.1/_18996_archive_1.a"
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "size": 546729,
+            "archive": "archive.1/_18996_archive_1.a",
+            "objects": [
+                [
+                    "rTVSK_d.o",
+                    37884
+                ],
+                [
+                    "RuFh3_d.o",
+                    13692
+                ],
+                [
+                    "ypVrV_d.o",
+                    13715
+                ],
+                [
+                    "xqeUE_d.o",
+                    12823
+                ],
+                [
+                    "Emx8S_d.o",
+                    21037
+                ],
+                [
+                    "NTNU2_d.o",
+                    301260
+                ],
+                [
+                    "ChjVu_d.o",
+                    38650
+                ],
+                [
+                    "amcQwB.o",
+                    107668
+                ]
+            ]
+        }
+    ]
+}

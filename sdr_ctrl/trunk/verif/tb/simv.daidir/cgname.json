@@ -1,31 +1,31 @@
 {
-    "intf_sdram": [
-        "intf_sdram",
-        "RuFh3",
-        "module",
-        4
-    ],
     "_vcs_unit__2496855327": [
         "_vcs_unit__2496855327",
         "rTVSK",
         "module",
-        5
+        1
     ],
     "std": [
         "std",
         "reYIK",
         "module",
-        1
+        2
     ],
     "inft_sdrcntrl": [
         "inft_sdrcntrl",
         "xqeUE",
         "module",
-        2
+        5
     ],
-    "sdrc_top": [
-        "sdrc_top",
-        "NTNU2",
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        9
+    ],
+    "intf_sdram": [
+        "intf_sdram",
+        "RuFh3",
         "module",
         3
     ],
@@ -33,24 +33,24 @@
         "intf_wishBone",
         "ypVrV",
         "module",
-        6
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        7
+        4
     ],
     "top": [
         "top",
         "Emx8S",
         "module",
-        8
+        6
+    ],
+    "sdrc_top": [
+        "sdrc_top",
+        "NTNU2",
+        "module",
+        7
     ],
     "sdrc_bank_fsm": [
         "sdrc_bank_fsm",
         "ChjVu",
         "module",
-        9
+        8
     ]
 }

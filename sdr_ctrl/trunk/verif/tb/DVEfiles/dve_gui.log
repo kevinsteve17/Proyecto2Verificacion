@@ -1,4 +1,13 @@
-Error: [UCLI-026] Tool type problem
-Internal error while executing synopsys::connect, failed to find -toolin file '/tmp/vcs_20181101204726_657_ESTUDIANTESkviquez..stdin'.
-If problem persists, please report this error to a Synopsys representative.
-cl
+Warning : License for product VCSRuntime_Net(725) will expire within 5 days, on: 11-nov-2018.
+If you would like to temporarily disable this message, set 
+ the VCS_LIC_EXPIRE_WARNING environment variable to the number of days
+before expiration that you want this message to start (the minimum is 0).
+Chronologic VCS simulator copyright 1991-2017
+Contains Synopsys proprietary information.
+Compiler version M-2017.03_Full64; Runtime version M-2017.03_Full64;  Nov  7 21:27 2018
+VCD+ Writer M-2017.03_Full64 Copyright (c) 1991-2017 by Synopsys Inc.
+The file '/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd' was opened successfully.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ps
+CPU Time:      0.370 seconds;       Data structure size:   0.1Mb
+Wed Nov  7 21:29:04 2018

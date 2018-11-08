@@ -1,2 +1,34 @@
 set ucliGUI::state
 set ucliGUI::state
+ucliCore::getToolPID
+synopsys::env hasTB
+trigger_hier_stack_context_switch 0
+synopsys::xml set_array_limit <data limit="50" />
+synopsys::xml set_depth_limit <data limit="100" />
+synopsys::xml set_string_limit <data limit="1000" />
+synopsys::xml set_only_active_frame <data value="1" />
+synopsys::xml set_variable_frame_id <data value="1" />
+synUtils::setDVEInitPhase 1
+synopsys::dump -type VPD -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd -locking
+synopsys::dump -autoflush on -fid VPD0
+set ::dve_fid VPD0
+synUtils::setDVEInitPhase 0
+ucliCore::getToolPID
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpK6rVld
+synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.kviquez.26948}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.kviquez.26948}
+config endofsim noexit
+config onfail enable all
+config syscaddplainmembers
+config syscaddsourcenames
+config syscaddstructtypes
+synopsys::listing -disable
+ucliGUI::getSignalValues -scope top -radix {decimal } -list {SDR_BW }
+synopsys::dump -add {top.sdrc_intf } -aggregates  -fid VPD0
+synopsys::dump -add {top.sdrc_intf.sdram_intf top.sdrc_intf.wb_intf } -aggregates  -fid VPD0
+ucliGUI::getSignalValues -scope top -radix {binary } -list {sdrc_intf.sdram_clk }
+if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+synopsys::finish
+set ucliGUI::state
+set ucliGUI::state
+ucli_exit

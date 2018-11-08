@@ -40,6 +40,9 @@ module top();
     //parameter dw = 32;
     parameter APP_AW = 26;
 
+
+
+
     // Interface instance
     inft_sdrcntrl #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW), .APP_AW(APP_AW)) sdrc_intf(
         sys_clk,
@@ -149,14 +152,16 @@ module top();
     $display("-------------------------------------- ");
     $display(" Case-1: Single Write/Read Case        ");
     $display("-------------------------------------- ");
+    
+    testcase test1 = new(sdrc_intf);
 
-    burst_write(32'h4_0000,8'h4);  
+    /*burst_write(32'h4_0000,8'h4);  
     #1000;
     burst_read();     
-    end 
+    end */
 
 
-    task burst_write;
+   /* task burst_write;
     input [31:0] Address;
     input [7:0]  bl;
     int i;
@@ -227,6 +232,6 @@ module top();
     sdrc_intf.wb_intf.wb_we_i         = 'hx;
     sdrc_intf.wb_intf.wb_addr_i       = 'hx;
     end
-    endtask
+    endtask*/
 
 endmodule

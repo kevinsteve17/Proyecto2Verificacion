@@ -22,11 +22,12 @@ class sdrcDrv;
     task BurstWrite();
         input [31:0] Address;
         input [7:0]  bl;
+        int i;
         begin
             sb.dir.push_back(Address);
             sb.burstLenght.push_back(bl);
             
-            @ (negedge sys_clk);
+            @ (negedge this.inft.sys_clk);
             $display("Write Address: %x, Burst Size: %d",Address,bl);
             for(i=0; i < bl; i++) begin
                 this.inft.wb_intf.wb_stb_i        = 1;
@@ -35,7 +36,7 @@ class sdrcDrv;
                 this.inft.wb_intf.wb_sel_i        = 4'b1111;
                 this.inft.wb_intf.wb_addr_i       = Address[31:2]+i;
                 this.inft.wb_intf.wb_dat_i        = $random & 32'hFFFFFFFF;
-                sb.store.push_back(wb_dat_i);
+                sb.store.push_back(this.inft.wb_intf.wb_dat_i);
 
                 do begin
                     @ (posedge this.inft.sys_clk);

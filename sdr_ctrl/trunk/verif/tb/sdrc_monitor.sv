@@ -16,6 +16,7 @@ class sdrcMon;
         // TO DO implementation
 
     reg [31:0]   exp_data;
+    int j;
     begin
 
         Address = sb.dir.pop_front(); 
@@ -34,7 +35,7 @@ class sdrcMon;
             end while(this.inft.wb_intf.wb_ack_o == 1'b0);
             if(this.inft.wb_intf.wb_dat_o !== exp_data) begin
                 $display("READ ERROR: Burst-No: %d Addr: %x Rxp: %x Exd: %x",j,this.inft.wb_intf.wb_addr_i,this.inft.wb_intf.wb_dat_o,exp_data);
-                ErrCnt = ErrCnt+1;
+                sb.ErrCnt = sb.ErrCnt+1;
             end else begin
                 $display("READ STATUS: Burst-No: %d Addr: %x Rxd: %x",j,this.inft.wb_intf.wb_addr_i,this.inft.wb_intf.wb_dat_o);
             end 
