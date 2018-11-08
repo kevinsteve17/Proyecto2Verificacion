@@ -4,7 +4,8 @@
 ../tb/sdram_interterface.sv
 ../tb/wb_interface.sv
 ../tb/sdrc_interface.sv
-../tb/tb_top.sv   
+../tb/tb_top.sv
+../tb/Test.v    
 ../../rtl/top/sdrc_top.v 
 ../../rtl/wb2sdrc/wb2sdrc.v 
 ../../rtl/lib/async_fifo.v  
