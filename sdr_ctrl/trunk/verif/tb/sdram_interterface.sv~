@@ -1,12 +1,12 @@
 `timescale 1ns/1ps
 
-interface intf_sdram #(parameter SDR_DW = 16,
-                       parameter SDR_BW = 2);
-
+interface intf_sdram #(parameter SDR_DW = 32,
+                       parameter SDR_BW = 2)(input sdram_clk);
+    input sdram_clk;
     logic [SDR_BW-1:0]  sdr_dqm;
     logic [1:0]         sdr_ba;
     logic [12:0]        sdr_addr;
-    wire [SDR_DW-1:0]  sdr_dq;
+    wire [SDR_DW-1:0]   sdr_dq;
     logic sdr_cke;
     logic sdr_ras_n;    
     logic sdr_cas_n;

@@ -96,15 +96,15 @@ COLORTERM=gnome-terminal
 1541272424 ../../rtl/wb2sdrc/wb2sdrc.v
 1541272424 ../../rtl/top/sdrc_top.v
 1541272425 ../model/mt48lc2m32b2.v
-1541655301 ../tb/tb_top_test.sv
-1541653220 ../tb/Test.sv
+1541659890 ../tb/tb_top_test.sv
+1541658083 ../tb/Test.sv
 1541649798 ../tb/sdrc_environment.sv
 1541653193 ../tb/sdrc_driver.sv
 1541652698 ../tb/sdrc_monitor.sv
 1541646745 ../tb/sdrc_scoreboard.sv
-1541643640 ../tb/sdrc_interface.sv
+1541659806 ../tb/sdrc_interface.sv
 1541647338 ../tb/wb_interface.sv
-1541643640 ../tb/sdram_interterface.sv
+1541659826 ../tb/sdram_interterface.sv
 1541654324 filelist_top_v1.f
 1487217861 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/vcsdp_lite.tab
 4
@@ -112,4 +112,4 @@ COLORTERM=gnome-terminal
 1487220396 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libvirsim.so
 1487219634 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/liberrorinf.so
 1487219608 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libsnpsmalloc.so
-1541655313 simv.daidir
+1541659896 simv.daidir

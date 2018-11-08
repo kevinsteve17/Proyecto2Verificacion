@@ -14,5 +14,10 @@ program testcase(inft_sdrcntrl intf);
     env.drv.BurstWrite(32'h4_0000,8'h4);
     #1000;
     env.mon.BurstRead();
+    
+    $display("-------------------------------------- ");
+    $display(" End-1: Single Write/Read Case        ");
+    $display("-------------------------------------- ");
+
     end
 endprogram

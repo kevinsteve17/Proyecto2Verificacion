@@ -98,7 +98,7 @@ module top();
     ///////////////////////// TEST /////////////////////////////
     
     // to fix the sdram interface timing issue
-    wire #(2.0) sdram_clk_d   = sdrc_intf.sdram_clk;
+    wire #(2.0) sdram_clk_d   = sdram_clk;
 
     mt48lc2m32b2 #(.data_bits(32)) u_sdram32 (
           .Dq                 (sdrc_intf.sdram_intf.sdr_dq) , 
