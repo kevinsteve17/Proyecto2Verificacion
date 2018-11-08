@@ -23,6 +23,45 @@ program testcase(inft_sdrcntrl intf);
       end
     endtask
 
+    task tc2_single_read;
+      begin
+        $display("-------------------------------------- ");
+        $display(" Case-1: Single Write/Read Case        ");
+        $display("-------------------------------------- ");
+    
+        // single write and single read
+        env.drv.BurstWrite(32'h4_0000,8'h4);
+        env.mon.BurstRead();
+
+        env.drv.BurstWrite(32'h0040_0000,8'h5);
+        env.mon.BurstRead();
+        
+        $display("-------------------------------------- ");
+        $display(" End-1: Single Write/Read Case        ");
+        $display("-------------------------------------- ");
+      end
+    endtask
+
+    task tc3_single_read;
+      begin
+        $display("-------------------------------------- ");
+        $display(" Case-1: Single Write/Read Case        ");
+        $display("-------------------------------------- ");
+    
+        // single write and single read
+        env.drv.BurstWrite(32'h4_0000,8'h4);
+        env.mon.BurstRead();
+
+        env.drv.BurstWrite(32'h0040_0000,8'h5);
+        env.mon.BurstRead();
+        
+        $display("-------------------------------------- ");
+        $display(" End-1: Single Write/Read Case        ");
+        $display("-------------------------------------- ");
+      end
+    endtask
+
+
     // Case:4 4 Write & 4 Read
     task tc4_4Write_4Read;
       begin
