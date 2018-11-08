@@ -1,6 +1,8 @@
 program testcase(inft_sdrcntrl intf);
 
   sdrcEnv env = new(intf);
+  int k;
+  reg [31:0] StartAddr;
      
     task tc1_single_read;
       begin
