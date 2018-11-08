@@ -1,7 +1,7 @@
 +define+S50 
 +define+VERBOSE 
 +incdir+../../rtl/core 
-../tb/
++incdir+../tb/
 ../tb/sdram_interterface.sv
 ../tb/wb_interface.sv
 ../tb/sdrc_interface.sv
@@ -11,6 +11,7 @@
 ../tb/sdrc_environment.sv
 ../tb/Test.sv
 ../tb/tb_top_test.sv
+../model/mt48lc2m32b2.v 
 ../../rtl/top/sdrc_top.v 
 ../../rtl/wb2sdrc/wb2sdrc.v 
 ../../rtl/lib/async_fifo.v  
@@ -20,3 +21,4 @@
 ../../rtl/core/sdrc_bs_convert.v 
 ../../rtl/core/sdrc_req_gen.v 
 ../../rtl/core/sdrc_xfr_ctl.v 
+

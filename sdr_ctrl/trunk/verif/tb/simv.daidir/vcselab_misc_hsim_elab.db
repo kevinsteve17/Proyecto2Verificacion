@@ -50,7 +50,7 @@ fHsimAllMtmPat                     	0
 fHsimCertRaptMode                  	0
 fNewCBSemantics                    	1
 fSchedAtEnd                        	0
-fSpecifyInDesign                   	0
+fSpecifyInDesign                   	1
 fHsimDumpFlatData                  	1
 fHsimCompressDiag                  	1
 fHsimPowerOpt                      	0
@@ -771,7 +771,7 @@ fHsimCheckLoop                     	1
 fHsimCheckLoopDiag                 	0
 fHsimCheckLoopMore                 	0
 fHsimLoop                          	1
-fHsimMdbDeltaGate                  	0
+fHsimMdbDeltaGate                  	1
 fHsimMdbVecDeltaGate               	1
 fHsimVpdOptVfsDB                   	1
 fHsimMdbPruneVpdGates              	1

@@ -1,0 +1,139 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "testcase": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        },
+        "_vcs_unit__204873936": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "mt48lc2m32b2": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        }
+    },
+    "CompUnits": {
+        "RuFh3_d": {
+            "mode": 4,
+            "out": "RuFh3_d.o",
+            "mod": "intf_sdram",
+            "archive": "archive.5/_8677_archive_1.a",
+            "bytes": 14267,
+            "checksum": 0
+        },
+        "Emx8S_d": {
+            "mode": 4,
+            "out": "Emx8S_d.o",
+            "mod": "top",
+            "archive": "archive.5/_8677_archive_1.a",
+            "bytes": 23424,
+            "checksum": 0
+        },
+        "xqeUE_d": {
+            "mode": 4,
+            "out": "xqeUE_d.o",
+            "mod": "inft_sdrcntrl",
+            "archive": "archive.5/_8677_archive_1.a",
+            "bytes": 13319,
+            "checksum": 0
+        },
+        "NTNU2_d": {
+            "mode": 4,
+            "out": "NTNU2_d.o",
+            "mod": "sdrc_top",
+            "archive": "archive.5/_8677_archive_1.a",
+            "bytes": 384347,
+            "checksum": 0
+        },
+        "a3mSN_d": {
+            "mode": 4,
+            "out": "a3mSN_d.o",
+            "mod": "mt48lc2m32b2",
+            "archive": "archive.5/_8677_archive_1.a",
+            "bytes": 196218,
+            "checksum": 0
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.5/_8677_archive_1.a",
+            "objects": [
+                [
+                    "RuFh3_d.o",
+                    14267
+                ],
+                [
+                    "xqeUE_d.o",
+                    13319
+                ],
+                [
+                    "Emx8S_d.o",
+                    23424
+                ],
+                [
+                    "a3mSN_d.o",
+                    196218
+                ],
+                [
+                    "NTNU2_d.o",
+                    384347
+                ],
+                [
+                    "amcQwB.o",
+                    121950
+                ]
+            ],
+            "size": 753525
+        }
+    ],
+    "reusePaths": {
+        "ChjVu_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "U5R3s_d": {
+            "icPath": "csrc"
+        },
+        "ypVrV_d": {
+            "icPath": "csrc"
+        },
+        "PATxq_d": {
+            "icPath": "csrc"
+        }
+    }
+}

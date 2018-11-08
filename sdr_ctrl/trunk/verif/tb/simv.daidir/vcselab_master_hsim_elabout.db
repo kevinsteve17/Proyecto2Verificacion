@@ -1,5 +1,5 @@
 hsDirType                          	1
-fHsimDesignHasDebugNodes           	31
+fHsimDesignHasDebugNodes           	63
 fNSParam                           	1024
 fLargeSizeSdfTest                  	0
 fHsimDelayGateMbme                 	0
@@ -360,7 +360,7 @@ igetFieldSmdPtr                    	-1
 fDebugDump                         	1
 fHsimOrigNodeNames                 	0
 fHsimCgVectors2VOnly               	0
-fHsimMdbDeltaGate                  	0
+fHsimMdbDeltaGate                  	1
 fHsimMdbVecDeltaGate               	1
 fHsimVpdOptVfsDB                   	1
 fHsimMdbPruneVpdGates              	1
@@ -527,6 +527,6 @@ fHsimSchedMinput                   	0
 fHsimSchedSeqPrim                  	0
 fHsimSchedSelectFanout             	0
 fHsimSchedSelectFanoutDebug        	0
-fSpecifyInDesign                   	0
+fSpecifyInDesign                   	1
 fFgpDynamicReadOn                  	0
 fHsCgOptAllUc                      	0

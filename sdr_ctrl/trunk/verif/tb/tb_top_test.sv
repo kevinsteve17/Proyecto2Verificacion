@@ -36,7 +36,7 @@ module top();
     always #(P_SDR/2) sdram_clk = !sdram_clk;
 
     parameter SDR_DW = 32;
-    parameter SDR_BW = 2;
+    parameter SDR_BW = 4;
     //parameter dw = 32;
     parameter APP_AW = 26;
 
@@ -128,7 +128,10 @@ module top();
     // Test Case
     /////////////////////////////////////////////////////////////////////////
 
-    initial begin //{
+
+    testcase test1(sdrc_intf);
+
+    /*initial begin //{
     ErrCnt          = 0;
     sdrc_intf.wb_intf.wb_addr_i      = 0;
     sdrc_intf.wb_intf.wb_dat_i      = 0;
@@ -153,7 +156,7 @@ module top();
     $display(" Case-1: Single Write/Read Case        ");
     $display("-------------------------------------- ");
     
-    testcase test1 = new(sdrc_intf);
+    testcase test1(sdrc_intf);
 
     /*burst_write(32'h4_0000,8'h4);  
     #1000;

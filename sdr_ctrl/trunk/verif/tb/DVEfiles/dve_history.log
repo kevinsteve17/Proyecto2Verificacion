@@ -3,28 +3,31 @@ gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_typ
 
 # State setting overrides
 gui_state_default_create -off -ini
-gui_set_state_value -category Layout -key child_console_size_x -value 1914
-gui_set_state_value -category Layout -key child_console_size_y -value 176
-gui_set_state_value -category Layout -key child_data_size_x -value 171
-gui_set_state_value -category Layout -key child_data_size_y -value 586
+gui_set_state_value -category Layout -key child_console_size_x -value 1910
+gui_set_state_value -category Layout -key child_console_size_y -value 260
+gui_set_state_value -category Layout -key child_data_size_x -value 167
+gui_set_state_value -category Layout -key child_data_size_y -value 498
 gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
 gui_set_state_value -category Layout -key child_hier_colpd -value 0
-gui_set_state_value -category Layout -key child_hier_size_x -value 171
-gui_set_state_value -category Layout -key child_hier_size_y -value 586
+gui_set_state_value -category Layout -key child_hier_size_x -value 167
+gui_set_state_value -category Layout -key child_hier_size_y -value 498
 gui_set_state_value -category Layout -key child_source_docknewline -value false
 gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
 gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
-gui_set_state_value -category Layout -key child_source_size_x -value 1575
-gui_set_state_value -category Layout -key child_source_size_y -value 581
-gui_set_state_value -category Layout -key main_pos_x -value 3
-gui_set_state_value -category Layout -key main_pos_y -value 52
+gui_set_state_value -category Layout -key child_source_size_x -value 1579
+gui_set_state_value -category Layout -key child_source_size_y -value 493
+gui_set_state_value -category Layout -key main_pos_x -value 7
+gui_set_state_value -category Layout -key main_pos_y -value 56
 gui_set_state_value -category Layout -key main_size_x -value 1917
 gui_set_state_value -category Layout -key main_size_y -value 921
 gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
 gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
 gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
 gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
-gui_create_state_key -category Widget_History -key dlgDumpValues|m_Combo -value_type string -value top
+gui_create_state_key -category Widget_History -key dlgDumpValues|m_Combo -value_type string -value {top.test1 top top.test1.intf {top.test1 top.sdrc_intf}}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_VPDCombo} -value_type string -value inter.vpd
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_curDirCombo} -value_type string -value /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_exeCombo} -value_type string -value ./simv
 gui_state_default_create -off
 
 # Begin command logging
@@ -32,13 +35,495 @@ gui_set_pref_value -category {Globals} -key {smart_resize} -value {false}
 gui_set_pref_value -category {Globals} -key {smart_resize} -value {true}
 gui_sim_run Ucli -exe ./simv -args {-ucligui  } -dir .
 gui_list_expand -id  Hier.1   top
-gui_list_expand -id  Hier.1   top.sdrc_intf
-gui_list_select -id Hier.1 -current_item_name _vcs_unit__2496855327 -current_item_type Scope  -selected  { _vcs_unit__2496855327   }
-gui_list_expand -id  Hier.1   _vcs_unit__2496855327
-gui_list_expand -id  Hier.1   top.duv
-gui_list_select -id Hier.1 -current_item_name top.duv.u_sdrc_core -current_item_type Scope  -selected  { top.duv.u_sdrc_core   }
-gui_list_select -id Hier.1 -current_item_name top.duv.u_wb2sdrc -current_item_type Scope  -selected  { top.duv.u_wb2sdrc   }
-gui_list_select -id Hier.1 -current_item_name top.sdrc_intf -current_item_type Scope  -selected  { top.sdrc_intf   }
-gui_list_show_data -select -id  Hier.1   top.sdrc_intf
-gui_list_select -id Hier.1 -current_item_name top -current_item_type Scope  -selected  { top   }
-gui_src_expand -id { Source.1 } -fid  0  -line 4
+gui_sim_dump_full_hierarchy 
+gui_list_select -id Hier.1 -current_item_name top.u_sdram32 -current_item_type Scope  -selected  { top.u_sdram32   }
+gui_list_select -id Hier.1 -current_item_name top.test1 -current_item_type Scope  -selected  { top.test1   }
+gui_sim_dump_full_hierarchy 
+dump -add { top.test1 }  -depth 0 -scope "."
+dump -add { top.test1 }  -depth 0 -scope "."
+dump -add { top.test1 } -depth 0 -scope "."
+dump -add { top.test1 }  -depth 0 -scope "."
+dump -add { top.test1 }  -depth 0 -scope "."
+gui_sim_watch { -file  $::env(PWD)/tb_top_test.sv  -line  25  }
+gui_sim_watch { -file  $::env(PWD)/tb_top_test.sv  -line  29  }
+gui_sim_watch { -file  $::env(PWD)/tb_top_test.sv  -line  33  }
+gui_list_action -id  Hier.1 top.test1
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  11  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  14  }
+gui_sim_watch { -file  $::env(PWD)/Test.sv  -line  16  }
+gui_sim_continue  
+gui_sim_watch { -disable {1}}
+gui_sim_continue  
+gui_sim_next 
+gui_sim_continue  
+gui_sim_continue  
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_step -prog
+gui_sim_continue  
+gui_sim_stop 
