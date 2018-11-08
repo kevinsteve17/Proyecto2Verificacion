@@ -13,7 +13,7 @@ program testcase(inft_sdrcntrl intf);
     tc4_4Write_4Read();
     tc5_24Write_24Read();
     tc4_6rndm_Write_2rndm_Read();
-
+    env.mon.Check();
   end
      
     task tc1_single_read();
@@ -28,17 +28,18 @@ program testcase(inft_sdrcntrl intf);
         env.drv.BurstWrite(32'h4_0000,8'h4);
         #1000;
         env.mon.BurstRead();
-        
+        env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
         $display("-------------------------------------- ");
         $display(" End-1: Single Write/Read Case        ");
         $display("-------------------------------------- ");
       end
     endtask
 
+  // Test case 2 Single Write/Read Case
     task tc2_single_read();
       begin
         $display("-------------------------------------- ");
-        $display(" Case-1: Single Write/Read Case        ");
+        $display(" Case-2: Single Write/Read Case        ");
         $display("-------------------------------------- ");
     
         // single write and single read
@@ -48,12 +49,15 @@ program testcase(inft_sdrcntrl intf);
         env.drv.BurstWrite(32'h0040_0000,8'h5);
         env.mon.BurstRead();
         
+        env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
+
         $display("-------------------------------------- ");
         $display(" End-1: Single Write/Read Case        ");
         $display("-------------------------------------- ");
       end
     endtask
 
+    // Case:3 Create a Page Cross Over
     task tc3_single_read();
       begin
        
@@ -108,6 +112,9 @@ program testcase(inft_sdrcntrl intf);
         env.mon.BurstRead();  
         env.mon.BurstRead();  
         env.mon.BurstRead();
+        
+        env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
+        
         $display("-------------------------------------- ");
         $display(" End-1: Single Write/Read Case        ");
         $display("-------------------------------------- ");
@@ -128,7 +135,9 @@ program testcase(inft_sdrcntrl intf);
         env.mon.BurstRead();  
         env.mon.BurstRead();  
         env.mon.BurstRead();  
-        env.mon.BurstRead();  
+        env.mon.BurstRead();
+        
+        env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;  
       end
     endtask
 
@@ -190,6 +199,8 @@ program testcase(inft_sdrcntrl intf);
         env.mon.BurstRead();  
         env.mon.BurstRead();  
         env.mon.BurstRead();
+        
+        env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
       end
     endtask
 
@@ -211,6 +222,8 @@ program testcase(inft_sdrcntrl intf);
             env.mon.BurstRead();  
             #100;
           end 
+
+          env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
       end
     endtask    
 

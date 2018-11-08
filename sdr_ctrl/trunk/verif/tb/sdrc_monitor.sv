@@ -1,6 +1,7 @@
 class sdrcMon;
     sdrcSB sb;
     virtual inft_sdrcntrl inft;
+    int execTestCasesCount = 6;
     
     function new(virtual inft_sdrcntrl inft,sdrcSB sb);
         $display("Creating SDRC Monitor");
@@ -9,6 +10,16 @@ class sdrcMon;
         // TO DO implementation
 
     endfunction
+    
+    task Check;
+        begin
+            if (this.execTestCasesCount==0 && sb.ErrCnt==0) begin
+                $display("TEST EXECUTION PASSED!!!");
+            end else begin
+                $display("TEST EXECUTION FAILED!!!");
+            end
+        end
+    endtask
 
     task BurstRead();
     reg [31:0] Address;
