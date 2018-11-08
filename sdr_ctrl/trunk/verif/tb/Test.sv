@@ -1,9 +1,7 @@
 program testcase(inft_sdrcntrl intf);
 
   sdrcEnv env = new(intf);
-         
-  initial
-
+     
     task tc1_single_read;
       begin
         $display("-------------------------------------- ");
@@ -41,7 +39,7 @@ program testcase(inft_sdrcntrl intf);
     endtask
 
     // Case:5 24 Write & 24 Read With Different Bank and Row
-    task tc4_4Write_4Read;
+    task tc5_24Write_24Read;
       begin
         $display("---------------------------------------");
         $display(" Case:5 24 Write & 24 Read With Different Bank and Row ");
@@ -102,7 +100,7 @@ program testcase(inft_sdrcntrl intf);
     endtask
 
     // Case: 6 Random 2 write and 2 read random
-    task tc4_4Write_4Read;
+    task tc4_6rndm_Write_2rndm_Read;
       begin
         $display("---------------------------------------------------");
         $display(" Case: 6 Random 2 write and 2 read random");

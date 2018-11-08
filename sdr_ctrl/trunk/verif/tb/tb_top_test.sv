@@ -124,117 +124,11 @@ module top();
     reg [31:0] ErrCnt;
     int k;
     reg [31:0] StartAddr;
+    
     /////////////////////////////////////////////////////////////////////////
     // Test Case
     /////////////////////////////////////////////////////////////////////////
 
-
     testcase test1(sdrc_intf);
-
-    /*initial begin //{
-    ErrCnt          = 0;
-    sdrc_intf.wb_intf.wb_addr_i      = 0;
-    sdrc_intf.wb_intf.wb_dat_i      = 0;
-    sdrc_intf.wb_intf.wb_sel_i       = 4'h0;
-    sdrc_intf.wb_intf.wb_we_i        = 0;
-    sdrc_intf.wb_intf.wb_stb_i       = 0;
-    sdrc_intf.wb_intf.wb_cyc_i       = 0;
-
-    sdrc_intf.resetn    = 1'h1;
-
-    #100
-    // Applying reset
-    sdrc_intf.resetn    = 1'h0;
-    #10000;
-    // Releasing reset
-    sdrc_intf.resetn    = 1'h1;
-    #1000;
-    wait(duv.sdr_init_done == 1);
-
-    #1000;
-    $display("-------------------------------------- ");
-    $display(" Case-1: Single Write/Read Case        ");
-    $display("-------------------------------------- ");
-    
-    testcase test1(sdrc_intf);
-
-    /*burst_write(32'h4_0000,8'h4);  
-    #1000;
-    burst_read();     
-    end */
-
-
-   /* task burst_write;
-    input [31:0] Address;
-    input [7:0]  bl;
-    int i;
-    begin
-    afifo.push_back(Address);
-    bfifo.push_back(bl);
-
-    @ (negedge sys_clk);
-    $display("Write Address: %x, Burst Size: %d",Address,bl);
-
-    for(i=0; i < bl; i++) begin
-        sdrc_intf.wb_intf.wb_stb_i        = 1;
-        sdrc_intf.wb_intf.wb_cyc_i        = 1;
-        sdrc_intf.wb_intf.wb_we_i         = 1;
-        sdrc_intf.wb_intf.wb_sel_i        = 4'b1111;
-        sdrc_intf.wb_intf.wb_addr_i       = Address[31:2]+i;
-        sdrc_intf.wb_intf.wb_dat_i        = $random & 32'hFFFFFFFF;
-        dfifo.push_back(sdrc_intf.wb_intf.wb_dat_i);
-
-        do begin
-            @ (posedge sys_clk);
-        end while(sdrc_intf.wb_intf.wb_ack_o == 1'b0);
-            @ (negedge sys_clk);
-    
-        $display("Status: Burst-No: %d  Write Address: %x  WriteData: %x ",i,sdrc_intf.wb_intf.wb_addr_i, sdrc_intf.wb_intf.wb_dat_i);
-    end
-    sdrc_intf.wb_intf.wb_stb_i        = 0;
-    sdrc_intf.wb_intf.wb_cyc_i        = 0;
-    sdrc_intf.wb_intf.wb_we_i         = 'hx;
-    sdrc_intf.wb_intf.wb_sel_i        = 'hx;
-    sdrc_intf.wb_intf.wb_addr_i       = 'hx;
-    sdrc_intf.wb_intf.wb_dat_i        = 'hx;
-    end
-    endtask
-
-    task burst_read;
-    reg [31:0] Address;
-    reg [7:0]  bl;
-
-    int i,j;
-    reg [31:0]   exp_data;
-    begin
-    
-    Address = afifo.pop_front(); 
-    bl      = bfifo.pop_front(); 
-    @ (negedge sys_clk);
-
-        for(j=0; j < bl; j++) begin
-            sdrc_intf.wb_intf.wb_stb_i        = 1;
-            sdrc_intf.wb_intf.wb_cyc_i        = 1;
-            sdrc_intf.wb_intf.wb_we_i         = 0;
-            sdrc_intf.wb_intf.wb_addr_i       = Address[31:2]+j;
-
-            exp_data        = dfifo.pop_front(); // Exptected Read Data
-            do begin
-                @ (posedge sys_clk);
-            end while(sdrc_intf.wb_intf.wb_ack_o == 1'b0);
-            if(sdrc_intf.wb_intf.wb_dat_o !== exp_data) begin
-                $display("READ ERROR: Burst-No: %d Addr: %x Rxp: %x Exd: %x",j, sdrc_intf.wb_intf.wb_addr_i, sdrc_intf.wb_intf.wb_dat_o,exp_data);
-                ErrCnt = ErrCnt+1;
-            end else begin
-                $display("READ STATUS: Burst-No: %d Addr: %x Rxd: %x",j, sdrc_intf.wb_intf.wb_addr_i, sdrc_intf.wb_intf.wb_dat_o);
-            end 
-            @ (negedge sdram_clk);
-        end
-    sdrc_intf.wb_intf.wb_stb_i        = 0;
-    sdrc_intf.wb_intf.wb_cyc_i        = 0;
-    sdrc_intf.wb_intf.wb_we_i         = 'hx;
-    sdrc_intf.wb_intf.wb_addr_i       = 'hx;
-    end
-    endtask*/
 
 endmodule
