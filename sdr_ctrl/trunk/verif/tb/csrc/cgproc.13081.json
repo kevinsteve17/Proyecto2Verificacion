@@ -1,0 +1,184 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "_vcs_unit__539399367": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 17
+        },
+        "mt48lc2m32b2": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 17
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 17
+        },
+        "testcase": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 17
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 17
+        },
+        "IS42VM16400K": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "mt48lc8m8a2": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 17
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 17
+        }
+    },
+    "CompUnits": {
+        "RuFh3_d": {
+            "mod": "intf_sdram",
+            "out": "RuFh3_d.o",
+            "archive": "archive.16/_13081_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 14296
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 8738
+        },
+        "ie7Qn_d": {
+            "mod": "_vcs_unit__539399367",
+            "out": "ie7Qn_d.o",
+            "archive": "archive.16/_13081_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 90827
+        },
+        "a3mSN_d": {
+            "mod": "mt48lc2m32b2",
+            "out": "a3mSN_d.o",
+            "archive": "archive.16/_13081_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 195898
+        },
+        "ypVrV_d": {
+            "mod": "intf_wishBone",
+            "out": "ypVrV_d.o",
+            "archive": "archive.16/_13081_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 14267
+        },
+        "NTNU2_d": {
+            "mod": "sdrc_top",
+            "out": "NTNU2_d.o",
+            "archive": "archive.16/_13081_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 384900
+        },
+        "Emx8S_d": {
+            "mod": "top",
+            "out": "Emx8S_d.o",
+            "archive": "archive.16/_13081_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 22295
+        },
+        "xqeUE_d": {
+            "mod": "inft_sdrcntrl",
+            "out": "xqeUE_d.o",
+            "archive": "archive.16/_13081_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 13319
+        },
+        "TzJKa_d": {
+            "mod": "IS42VM16400K",
+            "out": "TzJKa_d.o",
+            "archive": "archive.16/_13081_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "bytes": 282765
+        }
+    },
+    "reusePaths": {
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "ChjVu_d": {
+            "icPath": "csrc"
+        },
+        "Pj51K_d": {
+            "icPath": "csrc"
+        },
+        "PATxq_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.16/_13081_archive_1.a",
+            "objects": [
+                [
+                    "ie7Qn_d.o",
+                    90827
+                ],
+                [
+                    "RuFh3_d.o",
+                    14296
+                ],
+                [
+                    "ypVrV_d.o",
+                    14267
+                ],
+                [
+                    "xqeUE_d.o",
+                    13319
+                ],
+                [
+                    "Emx8S_d.o",
+                    22295
+                ],
+                [
+                    "a3mSN_d.o",
+                    195898
+                ],
+                [
+                    "TzJKa_d.o",
+                    282765
+                ],
+                [
+                    "NTNU2_d.o",
+                    384900
+                ],
+                [
+                    "amcQwB.o",
+                    159843
+                ]
+            ],
+            "size": 1178410
+        }
+    ]
+}

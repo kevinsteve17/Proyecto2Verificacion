@@ -1,0 +1,9 @@
+program testcase(intf_cnt intf);
+  environment env = new(intf);
+         
+  initial
+    begin
+    env.drvr.reset();
+    env.drvr.write(10);
+    end
+endprogram

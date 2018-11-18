@@ -1,0 +1,12 @@
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/assertion.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/driver.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/env.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/interface.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/monitor.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/ram_dp_ar_aw.v
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/scoreboard.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/stimulus.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/sync_fifo.v
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/test_1.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/top.sv
+/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/etc/sva/rec_ltl_classes_package.svp

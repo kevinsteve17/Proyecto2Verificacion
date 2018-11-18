@@ -1,0 +1,114 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Layout -key child_console_size_x -value 1919
+gui_set_state_value -category Layout -key child_console_size_y -value 169
+gui_set_state_value -category Layout -key child_data_size_x -value 164
+gui_set_state_value -category Layout -key child_data_size_y -value 753
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_size_x -value 164
+gui_set_state_value -category Layout -key child_hier_size_y -value 753
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 1594
+gui_set_state_value -category Layout -key child_source_size_y -value 748
+gui_set_state_value -category Layout -key child_wave_colname -value 121
+gui_set_state_value -category Layout -key child_wave_colvalue -value 120
+gui_set_state_value -category Layout -key child_wave_left -value 245
+gui_set_state_value -category Layout -key child_wave_right -value 597
+gui_set_state_value -category Layout -key main_pos_x -value 4
+gui_set_state_value -category Layout -key main_pos_y -value 78
+gui_set_state_value -category Layout -key main_size_x -value 1923
+gui_set_state_value -category Layout -key main_size_y -value 1081
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 852
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 336
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 494
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 293
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1341
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 790
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_state_default_create -off
+
+# Begin command logging
+gui_set_pref_value -category {Globals} -key {smart_resize} -value {false}
+gui_set_pref_value -category {Globals} -key {smart_resize} -value {true}
+gui_sim_run Ucli -exe ./simv -args {-ucligui  } -dir .
+gui_list_expand -id  Hier.1   top
+gui_list_select -id Hier.1 -current_item_name top.assertion -current_item_type Scope  -selected  { top.assertion   }
+gui_list_expand -id Hier.1   top.assertion
+gui_list_action -id  Hier.1 top.assertion
+gui_sim_dump_full_hierarchy 
+gui_list_action -id  Hier.1 top.assertion
+gui_list_select -id Hier.1 -current_item_name top -current_item_type Scope  -selected  { top   }
+gui_list_action -id  Hier.1 top
+gui_sim_dump_full_hierarchy 
+dump -add { top } -depth 0 -scope "."
+gui_list_select -id Hier.1 -current_item_name top.assertion -current_item_type Scope  -selected  { top.assertion   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Hier.1 { top.assertion } -insertionbar
+gui_wv_zoom_timerange -id  Wave.1 0 194
+gui_wv_zoom_timerange -id  Wave.1 0 216
+gui_wv_zoom_timerange -id  Wave.1 0 249
+gui_wv_zoom_timerange -id  Wave.1 0 254
+gui_wv_zoom_timerange -id  Wave.1 0 263
+gui_wv_zoom_timerange -id  Wave.1 0 271
+gui_wv_zoom_timerange -id  Wave.1 0 271
+gui_wv_zoom_timerange -id  Wave.1 0 275
+gui_wv_zoom_timerange -id  Wave.1 0 279
+gui_wv_zoom_timerange -id  Wave.1 0 284
+gui_wv_zoom_timerange -id  Wave.1 0 285
+gui_wv_zoom_timerange -id  Wave.1 0 291
+gui_wv_zoom_timerange -id  Wave.1 0 328
+gui_wv_zoom_timerange -id  Wave.1 0 353
+gui_wv_zoom_timerange -id  Wave.1 0 354
+gui_wv_zoom_timerange -id  Wave.1 0 361
+gui_wv_zoom_timerange -id  Wave.1 0 363
+gui_wv_zoom_timerange -id  Wave.1 0 363
+gui_wv_zoom_timerange -id  Wave.1 0 363
+gui_wv_zoom_timerange -id  Wave.1 0 366
+gui_wv_zoom_timerange -id  Wave.1 0 369
+gui_wv_zoom_timerange -id  Wave.1 0 373
+gui_wv_zoom_timerange -id  Wave.1 0 379
+gui_wv_zoom_timerange -id  Wave.1 0 380
+gui_wv_zoom_timerange -id  Wave.1 0 382
+gui_wv_zoom_timerange -id  Wave.1 0 382
+gui_wv_zoom_timerange -id  Wave.1 0 383
+gui_wv_zoom_timerange -id  Wave.1 0 382
+gui_sim_continue  
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 151
+gui_zoom -window Wave.1 -full
+gui_list_expand -id  Wave.1   top.assertion.full_empty_clean_up
+gui_wv_zoom_timerange -id  Wave.1 0 111
+gui_list_action -id  Hier.1 top.assertion
+gui_marker_move -id  Wave.1 C1 10
+gui_marker_move -id  Wave.1 C1 15
+gui_marker_move -id  Wave.1 C1 25
+gui_marker_move -id  Wave.1 C1 35
+gui_marker_move -id  Wave.1 C1 45
+gui_list_select -id Hier.1 -current_item_name top.assertion -current_item_type Scope  -selected  {  }
+gui_list_collapse -id  Wave.1   top.assertion.full_empty_clean_up
+gui_list_expand -id  Wave.1   top.assertion.full_empty_0
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_list_collapse -id  Wave.1   top.assertion.full_empty_0
+gui_marker_move -id  Wave.1 C1 0
+gui_marker_move -id  Wave.1 C1 10
+gui_marker_move -id  Wave.1 C1 22
+gui_marker_move -id  Wave.1 C1 5
+gui_list_expand -id  Wave.1   top.assertion.full_empty_4
+gui_close_window -window TopLevel.1
+#Dve crash log 
+#Encountered Illegal Interrupt SIGXFSZ on Thu Nov 1 20:07:44 2018
+#Version: M-2017.03_Full64
+#Platform: Linux RH 4.0
+#Data of Built: Feb 15 2017 21:07:56

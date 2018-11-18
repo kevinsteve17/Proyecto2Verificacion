@@ -1,0 +1,84 @@
+{
+    "Modules": {
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "_vcs_unit__3732619767": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "...MASTER...": {},
+        "sync_fifo": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "intf_cnt": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "testcase": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.65/_30082_archive_1.a",
+            "objects": [
+                [
+                    "gWQCM_d.o",
+                    29377
+                ],
+                [
+                    "Emx8S_d.o",
+                    43127
+                ],
+                [
+                    "amcQwB.o",
+                    104014
+                ]
+            ],
+            "size": 176518
+        }
+    ],
+    "CompUnits": {
+        "gWQCM_d": {
+            "mod": "sync_fifo",
+            "bytes": 29377,
+            "out": "gWQCM_d.o",
+            "mode": 4,
+            "archive": "archive.65/_30082_archive_1.a",
+            "checksum": 0
+        },
+        "Emx8S_d": {
+            "mod": "top",
+            "bytes": 43127,
+            "out": "Emx8S_d.o",
+            "mode": 4,
+            "archive": "archive.65/_30082_archive_1.a",
+            "checksum": 0
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "mjsL2_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "t85Au_d": {
+            "icPath": "csrc"
+        },
+        "PATxq_d": {
+            "icPath": "csrc"
+        }
+    }
+}

@@ -1,0 +1,3 @@
+DPI_STUB_OBJS += ./../simv.daidir/vc_hdrs.o
+./../simv.daidir/vc_hdrs.o: ./../simv.daidir/vc_hdrs.c
+	@$(CC) -I/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/include  -pipe -fPIC    -I/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/include  -fPIC -c -o ./../simv.daidir/vc_hdrs.o ./../simv.daidir/vc_hdrs.c

@@ -1,0 +1,184 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "_vcs_unit__539399367": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "mt48lc8m8a2": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "testcase": {
+            "Compiled": "Yes",
+            "Compiled Times": 12
+        },
+        "mt48lc2m32b2": {
+            "Compiled": "Yes",
+            "Compiled Times": 12
+        },
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "IS42VM16400K": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        }
+    },
+    "reusePaths": {
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "ChjVu_d": {
+            "icPath": "csrc"
+        },
+        "PATxq_d": {
+            "icPath": "csrc"
+        },
+        "Pj51K_d": {
+            "icPath": "csrc"
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "mode": 4,
+            "out": "objs/amcQw_d.o",
+            "bytes": 8738,
+            "checksum": 0
+        },
+        "ie7Qn_d": {
+            "archive": "archive.13/_15409_archive_1.a",
+            "mod": "_vcs_unit__539399367",
+            "mode": 4,
+            "out": "ie7Qn_d.o",
+            "bytes": 90292,
+            "checksum": 0
+        },
+        "RuFh3_d": {
+            "archive": "archive.13/_15409_archive_1.a",
+            "mod": "intf_sdram",
+            "mode": 4,
+            "out": "RuFh3_d.o",
+            "bytes": 14387,
+            "checksum": 0
+        },
+        "a3mSN_d": {
+            "archive": "archive.13/_15409_archive_1.a",
+            "mod": "mt48lc2m32b2",
+            "mode": 4,
+            "out": "a3mSN_d.o",
+            "bytes": 196218,
+            "checksum": 0
+        },
+        "ypVrV_d": {
+            "archive": "archive.13/_15409_archive_1.a",
+            "mod": "intf_wishBone",
+            "mode": 4,
+            "out": "ypVrV_d.o",
+            "bytes": 14211,
+            "checksum": 0
+        },
+        "xqeUE_d": {
+            "archive": "archive.13/_15409_archive_1.a",
+            "mod": "inft_sdrcntrl",
+            "mode": 4,
+            "out": "xqeUE_d.o",
+            "bytes": 13319,
+            "checksum": 0
+        },
+        "Emx8S_d": {
+            "archive": "archive.13/_15409_archive_1.a",
+            "mod": "top",
+            "mode": 4,
+            "out": "Emx8S_d.o",
+            "bytes": 21743,
+            "checksum": 0
+        },
+        "TzJKa_d": {
+            "archive": "archive.13/_15409_archive_1.a",
+            "mod": "IS42VM16400K",
+            "mode": 4,
+            "out": "TzJKa_d.o",
+            "bytes": 282591,
+            "checksum": 0
+        },
+        "NTNU2_d": {
+            "archive": "archive.13/_15409_archive_1.a",
+            "mod": "sdrc_top",
+            "mode": 4,
+            "out": "NTNU2_d.o",
+            "bytes": 384347,
+            "checksum": 0
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.13/_15409_archive_1.a",
+            "size": 1176972,
+            "objects": [
+                [
+                    "ie7Qn_d.o",
+                    90292
+                ],
+                [
+                    "RuFh3_d.o",
+                    14387
+                ],
+                [
+                    "ypVrV_d.o",
+                    14211
+                ],
+                [
+                    "xqeUE_d.o",
+                    13319
+                ],
+                [
+                    "Emx8S_d.o",
+                    21743
+                ],
+                [
+                    "a3mSN_d.o",
+                    196218
+                ],
+                [
+                    "TzJKa_d.o",
+                    282591
+                ],
+                [
+                    "NTNU2_d.o",
+                    384347
+                ],
+                [
+                    "amcQwB.o",
+                    159864
+                ]
+            ]
+        }
+    ]
+}

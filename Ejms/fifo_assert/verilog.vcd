@@ -1,0 +1,163 @@
+$date
+	Thu Nov  1 19:45:40 2018
+$end
+
+$version
+	Synopsys VCS version M-2017.03_Full64
+$end
+
+$timescale
+	1s
+$end
+
+$comment Csum: 1 903ee6ebb03da863 $end
+
+
+$scope module top $end
+$var reg 1 ! clk $end
+
+$scope module intf $end
+$var wire 1 " clk $end
+$var reg 1 # rst $end
+$var reg 1 $ wr_cs $end
+$var reg 1 % rd_cs $end
+$var reg 8 & data_in [7:0] $end
+$var reg 1 ' rd_en $end
+$var reg 1 ( wr_en $end
+$var reg 8 ) data_out [7:0] $end
+$var reg 1 * empty $end
+$var reg 1 + full $end
+$upscope $end
+
+
+$scope module assertion $end
+
+$scope task _$$txp______assert_full_empty_2 $end
+$upscope $end
+
+
+$scope task _$$txp______assert_full_empty_4 $end
+$upscope $end
+
+
+$scope task _$$txp______assert_full_empty_clean_up $end
+$upscope $end
+
+
+$scope task _$$txp_fail_action_full_empty_2 $end
+$upscope $end
+
+
+$scope task _$$txp_fail_action_full_empty_3 $end
+$upscope $end
+
+
+$scope task _$$txp_fail_action_full_empty_4 $end
+$upscope $end
+
+
+$scope task _$$txp_fail_action_full_empty_clean_up $end
+$upscope $end
+
+$upscope $end
+
+
+$scope module dut $end
+$var wire 1 , clk $end
+$var wire 1 - rst $end
+$var wire 1 . full $end
+$var wire 1 / empty $end
+$var wire 1 0 wr_cs $end
+$var wire 1 1 rd_cs $end
+$var wire 1 2 rd_en $end
+$var wire 1 3 wr_en $end
+$var wire 8 4 data_in [7:0] $end
+$var reg 8 5 data_out [7:0] $end
+$var reg 8 6 wr_pointer [7:0] $end
+$var reg 8 7 rd_pointer [7:0] $end
+$var reg 9 8 status_cnt [8:0] $end
+$var wire 8 9 data_ram [7:0] $end
+
+$scope begin WRITE_POINTER $end
+$upscope $end
+
+
+$scope begin READ_POINTER $end
+$upscope $end
+
+
+$scope begin READ_DATA $end
+$upscope $end
+
+
+$scope begin STATUS_COUNTER $end
+$upscope $end
+
+
+$scope module DP_RAM $end
+$var wire 8 : address_0 [7:0] $end
+$var wire 1 0 cs_0 $end
+$var wire 1 3 we_0 $end
+$var wire 1 ; oe_0 $end
+$var wire 8 < address_1 [7:0] $end
+$var wire 1 1 cs_1 $end
+$var wire 1 = we_1 $end
+$var wire 1 2 oe_1 $end
+$var wire 8 4 data_0 [7:0] $end
+$var wire 8 9 data_1 [7:0] $end
+$var reg 8 > data_0_out [7:0] $end
+$var reg 8 ? data_1_out [7:0] $end
+
+$scope begin MEM_WRITE $end
+$upscope $end
+
+
+$scope begin MEM_READ_0 $end
+$upscope $end
+
+
+$scope begin MEM_READ_1 $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+bxxxxxxxx )
+b00000000 &
+0;
+0=
+bxxxxxxxx :
+bxxxxxxxx <
+b00000000 >
+b00000000 ?
+bxxxxxxxx 5
+bzzzzzzzz 9
+bxxxxxxxx 7
+bxxxxxxxxx 8
+bxxxxxxxx 6
+0"
+0,
+x.
+x/
+b00000000 4
+0-
+00
+01
+02
+03
+x*
+x+
+0%
+0'
+0#
+0$
+0(
+$end

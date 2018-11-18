@@ -1,0 +1,44 @@
+Warning : License for product VCSRuntime_Net(725) will expire within 11 days, on: 11-nov-2018.
+If you would like to temporarily disable this message, set 
+ the VCS_LIC_EXPIRE_WARNING environment variable to the number of days
+before expiration that you want this message to start (the minimum is 0).
+Chronologic VCS simulator copyright 1991-2017
+Contains Synopsys proprietary information.
+Compiler version M-2017.03_Full64; Runtime version M-2017.03_Full64;  Nov  1 19:44 2018
+Warning : License for product VT_TestbenchRuntime(802) will expire within 11 days, on: 11-nov-2018.
+If you would like to temporarily disable this message, set 
+ the VCS_LIC_EXPIRE_WARNING environment variable to the number of days
+before expiration that you want this message to start (the minimum is 0).
+VCD+ Writer M-2017.03_Full64 Copyright (c) 1991-2017 by Synopsys Inc.
+The design has assertions or cover properties.
+The assertion browser can be used to view them. Click on the assertion toolbar button or use the menu 'Window->Panes->Assertion' to open it.
+The file '/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/inter.vpd' was opened successfully.
+1
+"assertion.sv", 7: top.assertion.full_empty_0: started at 0s failed at 0s
+	Offending '(top.dut.empty ^ top.dut.full)'
+"assertion.sv", 12: top.assertion.full_empty_1: started at 0s failed at 0s
+	Offending '(top.dut.empty ^ top.dut.full)'
+
+Creating environment
+"assertion.sv", 32: top.assertion.full_empty_4: started at 5s failed at 5s
+	Offending '((top.dut.empty ^ top.dut.full) == 1'b1)'
+Error: "assertion.sv", 32: top.assertion.full_empty_4: at time 5
+full xor empty signals violated
+$finish at simulation time                  130
+Simulation complete, time is 130.
+Releasing License for VCSRuntime_Net at Thu Nov  1 20:04:56
+Releasing License for VT_TestbenchRuntime at Thu Nov  1 20:04:56
+Attempting to Re-Acquire License for VCSRuntime_Net at Thu Nov  1 20:04:57
+Warning : License for product VCSRuntime_Net(725) will expire within 11 days, on: 11-nov-2018.
+
+If you would like to temporarily disable this message, set 
+ the VCS_LIC_EXPIRE_WARNING environment variable to the number of days
+before expiration that you want this message to start (the minimum is 0).
+Re-Acquired License for VCSRuntime_Net at Thu Nov  1 20:04:57, continuing....
+Attempting to Re-Acquire License for VT_TestbenchRuntime at Thu Nov  1 20:04:57
+Warning : License for product VT_TestbenchRuntime(802) will expire within 11 days, on: 11-nov-2018.
+
+If you would like to temporarily disable this message, set 
+ the VCS_LIC_EXPIRE_WARNING environment variable to the number of days
+before expiration that you want this message to start (the minimum is 0).
+Re-Acquired License for VT_TestbenchRuntime at Thu Nov  1 20:04:57, continuing....
