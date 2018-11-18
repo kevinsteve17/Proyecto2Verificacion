@@ -3,8 +3,6 @@
 // top module
 module top();
 
-    DuvConfigurationUtils duvConfigUtils = new();
-
     parameter P_SYS  = 10;     //    200MHz
     parameter P_SDR  = 20;     //    100MHz
 
