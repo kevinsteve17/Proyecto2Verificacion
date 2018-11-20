@@ -94,7 +94,7 @@ COLORTERM=gnome-terminal
 1541688445 ../model/IS42VM16400K.V
 1541688445 ../model/mt48lc8m8a2.v
 1541688445 ../model/mt48lc2m32b2.v
-1542672016 ../tb/top.sv
+1542676538 ../tb/tb_top_proyecto2_test.sv
 1542676284 ../tb/whitebox_interface.sv
 1542559637 ../tb/Test.sv
 1541688446 ../tb/sdrc_environment.sv
@@ -104,11 +104,11 @@ COLORTERM=gnome-terminal
 1541688446 ../tb/sdrc_interface.sv
 1541688446 ../tb/wb_interface.sv
 1541688446 ../tb/sdram_interterface.sv
-1542672029 filelist_Proyecto2_test.f
+1542676568 filelist_Proyecto2_test.f
 1487217861 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/vcsdp_lite.tab
 4
 0 
 1487220396 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libvirsim.so
 1487219634 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/liberrorinf.so
 1487219608 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libsnpsmalloc.so
-1542676314 simv.daidir
+1542676583 simv.daidir

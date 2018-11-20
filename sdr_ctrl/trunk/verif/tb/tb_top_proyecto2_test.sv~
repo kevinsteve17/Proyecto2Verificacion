@@ -40,7 +40,7 @@ module top();
     );
 
     // Whitebox interface instance
-    //intf_whitebox whitebox_intf(sdrc_intf.sdram_clk);
+    intf_whitebox whitebox_intf(sdrc_intf.sdram_clk);
 
     // assertion
     //whitebox assertion(whitebox_intf); 

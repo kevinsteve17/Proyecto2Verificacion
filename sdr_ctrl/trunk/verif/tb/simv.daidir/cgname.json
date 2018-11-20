@@ -5,17 +5,11 @@
         "module",
         1
     ],
-    "sdrc_top": [
-        "sdrc_top",
-        "NTNU2",
+    "intf_wishBone": [
+        "intf_wishBone",
+        "ypVrV",
         "module",
-        7
-    ],
-    "std": [
-        "std",
-        "reYIK",
-        "module",
-        2
+        4
     ],
     "intf_whitebox": [
         "intf_whitebox",
@@ -29,23 +23,11 @@
         "module",
         9
     ],
-    "intf_wishBone": [
-        "intf_wishBone",
-        "ypVrV",
-        "module",
-        4
-    ],
     "intf_sdram": [
         "intf_sdram",
         "RuFh3",
         "module",
         3
-    ],
-    "top": [
-        "top",
-        "Emx8S",
-        "module",
-        6
     ],
     "testcase": [
         "testcase",
@@ -53,11 +35,23 @@
         "module",
         11
     ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        2
+    ],
     "inft_sdrcntrl": [
         "inft_sdrcntrl",
         "xqeUE",
         "module",
         5
+    ],
+    "top": [
+        "top",
+        "Emx8S",
+        "module",
+        6
     ],
     "mt48lc2m32b2": [
         "mt48lc2m32b2",
@@ -76,6 +70,12 @@
         "TzJKa",
         "module",
         14
+    ],
+    "sdrc_top": [
+        "sdrc_top",
+        "NTNU2",
+        "module",
+        7
     ],
     "sdrc_bank_fsm": [
         "sdrc_bank_fsm",
