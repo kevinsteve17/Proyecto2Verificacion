@@ -1,0 +1,133 @@
+{
+    "Modules": {
+        "sdrc_top": {
+            "Compiled Times": 19,
+            "Compiled": "Yes"
+        },
+        "std": {
+            "Compiled Times": 19,
+            "Compiled": "Yes"
+        },
+        "intf_whitebox": {
+            "Compiled Times": 2,
+            "Compiled": "Yes"
+        },
+        "...MASTER...": {},
+        "intf_wishBone": {
+            "Compiled Times": 19,
+            "Compiled": "Yes"
+        },
+        "_vcs_unit__2727606658": {
+            "Compiled Times": 2,
+            "Compiled": "Yes"
+        },
+        "testcase": {
+            "Compiled Times": 17,
+            "Compiled": "Yes"
+        },
+        "top": {
+            "Compiled Times": 19,
+            "Compiled": "Yes"
+        },
+        "intf_sdram": {
+            "Compiled Times": 19,
+            "Compiled": "Yes"
+        },
+        "inft_sdrcntrl": {
+            "Compiled Times": 19,
+            "Compiled": "Yes"
+        },
+        "mt48lc2m32b2": {
+            "Compiled Times": 17,
+            "Compiled": "Yes"
+        },
+        "mt48lc8m8a2": {
+            "Compiled Times": 7,
+            "Compiled": "Yes"
+        },
+        "IS42VM16400K": {
+            "Compiled Times": 7,
+            "Compiled": "Yes"
+        },
+        "sdrc_bank_fsm": {
+            "Compiled Times": 19,
+            "Compiled": "Yes"
+        }
+    },
+    "CompUnits": {
+        "N7Gpy_d": {
+            "mod": "_vcs_unit__2727606658",
+            "bytes": 90601,
+            "out": "N7Gpy_d.o",
+            "archive": "archive.19/_13011_archive_1.a",
+            "mode": 4,
+            "checksum": 0
+        },
+        "qtWga_d": {
+            "mod": "intf_whitebox",
+            "bytes": 7001,
+            "out": "qtWga_d.o",
+            "archive": "archive.19/_13011_archive_1.a",
+            "mode": 4,
+            "checksum": 0
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "a3mSN_d": {
+            "icPath": "csrc"
+        },
+        "RuFh3_d": {
+            "icPath": "csrc"
+        },
+        "ypVrV_d": {
+            "icPath": "csrc"
+        },
+        "PATxq_d": {
+            "icPath": "csrc"
+        },
+        "xqeUE_d": {
+            "icPath": "csrc"
+        },
+        "TzJKa_d": {
+            "icPath": "csrc"
+        },
+        "Emx8S_d": {
+            "icPath": "csrc"
+        },
+        "ChjVu_d": {
+            "icPath": "csrc"
+        },
+        "Pj51K_d": {
+            "icPath": "csrc"
+        },
+        "NTNU2_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.19/_13011_archive_1.a",
+            "objects": [
+                [
+                    "N7Gpy_d.o",
+                    90601
+                ],
+                [
+                    "qtWga_d.o",
+                    7001
+                ],
+                [
+                    "amcQwB.o",
+                    159895
+                ]
+            ],
+            "size": 257497
+        }
+    ]
+}

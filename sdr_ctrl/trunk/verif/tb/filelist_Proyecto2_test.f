@@ -10,7 +10,8 @@
 ../tb/sdrc_driver.sv
 ../tb/sdrc_environment.sv
 ../tb/Test.sv
-../tb/tb_top_proyecto2_test.sv
+../tb/whitebox_interface.sv
+../tb/top.sv
 ../model/mt48lc2m32b2.v
 ../model/mt48lc8m8a2.v
 ../model/IS42VM16400K.V

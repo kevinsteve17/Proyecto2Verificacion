@@ -5,9 +5,9 @@
         "module",
         0
     ],
-    "top": [
-        "top",
-        "Emx8S",
+    "intf_cnt": [
+        "intf_cnt",
+        "t85Au",
         "module",
         0
     ],
@@ -17,27 +17,27 @@
         "module",
         1
     ],
-    "sync_fifo": [
-        "sync_fifo",
-        "gWQCM",
-        "module",
-        0
-    ],
     "std": [
         "std",
         "reYIK",
         "module",
         0
     ],
-    "intf_cnt": [
-        "intf_cnt",
-        "t85Au",
+    "sync_fifo": [
+        "sync_fifo",
+        "gWQCM",
         "module",
         0
     ],
     "testcase": [
         "testcase",
         "PATxq",
+        "module",
+        0
+    ],
+    "top": [
+        "top",
+        "Emx8S",
         "module",
         0
     ]
