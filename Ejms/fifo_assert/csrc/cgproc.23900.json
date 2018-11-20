@@ -1,0 +1,123 @@
+{
+    "CompUnits": {
+        "Emx8S_d": {
+            "archive": "archive.66/_23900_archive_1.a",
+            "mod": "top",
+            "checksum": 0,
+            "out": "Emx8S_d.o",
+            "mode": 4,
+            "bytes": 43239
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "checksum": 0,
+            "out": "objs/amcQw_d.o",
+            "mode": 4,
+            "bytes": 8096
+        },
+        "mjsL2_d": {
+            "archive": "archive.66/_23900_archive_1.a",
+            "mod": "_vcs_unit__3732619767",
+            "checksum": 0,
+            "out": "mjsL2_d.o",
+            "mode": 4,
+            "bytes": 74252
+        },
+        "reYIK_d": {
+            "archive": "archive.66/_23900_archive_1.a",
+            "mod": "std",
+            "checksum": 0,
+            "out": "reYIK_d.o",
+            "mode": 4,
+            "bytes": 68477
+        },
+        "gWQCM_d": {
+            "archive": "archive.66/_23900_archive_1.a",
+            "mod": "sync_fifo",
+            "checksum": 0,
+            "out": "gWQCM_d.o",
+            "mode": 4,
+            "bytes": 29393
+        },
+        "t85Au_d": {
+            "archive": "archive.66/_23900_archive_1.a",
+            "mod": "intf_cnt",
+            "checksum": 0,
+            "out": "t85Au_d.o",
+            "mode": 4,
+            "bytes": 13455
+        },
+        "PATxq_d": {
+            "archive": "archive.66/_23900_archive_1.a",
+            "mod": "testcase",
+            "checksum": 0,
+            "out": "PATxq_d.o",
+            "mode": 4,
+            "bytes": 14528
+        }
+    },
+    "Modules": {
+        "intf_cnt": {
+            "Compiled Times": 30,
+            "Compiled": "Yes"
+        },
+        "_vcs_unit__3732619767": {
+            "Compiled Times": 15,
+            "Compiled": "Yes"
+        },
+        "...MASTER...": {},
+        "std": {
+            "Compiled Times": 30,
+            "Compiled": "Yes"
+        },
+        "sync_fifo": {
+            "Compiled Times": 30,
+            "Compiled": "Yes"
+        },
+        "testcase": {
+            "Compiled Times": 30,
+            "Compiled": "Yes"
+        },
+        "top": {
+            "Compiled Times": 30,
+            "Compiled": "Yes"
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": [
+        {
+            "archive": "archive.66/_23900_archive_1.a",
+            "objects": [
+                [
+                    "mjsL2_d.o",
+                    74252
+                ],
+                [
+                    "reYIK_d.o",
+                    68477
+                ],
+                [
+                    "gWQCM_d.o",
+                    29393
+                ],
+                [
+                    "t85Au_d.o",
+                    13455
+                ],
+                [
+                    "PATxq_d.o",
+                    14528
+                ],
+                [
+                    "Emx8S_d.o",
+                    43239
+                ],
+                [
+                    "amcQwB.o",
+                    106398
+                ]
+            ],
+            "size": 349742
+        }
+    ]
+}

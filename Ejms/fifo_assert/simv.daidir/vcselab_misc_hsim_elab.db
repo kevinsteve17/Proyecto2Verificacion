@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	NULL
-pDaiDir                            	/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert/simv.daidir
+pDaiDir                            	/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/Ejms/fifo_assert/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 hsMainFileCount                    	0

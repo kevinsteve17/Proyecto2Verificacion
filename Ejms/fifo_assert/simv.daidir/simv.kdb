@@ -1,7 +1,7 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_assert
+COMPILE_PATH=/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/Ejms/fifo_assert
 SystemC=FALSE
 UUM=FALSE
 KDB=FALSE

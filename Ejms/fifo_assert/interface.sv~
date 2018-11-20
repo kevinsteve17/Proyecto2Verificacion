@@ -1,4 +1,5 @@
-interface intf_cnt();
+parameter DUV_PATH = top.duv;
+interface intf_cnt(input clk);
   
   logic rst;
   logic wr_cs;

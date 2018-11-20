@@ -7,4 +7,5 @@ driver.sv
 monitor.sv
 env.sv
 assertion.sv
+test_1.sv
 top.sv
