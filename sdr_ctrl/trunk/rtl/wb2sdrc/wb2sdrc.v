@@ -242,8 +242,7 @@ end
 //     $display("ERROR:%m COMMAND FIFO WRITE OVERFLOW");
 //  end 
 //end 
-
-full_fifo: assert property ( @(posedge wb_clk_i) (cmdfifo_full == 1'b1 && cmdfifo_wr == 1'b1) else $error ("ERROR:%m COMMAND FIFO WRITE OVERFLOW");
+full_fifo: assert property ( @(posedge wb_clk_i) (cmdfifo_full == 1'b1 && cmdfifo_wr == 1'b1)) else $error ("ERROR:%m COMMAND FIFO WRITE OVERFLOW");
 
 // synopsys translate_on
 // synopsys translate_off
