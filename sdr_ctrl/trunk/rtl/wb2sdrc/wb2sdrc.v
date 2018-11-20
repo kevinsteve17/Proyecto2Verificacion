@@ -250,7 +250,7 @@ full_fifo_cmdwrite: assert property ( @(posedge wb_clk_i) (cmdfifo_full == 1'b1 
 //   if (cmdfifo_empty == 1'b1 && cmdfifo_rd == 1'b1) begin
 //      $display("ERROR:%m COMMAND FIFO READ OVERFLOW");
 //   end
-end 
+//end 
 full_fifo_cmdread: assert property ( @(posedge wb_clk_i) (cmdfifo_empty == 1'b1 && cmdfifo_rd == 1'b1)) else $error ("ERROR:%m COMMAND FIFO READ OVERFLOW");
 // synopsys translate_on
 
