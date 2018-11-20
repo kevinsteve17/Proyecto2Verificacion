@@ -106,14 +106,14 @@ The MASTER sends this information to the SLAVE. The SLAVE can use this
 information to prepare the response for the next cycle.
 Table 4-2 Cycle Type Identifiers
 CTI_O(2:0) Description
-‘000’ Classic cycle.
-‘001’ Constant address burst cycle
-‘010’ Incrementing burst cycle
-‘011’ Reserved
-‘100’ Reserved
-‘101 Reserved
-‘110’ Reserved
-‘111’ End-of-Burst
+ï¿½000ï¿½ Classic cycle.
+ï¿½001ï¿½ Constant address burst cycle
+ï¿½010ï¿½ Incrementing burst cycle
+ï¿½011ï¿½ Reserved
+ï¿½100ï¿½ Reserved
+ï¿½101 Reserved
+ï¿½110ï¿½ Reserved
+ï¿½111ï¿½ End-of-Burst
 ****************************************************/
 //--------------------------------------------
 // SDRAM controller Interface 
@@ -237,11 +237,14 @@ end
      );
 
 // synopsys translate_off
-always @(posedge wb_clk_i) begin
-  if (cmdfifo_full == 1'b1 && cmdfifo_wr == 1'b1)  begin
-     $display("ERROR:%m COMMAND FIFO WRITE OVERFLOW");
-  end 
-end 
+//always @(posedge wb_clk_i) begin
+//  if (cmdfifo_full == 1'b1 && cmdfifo_wr == 1'b1)  begin
+//     $display("ERROR:%m COMMAND FIFO WRITE OVERFLOW");
+//  end 
+//end 
+
+full_fifo: assert property ( @(posedge wb_clk_i) (cmdfifo_full == 1'b1 && cmdfifo_wr == 1'b1) else $error ("ERROR:%m COMMAND FIFO WRITE OVERFLOW");
+
 // synopsys translate_on
 // synopsys translate_off
 always @(posedge sdram_clk) begin
