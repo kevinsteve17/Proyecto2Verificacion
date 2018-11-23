@@ -7,11 +7,13 @@ interface intf_whitebox (sdram_clk);
     logic sdr_ras_n;    
     logic sdr_cas_n;
     logic sdr_we_n;
+    logic sdram_resetn;
 
     assign sdr_ras_n = `DUV_PATH.sdr_ras_n;
     assign sdr_cas_n = `DUV_PATH.sdr_cas_n;
     assign sdr_we_n = `DUV_PATH.sdr_we_n;
-    
+    assign sdram_resetn = `DUV_PATH.sdram_resetn;
+
     /*logic [SDR_BW-1:0]  sdr_dqm;
     logic [1:0]         sdr_ba;
     logic [12:0]        sdr_addr;
