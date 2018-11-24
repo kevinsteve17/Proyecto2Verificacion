@@ -28,7 +28,7 @@ module top();
  `elsif SDR_8BIT
     parameter SDR_DW = 8;
     parameter SDR_BW = 1;
-    parameter CNFG_SDR_WDITH = 2'b00;
+    parameter CNFG_SDR_WDITH = 2'b10;
 `endif
 
     parameter APP_AW = 26;
@@ -43,7 +43,7 @@ module top();
     intf_whitebox whitebox_intf(sdrc_intf.sdram_clk);
 
     // assertion
-    //whitebox assertion(whitebox_intf); 
+    whitebox assertion(whitebox_intf); 
 
     sdrc_top #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW)) duv(
         // system
@@ -123,9 +123,9 @@ module top();
 `elsif SDR_8BIT
     mt48lc8m8a2 #(.data_bits(8)) u_sdram8 (
           .Dq                 (sdrc_intf.sdram_intf.sdr_dq) , 
-          .Addr               (sdrc_intf.sdram_intf.sdr_addr[11:0]), 
+          .Addr               (sdrc_intf.sdram_intf.sdr_addr[10:0]), 
           .Ba                 (sdrc_intf.sdram_intf.sdr_ba), 
-          .Clk                (sdram_clk_d        ), 
+          .Clk                (sdram_clk_d), 
           .Cke                (sdrc_intf.sdram_intf.sdr_cke), 
           .Cs_n               (sdrc_intf.sdram_intf.sdr_cs_n), 
           .Ras_n              (sdrc_intf.sdram_intf.sdr_ras_n), 
