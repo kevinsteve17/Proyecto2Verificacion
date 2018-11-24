@@ -5,29 +5,23 @@
         "module",
         10
     ],
-    "testcase": [
-        "testcase",
-        "PATxq",
+    "intf_sdram": [
+        "intf_sdram",
+        "RuFh3",
         "module",
-        11
+        3
     ],
-    "mt48lc8m8a2": [
-        "mt48lc8m8a2",
-        "Pj51K",
+    "top": [
+        "top",
+        "Emx8S",
         "module",
-        1
+        6
     ],
     "mt48lc2m32b2": [
         "mt48lc2m32b2",
         "a3mSN",
         "module",
         13
-    ],
-    "intf_sdram": [
-        "intf_sdram",
-        "RuFh3",
-        "module",
-        3
     ],
     "std": [
         "std",
@@ -41,35 +35,17 @@
         "module",
         4
     ],
-    "intf_whitebox": [
-        "intf_whitebox",
-        "qtWga",
-        "module",
-        15
-    ],
-    "top": [
-        "top",
-        "Emx8S",
-        "module",
-        6
-    ],
     "inft_sdrcntrl": [
         "inft_sdrcntrl",
         "xqeUE",
         "module",
         5
     ],
-    "IS42VM16400K": [
-        "IS42VM16400K",
-        "TzJKa",
+    "testcase": [
+        "testcase",
+        "PATxq",
         "module",
-        14
-    ],
-    "sdrc_top": [
-        "sdrc_top",
-        "NTNU2",
-        "module",
-        7
+        11
     ],
     "sdrc_bank_fsm": [
         "sdrc_bank_fsm",
@@ -77,10 +53,34 @@
         "module",
         8
     ],
+    "intf_whitebox": [
+        "intf_whitebox",
+        "qtWga",
+        "module",
+        15
+    ],
+    "mt48lc8m8a2": [
+        "mt48lc8m8a2",
+        "Pj51K",
+        "module",
+        1
+    ],
     "...MASTER...": [
         "SIM",
         "amcQw",
         "module",
         9
+    ],
+    "sdrc_top": [
+        "sdrc_top",
+        "NTNU2",
+        "module",
+        7
+    ],
+    "IS42VM16400K": [
+        "IS42VM16400K",
+        "TzJKa",
+        "module",
+        14
     ]
 }
