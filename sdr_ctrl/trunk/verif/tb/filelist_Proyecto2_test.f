@@ -11,6 +11,7 @@
 ../tb/sdrc_environment.sv
 ../tb/Test.sv
 ../tb/whitebox_interface.sv
+../tb/assertions.sv
 ../tb/tb_top_proyecto2_test.sv
 ../model/mt48lc2m32b2.v
 ../model/mt48lc8m8a2.v

@@ -1,7 +1,7 @@
 2        
 0 sdrc_define.v
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/etc/systemverilog/sdrc_define.v
-29
+31
 +define+SDR_32BIT
 +itf+/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/vcsdp_lite.tab
 +vcsd1
@@ -22,6 +22,7 @@
 -Msyslibs=-ldl
 -Mvcsaceobjs=
 -Mxcflags= -pipe -fPIC -I/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/include
+-assert
 -debug_access+all
 -f filelist_Proyecto2_test.f
 -full64
@@ -31,11 +32,12 @@
 -sverilog
 -ucli
 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/bin/vcs1
+svaext
 47
 sysc_uni_pwd=/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb
 XMODIFIERS=@im=none
-XDG_SESSION_COOKIE=7d1e713e61d13a600c6dc60900000019-1542670111.585602-736205011
-XAUTHORITY=/var/run/gdm/auth-for-ESTUDIANTES\fparis-r65iDF/database
+XDG_SESSION_COOKIE=7d1e713e61d13a600c6dc60900000019-1543019764.901342-1475649552
+XAUTHORITY=/var/run/gdm/auth-for-ESTUDIANTES\fparis-5Xnvhk/database
 WINDOWPATH=1
 VMR_MODE_FLAG=64
 VCS_MX_HOME_INTERNAL=1
@@ -48,10 +50,10 @@ USERNAME=ESTUDIANTES\fparis
 UNAME=/bin/uname
 TOOL_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64
 SYNOPSYS_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/
-SSH_AUTH_SOCK=/tmp/keyring-lSYSeh/socket.ssh
+SSH_AUTH_SOCK=/tmp/keyring-Uu3FkE/socket.ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/28743,unix/unix:/tmp/.ICE-unix/28743
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/25321,unix/unix:/tmp/.ICE-unix/25321
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QT_IM_MODULE=xim
@@ -62,26 +64,27 @@ OVA_UUM=0
 ORBIT_SOCKETDIR=/tmp/orbit-ESTUDIANTES\fparis
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_ALL=C
-KRB5CCNAME=FILE:/tmp/krb5cc_1160251947_viFE83
+KRB5CCNAME=FILE:/tmp/krb5cc_1160251947_OZ8L4X
 IMSETTINGS_MODULE=none
 IMSETTINGS_INTEGRATE_DESKTOP=yes
 HISTCONTROL=ignoredups
 G_BROKEN_FILENAMES=1
 GTK_RC_FILES=/etc/gtk/gtkrc:/home/local/ESTUDIANTES/fparis/.gtkrc-1.2-gnome2
-GNOME_KEYRING_SOCKET=/tmp/keyring-lSYSeh/socket
+GNOME_KEYRING_SOCKET=/tmp/keyring-Uu3FkE/socket
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
-GIO_LAUNCHED_DESKTOP_FILE_PID=29748
+GIO_LAUNCHED_DESKTOP_FILE_PID=26155
 GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/gnome-terminal.desktop
 GDM_LANG=en_US.UTF-8
 GDM_KEYBOARD_LAYOUT=us
 GDMSESSION=gnome
 DESKTOP_SESSION=gnome
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-izuobLoJlI,guid=31ab874c6f49e3dabc5fb102000fd285
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-B1RuZnuDiD,guid=556cbe5fee58fc317dbbc7cd0006c2cd
 CVS_RSH=ssh
 COLORTERM=gnome-terminal
 0
-25
+27
 1541688445 ../../rtl/core/sdrc_define.v
+1487217855 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/etc/sva/rec_ltl_classes_package.svp
 1541688445 ../../rtl/core/sdrc_xfr_ctl.v
 1541688445 ../../rtl/core/sdrc_req_gen.v
 1541688445 ../../rtl/core/sdrc_bs_convert.v
@@ -89,14 +92,15 @@ COLORTERM=gnome-terminal
 1541688445 ../../rtl/core/sdrc_bank_ctl.v
 1541688445 ../../rtl/core/sdrc_core.v
 1541688445 ../../rtl/lib/async_fifo.v
-1541688445 ../../rtl/wb2sdrc/wb2sdrc.v
+1543020225 ../../rtl/wb2sdrc/wb2sdrc.v
 1541688445 ../../rtl/top/sdrc_top.v
 1541688445 ../model/IS42VM16400K.V
 1541688445 ../model/mt48lc8m8a2.v
 1541688445 ../model/mt48lc2m32b2.v
-1542676538 ../tb/tb_top_proyecto2_test.sv
-1542676284 ../tb/whitebox_interface.sv
-1542559637 ../tb/Test.sv
+1543024843 ../tb/tb_top_proyecto2_test.sv
+1543027788 ../tb/assertions.sv
+1543020225 ../tb/whitebox_interface.sv
+1543026752 ../tb/Test.sv
 1541688446 ../tb/sdrc_environment.sv
 1541688446 ../tb/sdrc_driver.sv
 1542559637 ../tb/sdrc_monitor.sv
@@ -104,11 +108,11 @@ COLORTERM=gnome-terminal
 1541688446 ../tb/sdrc_interface.sv
 1541688446 ../tb/wb_interface.sv
 1541688446 ../tb/sdram_interterface.sv
-1542676568 filelist_Proyecto2_test.f
+1543024775 filelist_Proyecto2_test.f
 1487217861 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/vcsdp_lite.tab
 4
 0 
 1487220396 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libvirsim.so
 1487219634 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/liberrorinf.so
 1487219608 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libsnpsmalloc.so
-1542676583 simv.daidir
+1543027803 simv.daidir
