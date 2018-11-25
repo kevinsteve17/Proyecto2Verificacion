@@ -10,11 +10,17 @@ module top();
     reg  sys_clk;
     reg  sdram_clk;
 
-    initial sys_clk = 0;
-    initial sdram_clk = 0;
+    // clocks 
+    Clocks clks(
+        .sys_clk(sys_clk)
+        .sdram_clk(sdram_clk)
+    );
 
-    always #(P_SYS/2) sys_clk = !sys_clk;
-    always #(P_SDR/2) sdram_clk = !sdram_clk;
+    // initial sys_clk = 0;
+    // initial sdram_clk = 0;
+
+    // always #(P_SYS/2) sys_clk = !sys_clk;
+    // always #(P_SDR/2) sdram_clk = !sdram_clk;
 
 
 `ifdef SDR_32BIT
