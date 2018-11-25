@@ -11,23 +11,36 @@ property sdram_init;
   $rose(!whitebox_if.sdr_ras_n && !whitebox_if.sdr_cas_n && whitebox_if.sdr_we_n);                        // autorefresh LLH
 endproperty
 
-// Property of Rule 3.00
+// Property of Rule 3.00 Reset operation
 property wb_init;
 @(posedge whitebox_if.wb_clk_i)
 $rose whitebox_if.wb_clk_i |=> $fell whitebox_if.wb_rst_i
 endproperty
 
-// Property of Rule 3.05
-property wb_reset;
+// Property of Rule 3.05 Reset operation
+property wb_reset_1_cycl;
 @(posedge whitebox_if.wb_clk_i)
 $rose whitebox_if.wb_clk_i |=> ##[1] $fell whitebox_if.wb_rst_i
 endproperty
 
-// Property of Rule 3.10
+// Property of Rule 3.10 Reset operation
 property wb_reset;
 @(posedge whitebox_if.wb_clk_i)
-$rose whitebox_if.wb_rst_i |=> ##[1] $fell whitebox_if.wb_rst_i
+$rose whitebox_if.sdram_resetn |=> $rose whitebox_if.wb_rst_i
 endproperty
+
+// Property of Rule 3.25 Transfer cycle initiaiton
+property wb_tci;
+@(posedge whitebox_if.wb_clk_i)
+$rose whitebox_if.wb_stb_i |=> $rose whitebox_if.wb_cyc_i
+endproperty
+
+// Property of Rule 3.35 Transfer cycle initiaiton
+property wb_termination;
+@(posedge whitebox_if.wb_clk_i)
+$rose whitebox_if.wb_stb_i |=> $rose whitebox_if.wb_cyc_i
+endproperty
+
 
 
 
@@ -35,14 +48,19 @@ endproperty
 sdram_initialization: assert property (sdram_init) else $error ("SDRAM_INIT FAILED!!!!!!!!!");
 
 // Rule 3.00
- wb_initialization: assert property (wb_init) else $error ("Wishbone Protocol Rule 3.00 violated");
+wb_initialization: assert property (wb_init) else $error ("Wishbone Protocol Rule 3.00 violated");
 
 // Rule 3.05
- wb_reset_1_clk: assert property(wb_reset) else $error ("Wishbone Protocol Rule 3.05 violated");
+wb_reset_1_clk: assert property(wb_reset_1_cycl) else $error ("Wishbone Protocol Rule 3.05 violated");
 
-// Rule 3.10  Seringa  ... 
+// Rule 3.10   
+wb_reset_react: assert property(wb_reset) else $error ("Wishbone Protocol Rule 3.10 violated");
 
-// Rule 
+// Rule 3.25
+wb_SRW_RMW: assert property(wb_tci) else $error ("Wishbone Protocol Rule 3.25 violated");
+
+// Rule 3.35
+wb_AND: assert property(wb_termination) else $error ("Wishbone Protocol Rule 3.35 violated");
 
 
 endmodule
