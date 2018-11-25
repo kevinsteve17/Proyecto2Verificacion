@@ -12,7 +12,7 @@ module top();
 
     // clocks 
     Clocks clks(
-        .sys_clk(sys_clk)
+        .sys_clk(sys_clk),
         .sdram_clk(sdram_clk)
     );
 
