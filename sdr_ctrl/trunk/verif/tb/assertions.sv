@@ -13,32 +13,32 @@ endproperty
 
 // Property of Rule 3.00 Reset operation
 property wb_init;
-@(posedge whitebox_if.wb_clk_i)
-$rose(whitebox_if.wb_clk_i) |=> $fell(whitebox_if.wb_rst_i);
+  @(posedge whitebox_if.wb_clk_i)
+  $rose(whitebox_if.wb_clk_i) |-> $fell(whitebox_if.wb_rst_i);
 endproperty
 
 // Property of Rule 3.05 Reset operation
 property wb_reset_1_cycl;
-@(posedge whitebox_if.wb_clk_i)
-$rose(whitebox_if.wb_clk_i) |=> ##[1] $fell(whitebox_if.wb_rst_i);
+  @(posedge whitebox_if.wb_clk_i)
+  $rose(whitebox_if.wb_clk_i) |-> ##[1] $fell(whitebox_if.wb_rst_i);
 endproperty
 
 // Property of Rule 3.10 Reset operation
 property wb_reset;
-@(posedge whitebox_if.wb_clk_i)
-$rose(whitebox_if.sdram_resetn) |=> $rose(whitebox_if.wb_rst_i);
+  @(posedge whitebox_if.wb_clk_i)
+  $rose(whitebox_if.sdram_resetn) |-> $rose(whitebox_if.wb_rst_i);
 endproperty
 
 // Property of Rule 3.25 Transfer cycle initiaiton
 property wb_tci;
-@(posedge whitebox_if.wb_clk_i)
-$rose(whitebox_if.wb_stb_i) |=> $rose(whitebox_if.wb_cyc_i);
+  @(posedge whitebox_if.wb_clk_i)
+  $rose(whitebox_if.wb_stb_i) |-> $rose(whitebox_if.wb_cyc_i);
 endproperty
 
 // Property of Rule 3.35 Transfer cycle initiaiton
 property wb_termination;
-@(posedge whitebox_if.wb_clk_i)
-$rose(whitebox_if.wb_stb_i) |=> $rose(whitebox_if.wb_cyc_i);
+  @(posedge whitebox_if.wb_clk_i)
+  $rose(whitebox_if.wb_stb_i) |-> $rose(whitebox_if.wb_cyc_i);
 endproperty
 
 
