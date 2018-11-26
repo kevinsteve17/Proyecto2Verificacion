@@ -10,6 +10,12 @@ module top();
     reg  sys_clk;
     reg  sdram_clk;
 
+    // clocks 
+    // Clocks clks(
+    //     .sys_clk(sys_clk),
+    //     .sdram_clk(sdram_clk)
+    // );
+
     initial sys_clk = 0;
     initial sdram_clk = 0;
 

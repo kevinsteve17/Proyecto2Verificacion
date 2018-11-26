@@ -12,6 +12,7 @@
 ../tb/Test.sv
 ../tb/whitebox_interface.sv
 ../tb/assertions.sv
+../tb/Clocks.sv
 ../tb/tb_top_proyecto2_test.sv
 ../model/mt48lc2m32b2.v
 ../model/mt48lc8m8a2.v
