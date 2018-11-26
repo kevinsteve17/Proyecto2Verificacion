@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module Clks();
+module Clks(reg sys_clk, reg sdram_clk);
     parameter P_SYS  = 10;     //    200MHz
     parameter P_SDR  = 20;     //    100MHz
     // General
