@@ -1,15 +1,17 @@
 # Begin_DVE_Session_Save_Info
 # DVE restart session
-# Saved on Fri Nov 23 20:23:36 2018
+# Saved on Sat Nov 24 11:43:57 2018
 # Designs open: 1
 #   Sim: /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv
 # Toplevel windows open: 2
 # 	TopLevel.1
 # 	TopLevel.2
 #   Source.1: _vcs_unit__2343566412
-#   Wave.1: 5 signals
-#   Group count = 1
-#   Group Group1 signal count = 5
+#   Wave.1: 7 signals
+#   Group count = 3
+#   Group Group1 signal count = 1
+#   Group Group2 signal count = 1
+#   Group Group3 signal count = 7
 # End_DVE_Session_Save_Info
 
 # DVE version: M-2017.03_Full64
@@ -45,6 +47,7 @@ set DLPane.1 DLPane.1
 set Data.1 Data.1
 set Local.1 Local.1
 set Member.1 Member.1
+set Assertion.1 Assertion.1
 set Console.1 Console.1
 gui_sync_global -id ${TopLevel.1} -option true
 
@@ -64,7 +67,7 @@ gui_sync_global -id ${TopLevel.2} -option true
 
 # MDI window settings
 set Wave.1 Wave.1
-gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 395} {child_wave_right 965} {child_wave_colname 205} {child_wave_colvalue 186} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 376} {child_wave_right 918} {child_wave_colname 186} {child_wave_colvalue 186} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -75,7 +78,7 @@ gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {d
 
 gui_set_precision 1ps
 gui_set_time_units 1ps
-dump -add { top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn }  -depth 0 -scope "."
+dump -add { top.assertion.sdram_initialization top.assertion.whitebox_if top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn }  -depth 0 -scope "."
 
 #</Database>
 
@@ -83,7 +86,6 @@ dump -add { top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ra
 
 
 # Global: Breakpoints
-stop -file {/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/assertions.sv}  -line {15}   
 
 # Global: Bus
 
@@ -96,11 +98,23 @@ stop -file {/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/
 # Global: Signal Groups
 
 
-set _session_group_1 Group1
-gui_sg_create "$_session_group_1"
-set Group1 "$_session_group_1"
+set _session_group_2 Group1
+gui_sg_create "$_session_group_2"
+set Group1 "$_session_group_2"
 
-gui_sg_addsignal -group "$_session_group_1" { top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn }
+gui_sg_addsignal -group "$_session_group_2" { top.assertion.sdram_initialization }
+
+set _session_group_3 Group2
+gui_sg_create "$_session_group_3"
+set Group2 "$_session_group_3"
+
+gui_sg_addsignal -group "$_session_group_3" { top.assertion.sdram_initialization }
+
+set _session_group_4 Group3
+gui_sg_create "$_session_group_4"
+set Group3 "$_session_group_4"
+
+gui_sg_addsignal -group "$_session_group_4" { top.assertion.sdram_initialization top.assertion.whitebox_if top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn }
 
 # Global: Highlighting
 
@@ -131,7 +145,7 @@ gui_list_set_filter -id ${Hier.1} -text {*}
 gui_change_design -id ${Hier.1} -design Sim
 catch {gui_list_expand -id ${Hier.1} top}
 catch {gui_list_select -id ${Hier.1} {top.assertion}}
-gui_view_scroll -id ${Hier.1} -vertical -set 0
+gui_view_scroll -id ${Hier.1} -vertical -set 40
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Class 'Class.1'
@@ -149,10 +163,10 @@ gui_list_set_filter -id ${Data.1} -text {*}
 gui_list_show_data -id ${Data.1} {top.assertion}
 gui_list_expand -id ${Data.1} top.assertion.whitebox_if
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn }}
+catch { gui_list_select -id ${Data.1} {top.assertion.sdram_initialization top.assertion.whitebox_if top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
-gui_view_scroll -id ${Hier.1} -vertical -set 0
+gui_view_scroll -id ${Hier.1} -vertical -set 40
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Source 'Source.1'
@@ -163,6 +177,9 @@ gui_view_scroll -id ${Source.1} -vertical -set 0
 gui_src_set_reusable -id ${Source.1}
 # Warning: Class view not found.
 
+# View 'Assertion.1'
+gui_switch_assert -id ${Assertion.1} -type assertion
+
 # View 'Wave.1'
 gui_wv_sync -id ${Wave.1} -switch false
 set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
@@ -171,8 +188,8 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 0 315
-gui_list_add_group -id ${Wave.1} -after {New Group} {Group1}
+gui_wv_zoom_timerange -id ${Wave.1} 0 299
+gui_list_add_group -id ${Wave.1} -after {New Group} {Group3}
 gui_seek_criteria -id ${Wave.1} {Any Edge}
 
 
@@ -188,7 +205,7 @@ if { $groupExD } {
 }
 gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Wave.1} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.1} -group Group1  -position in
+gui_list_set_insertion_bar  -id ${Wave.1} -group Group3  -position in
 
 gui_view_scroll -id ${Wave.1} -vertical -set 0
 gui_show_grid -id ${Wave.1} -enable false

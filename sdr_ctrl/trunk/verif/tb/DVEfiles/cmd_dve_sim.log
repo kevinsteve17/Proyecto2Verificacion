@@ -14,9 +14,9 @@ synopsys::dump -autoflush on -fid VPD0
 set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpJJQpk3
-synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.fparis.4910}
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.fparis.4910}
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpeCHYXV
+synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.fparis.27248}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.fparis.27248}
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
@@ -28,15 +28,19 @@ synUtils::sendTool -active {_icl_getAssertions -scopes}
 ucliGUI::vpdAddHierarchy -scope top.assertion -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
 ucliGUI::vpdAddHierarchy -scope top.duv.u_wb2sdrc -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
 synopsys::dump -flush VPD0
+dump -add { top.assertion.sdram_initialization top.assertion.whitebox_if } -depth 0 -scope "."
+dump -add { top.assertion.sdram_initialization top.assertion.whitebox_if }  -depth 0 -scope "."
+synopsys::dump -add {top.assertion.whitebox_if } -aggregates  -fid VPD0
+synopsys::dump -add {top.sdrc_intf top.whitebox_intf } -aggregates  -fid VPD0
 synopsys::run
 set ucliGUI::state
 set ucliGUI::state
-set synopsys::env(time) 50685000
-set synopsys::env(time) 102255000
-set synopsys::env(time) 156405000
-set synopsys::env(time) 210285000
-set synopsys::env(time) 253755000
-set synopsys::env(time) 310095000
+set synopsys::env(time) 47450000
+set synopsys::env(time) 98035000
+set synopsys::env(time) 147075000
+set synopsys::env(time) 193970000
+set synopsys::env(time) 240565000
+set synopsys::env(time) 286405000
 set ucliGUI::state
 set ucliGUI::state
 synopsys::xml get_stop_data
