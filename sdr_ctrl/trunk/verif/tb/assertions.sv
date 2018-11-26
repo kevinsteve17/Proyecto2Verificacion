@@ -47,8 +47,6 @@ property wb_termination;
 endproperty
 
 
-
-
 // Sdram init assertion
 sdram_initialization: assert property (sdram_init) else $error ("SDRAM_INIT FAILED!!!!!!!!!");
 

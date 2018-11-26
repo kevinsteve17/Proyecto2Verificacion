@@ -1,0 +1,243 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.62/_21479_archive_1.a",
+            "objects": [
+                [
+                    "BW0b7_d.o",
+                    95718
+                ],
+                [
+                    "RuFh3_d.o",
+                    14575
+                ],
+                [
+                    "ypVrV_d.o",
+                    14399
+                ],
+                [
+                    "xqeUE_d.o",
+                    13508
+                ],
+                [
+                    "PATxq_d.o",
+                    106131
+                ],
+                [
+                    "qtWga_d.o",
+                    7468
+                ],
+                [
+                    "F5CYM_d.o",
+                    8968
+                ],
+                [
+                    "Emx8S_d.o",
+                    586114
+                ],
+                [
+                    "a3mSN_d.o",
+                    196407
+                ],
+                [
+                    "Pj51K_d.o",
+                    187820
+                ],
+                [
+                    "TzJKa_d.o",
+                    282780
+                ],
+                [
+                    "NTNU2_d.o",
+                    411516
+                ],
+                [
+                    "ChjVu_d.o",
+                    48789
+                ],
+                [
+                    "amcQwB.o",
+                    163976
+                ]
+            ],
+            "size": 2138169
+        }
+    ],
+    "Modules": {
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 61
+        },
+        "IS42VM16400K": {
+            "Compiled": "Yes",
+            "Compiled Times": 49
+        },
+        "...MASTER...": {},
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 61
+        },
+        "_vcs_unit__2559226825": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 61
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 61
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 61
+        },
+        "testcase": {
+            "Compiled": "Yes",
+            "Compiled Times": 59
+        },
+        "mt48lc2m32b2": {
+            "Compiled": "Yes",
+            "Compiled Times": 59
+        },
+        "intf_whitebox": {
+            "Compiled": "Yes",
+            "Compiled Times": 44
+        },
+        "Clks": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 61
+        },
+        "mt48lc8m8a2": {
+            "Compiled": "Yes",
+            "Compiled Times": 33
+        },
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 61
+        }
+    },
+    "CompUnits": {
+        "ChjVu_d": {
+            "mod": "sdrc_bank_fsm",
+            "out": "ChjVu_d.o",
+            "bytes": 48789,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 8926,
+            "mode": 4,
+            "checksum": 0
+        },
+        "BW0b7_d": {
+            "mod": "_vcs_unit__2559226825",
+            "out": "BW0b7_d.o",
+            "bytes": 95718,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "RuFh3_d": {
+            "mod": "intf_sdram",
+            "out": "RuFh3_d.o",
+            "bytes": 14575,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "ypVrV_d": {
+            "mod": "intf_wishBone",
+            "out": "ypVrV_d.o",
+            "bytes": 14399,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "PATxq_d": {
+            "mod": "testcase",
+            "out": "PATxq_d.o",
+            "bytes": 106131,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "qtWga_d": {
+            "mod": "intf_whitebox",
+            "out": "qtWga_d.o",
+            "bytes": 7468,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "xqeUE_d": {
+            "mod": "inft_sdrcntrl",
+            "out": "xqeUE_d.o",
+            "bytes": 13508,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "Pj51K_d": {
+            "mod": "mt48lc8m8a2",
+            "out": "Pj51K_d.o",
+            "bytes": 187820,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "F5CYM_d": {
+            "mod": "Clks",
+            "out": "F5CYM_d.o",
+            "bytes": 8968,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "Emx8S_d": {
+            "mod": "top",
+            "out": "Emx8S_d.o",
+            "bytes": 586114,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "a3mSN_d": {
+            "mod": "mt48lc2m32b2",
+            "out": "a3mSN_d.o",
+            "bytes": 196407,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "TzJKa_d": {
+            "mod": "IS42VM16400K",
+            "out": "TzJKa_d.o",
+            "bytes": 282780,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        },
+        "NTNU2_d": {
+            "mod": "sdrc_top",
+            "out": "NTNU2_d.o",
+            "bytes": 411516,
+            "mode": 4,
+            "archive": "archive.62/_21479_archive_1.a",
+            "checksum": 0
+        }
+    },
+    "reusePaths": {
+        "reYIK_d": {
+            "icPath": "csrc"
+        }
+    }
+}
