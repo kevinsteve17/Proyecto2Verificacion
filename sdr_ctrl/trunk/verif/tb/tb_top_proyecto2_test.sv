@@ -3,26 +3,6 @@
 // top module
 module top();
 
-    parameter P_SYS  = 10;     //    200MHz
-    parameter P_SDR  = 20;     //    100MHz
-
-    // General
-    reg  sys_clk;
-    reg  sdram_clk;
-
-    // clocks 
-    // Clocks clks(
-    //     .sys_clk(sys_clk),
-    //     .sdram_clk(sdram_clk)
-    // );
-
-    initial sys_clk = 0;
-    initial sdram_clk = 0;
-
-    always #(P_SYS/2) sys_clk = !sys_clk;
-    always #(P_SDR/2) sdram_clk = !sdram_clk;
-
-
 `ifdef SDR_32BIT
     parameter SDR_DW = 32;
     parameter SDR_BW = 4;
@@ -38,6 +18,16 @@ module top();
 `endif
 
     parameter APP_AW = 26;
+
+    // General
+    logic  sys_clk;
+    logic  sdram_clk;
+
+    // clocks 
+    Clks clks(
+        .sys_clk(sys_clk),
+        .sdram_clk(sdram_clk)
+    );
 
     // Interface instance
     inft_sdrcntrl #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW), .APP_AW(APP_AW)) sdrc_intf(
