@@ -1,5 +1,5 @@
 class mem_base_object;
     int addr;
     int bl;
-    int data;
+    int data[$];
 endclass

@@ -7,15 +7,9 @@ class sdrcSB;
 
 
     task store_write();
-    input [31:0] Address;
-    input [7:0]  bl;
-    input [31:0] data;
-    begin
-        mem_base_object  mem_obj = new();
-        mem_obj.addr = Address;
-        mem_obj.bl = bl;
-        mem_obj.data = data; // this won't work ... different types ... 
+    input mem_base_object  mem_obj;
 
+    begin
         // write the data in the scoreboard
         mem[Address] = mem_obj;
     end
@@ -24,7 +18,6 @@ class sdrcSB;
 
     task store_read();
     input [31:0] Address;
-    input [7:0]  bl;
     mem_base_object  read_mem_obj = mem[Address];
     begin
         // read the data in the scoreboard
