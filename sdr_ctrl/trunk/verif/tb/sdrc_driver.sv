@@ -80,9 +80,9 @@ class sdrcDrv;
             diff_bank_row_stim = new();
 
             if(diff_bank_row_stim.randomize())
-                burst_size = stim.bank + 8'h4;
+                burst_size = diff_bank_row_stim.bank + 8'h4;
             
-            this.BurstWrite({stim.row,stim.bank,8'h00,2'b00},burst_size);
+            this.BurstWrite({diff_bank_row_stim.row, diff_bank_row_stim.bank, 8'h00,2'b00}, burst_size);
         end
     endtask
 
