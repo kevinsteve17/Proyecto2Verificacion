@@ -46,7 +46,7 @@ class sdrcMon;
 
             // exp_data = sb.store.pop_front(); // Expected Read Data address 
             if (sb.store.exists(Address)) begin
-                exp_data = sb.store.[Address];
+                exp_data = sb.store[Address];
             end
 
             do begin
