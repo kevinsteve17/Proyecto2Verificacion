@@ -26,11 +26,13 @@ class sdrcMon;
     endtask
 
     task BurstRead();
-    reg [31:0] Address;
+    // reg [31:0] Address; Deprecated for second project
+    int unsigned Address;
     reg [7:0]  bl;
         // TO DO implementation
 
-    reg [31:0]   exp_data;
+    // reg [31:0]   exp_data; Deprecated for second project
+    int unsigned   exp_data;
     int j;
     begin
 
@@ -44,7 +46,7 @@ class sdrcMon;
             this.inft.wb_intf.wb_we_i         = 0;
             this.inft.wb_intf.wb_addr_i       = Address[31:2]+j;
 
-            // exp_data = sb.store.pop_front(); // Expected Read Data address 
+            // exp_data = sb.store.pop_front(); // Expected Read Data address - Deprecated for second project
             if (sb.store.exists(Address)) begin
                 exp_data = sb.store[Address];
             end
