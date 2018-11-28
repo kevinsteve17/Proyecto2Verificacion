@@ -47,8 +47,11 @@ class sdrcMon;
             this.inft.wb_intf.wb_addr_i       = Address[31:2]+j;
 
             // exp_data = sb.store.pop_front(); // Expected Read Data address - Deprecated for second project
+            exp_data = sb.store[Address];
             if (sb.store.exists(Address)) begin
                 exp_data = sb.store[Address];
+            end else begin
+                $display("READ ERROR: Burst-No: %d Addr: %d does not exist.",j,Address);
             end
 
             do begin
