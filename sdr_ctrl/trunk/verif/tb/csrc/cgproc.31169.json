@@ -1,0 +1,176 @@
+{
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "ypVrV_d": {
+            "icPath": "csrc"
+        },
+        "a3mSN_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "RuFh3_d": {
+            "icPath": "csrc"
+        },
+        "TzJKa_d": {
+            "icPath": "csrc"
+        },
+        "xqeUE_d": {
+            "icPath": "csrc"
+        },
+        "F5CYM_d": {
+            "icPath": "csrc"
+        },
+        "Pj51K_d": {
+            "icPath": "csrc"
+        }
+    },
+    "Modules": {
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 64
+        },
+        "mt48lc2m32b2": {
+            "Compiled": "Yes",
+            "Compiled Times": 62
+        },
+        "...MASTER...": {},
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 64
+        },
+        "IS42VM16400K": {
+            "Compiled": "Yes",
+            "Compiled Times": 52
+        },
+        "_vcs_unit__2559226825": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        },
+        "mt48lc8m8a2": {
+            "Compiled": "Yes",
+            "Compiled Times": 36
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 64
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 64
+        },
+        "intf_whitebox": {
+            "Compiled": "Yes",
+            "Compiled Times": 47
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 64
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 64
+        },
+        "testcase": {
+            "Compiled": "Yes",
+            "Compiled Times": 62
+        },
+        "Clks": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 64
+        }
+    },
+    "CompUnits": {
+        "BW0b7_d": {
+            "mod": "_vcs_unit__2559226825",
+            "archive": "archive.65/_31169_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "out": "BW0b7_d.o",
+            "bytes": 107366
+        },
+        "ChjVu_d": {
+            "mod": "sdrc_bank_fsm",
+            "archive": "archive.65/_31169_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "out": "ChjVu_d.o",
+            "bytes": 49381
+        },
+        "PATxq_d": {
+            "mod": "testcase",
+            "archive": "archive.65/_31169_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "out": "PATxq_d.o",
+            "bytes": 77993
+        },
+        "qtWga_d": {
+            "mod": "intf_whitebox",
+            "archive": "archive.65/_31169_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "out": "qtWga_d.o",
+            "bytes": 7852
+        },
+        "NTNU2_d": {
+            "mod": "sdrc_top",
+            "archive": "archive.65/_31169_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "out": "NTNU2_d.o",
+            "bytes": 411516
+        },
+        "Emx8S_d": {
+            "mod": "top",
+            "archive": "archive.65/_31169_archive_1.a",
+            "checksum": 0,
+            "mode": 4,
+            "out": "Emx8S_d.o",
+            "bytes": 417159
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.65/_31169_archive_1.a",
+            "objects": [
+                [
+                    "BW0b7_d.o",
+                    107366
+                ],
+                [
+                    "PATxq_d.o",
+                    77993
+                ],
+                [
+                    "qtWga_d.o",
+                    7852
+                ],
+                [
+                    "Emx8S_d.o",
+                    417159
+                ],
+                [
+                    "NTNU2_d.o",
+                    411516
+                ],
+                [
+                    "ChjVu_d.o",
+                    49381
+                ],
+                [
+                    "amcQwB.o",
+                    160931
+                ]
+            ],
+            "size": 1232198
+        }
+    ]
+}
