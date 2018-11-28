@@ -28,8 +28,8 @@ endproperty
 // Property of Rule 3.05 Reset operation
 property wb_reset_1_cycl;
   @(posedge whitebox_if.wb_clk_i)
-  $rose(whitebox_if.wb_rst_i) |-> 
-  $stable(whitebox_if.wb_rst_i)[*1];
+  $rose(whitebox_if.wb_rst_i) |=> 
+  $rose(whitebox_if.wb_rst_i);
 endproperty
 
 // Property of Rule 3.10 Reset operation
