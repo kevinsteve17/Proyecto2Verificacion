@@ -1,4 +1,10 @@
 {
+    "testcase": [
+        "testcase",
+        "PATxq",
+        "module",
+        11
+    ],
     "_vcs_unit__2559226825": [
         "_vcs_unit__2559226825",
         "BW0b7",
@@ -11,23 +17,17 @@
         "module",
         2
     ],
+    "mt48lc2m32b2": [
+        "mt48lc2m32b2",
+        "a3mSN",
+        "module",
+        13
+    ],
     "intf_wishBone": [
         "intf_wishBone",
         "ypVrV",
         "module",
         4
-    ],
-    "intf_sdram": [
-        "intf_sdram",
-        "RuFh3",
-        "module",
-        3
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        9
     ],
     "sdrc_bank_fsm": [
         "sdrc_bank_fsm",
@@ -35,35 +35,29 @@
         "module",
         8
     ],
+    "sdrc_top": [
+        "sdrc_top",
+        "NTNU2",
+        "module",
+        7
+    ],
     "IS42VM16400K": [
         "IS42VM16400K",
         "TzJKa",
         "module",
         14
     ],
+    "intf_sdram": [
+        "intf_sdram",
+        "RuFh3",
+        "module",
+        3
+    ],
     "inft_sdrcntrl": [
         "inft_sdrcntrl",
         "xqeUE",
         "module",
         5
-    ],
-    "Clks": [
-        "Clks",
-        "F5CYM",
-        "module",
-        16
-    ],
-    "testcase": [
-        "testcase",
-        "PATxq",
-        "module",
-        11
-    ],
-    "mt48lc2m32b2": [
-        "mt48lc2m32b2",
-        "a3mSN",
-        "module",
-        13
     ],
     "intf_whitebox": [
         "intf_whitebox",
@@ -77,16 +71,22 @@
         "module",
         6
     ],
+    "Clks": [
+        "Clks",
+        "F5CYM",
+        "module",
+        16
+    ],
     "mt48lc8m8a2": [
         "mt48lc8m8a2",
         "Pj51K",
         "module",
         1
     ],
-    "sdrc_top": [
-        "sdrc_top",
-        "NTNU2",
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module",
-        7
+        9
     ]
 }
