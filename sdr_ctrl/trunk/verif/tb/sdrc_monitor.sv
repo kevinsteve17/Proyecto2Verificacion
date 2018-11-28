@@ -45,7 +45,8 @@ class sdrcMon;
             this.inft.wb_intf.wb_stb_i        = 1;
             this.inft.wb_intf.wb_cyc_i        = 1;
             this.inft.wb_intf.wb_we_i         = 0;
-            this.inft.wb_intf.wb_addr_i       = Address[31:2]+j;
+            // this.inft.wb_intf.wb_addr_i       = Address[31:2]+j;
+            this.inft.wb_intf.wb_addr_i       = Address;
 
             // exp_data = sb.store.pop_front(); // Expected Read Data address - Deprecated for second project
             if (sb.store.exists(Address)) begin
