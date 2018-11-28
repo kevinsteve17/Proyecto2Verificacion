@@ -30,7 +30,7 @@ endproperty
 // Property of Rule 3.10 Reset operation
 property wb_reset;
   @(posedge whitebox_if.wb_clk_i)
-  $rose(whitebox_if.sdram_resetn) |-> 
+  $fell(whitebox_if.sdram_resetn) |-> 
   $rose(whitebox_if.wb_rst_i);
 endproperty
 
