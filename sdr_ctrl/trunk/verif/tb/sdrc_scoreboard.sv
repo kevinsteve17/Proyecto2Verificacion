@@ -10,7 +10,7 @@ class sdrcSB;
             // clear the data in the scoreboard
             store = {};
             dir = {};
-            burstLenght{};
+            burstLenght={};
             ErrCnt = 0;
         end
     endtask //automatic
