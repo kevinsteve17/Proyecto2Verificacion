@@ -37,7 +37,7 @@ property wb_reset;
   @(posedge whitebox_if.wb_clk_i)
   $fell(whitebox_if.sdram_resetn) |-> 
   $rose(whitebox_if.wb_rst_i)     |->
-  (whitebox_if.wb_sel_i = 4'h0 && whitebox_if.wb_we_i = 0 && whitebox_if.wb_stb_i = 0 && whitebox_if.wb_cyc_i = 0);
+  (whitebox_if.wb_sel_i == 4'h0 && whitebox_if.wb_we_i == 0 && whitebox_if.wb_stb_i == 0 && whitebox_if.wb_cyc_i == 0);
 endproperty
 
 // Property of Rule 3.25 Transfer cycle initiaiton
