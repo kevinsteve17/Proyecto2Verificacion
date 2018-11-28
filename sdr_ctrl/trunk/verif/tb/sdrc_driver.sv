@@ -41,7 +41,7 @@ class sdrcDrv;
         input int unsigned bl; 
         int i;
         begin
-            sb.dir.push_back(Address);
+            //sb.dir.push_back(Address); // Deprecated for second project
             sb.burstLenght.push_back(bl);
             
             @ (negedge this.inft.sys_clk);
@@ -54,6 +54,7 @@ class sdrcDrv;
                 this.inft.wb_intf.wb_addr_i       = Address[31:2]+i;
                 this.inft.wb_intf.wb_dat_i        = $random & 32'hFFFFFFFF;
                 // sb.store.push_back(this.inft.wb_intf.wb_dat_i); //Deprecated
+                sb.dir.push_back(this.inft.wb_intf.wb_addr_i);
                 sb.store[this.inft.wb_intf.wb_addr_i] = this.inft.wb_intf.wb_dat_i;
 
                 do begin
