@@ -44,7 +44,11 @@ class sdrcMon;
             this.inft.wb_intf.wb_we_i         = 0;
             this.inft.wb_intf.wb_addr_i       = Address[31:2]+j;
 
-            exp_data        = sb.store.pop_front(); // Expected Read Data
+            // exp_data = sb.store.pop_front(); // Expected Read Data address 
+            if (sb.store.exists(Address)) begin
+                exp_data = sb.store.[Address];
+            end
+
             do begin
                 @ (posedge this.inft.sys_clk);
             end while(this.inft.wb_intf.wb_ack_o == 1'b0);
