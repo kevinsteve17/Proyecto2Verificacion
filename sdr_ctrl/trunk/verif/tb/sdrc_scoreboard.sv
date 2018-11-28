@@ -8,7 +8,7 @@ class sdrcSB;
     task clearStore();
         begin
             // clear the data in the scoreboard
-            store = {};
+            //store = {}{};
             dir = {};
             burstLenght={};
             ErrCnt = 0;
