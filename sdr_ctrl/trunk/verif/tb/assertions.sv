@@ -15,10 +15,14 @@ endproperty
 // Property of Rule 3.00 Reset operation
 property wb_init;
   @(posedge whitebox_if.wb_clk_i)
-  $rose(whitebox_if.wb_clk_i)    |-> 
-  $fell(!whitebox_if.wb_rst_i)   |->
-  $stable(!whitebox_if.wb_rst_i) |-> ##1
-  $rose(whitebox_if.wb_clk_i);
+  $rose(whitebox_if.wb_clk_i)           |-> 
+  $rose(whitebox_if.wb_rst_i)           |->
+  $stable(whitebox_if.wb_rst_i)         |-> ##1
+  $rose(whitebox_if.wb_clk_i)           |->
+  $isunknown(whitebox_if.wb_stb_i) == 0 |->
+  $isunknown(whitebox_if.wb_cyc_i) == 0 |->
+  $isunknown(whitebox_if.wb_ack_o) == 0 |->
+  $isunknown(whitebox_if.wb_we_i)  == 0;
 endproperty
 
 // Property of Rule 3.05 Reset operation
@@ -32,7 +36,8 @@ endproperty
 property wb_reset;
   @(posedge whitebox_if.wb_clk_i)
   $fell(whitebox_if.sdram_resetn) |-> 
-  $rose(whitebox_if.wb_rst_i);
+  $rose(whitebox_if.wb_rst_i)     |->
+  (whitebox_if.wb_sel_i == 4'h0 && whitebox_if.wb_we_i == 0 && whitebox_if.wb_stb_i == 0 && whitebox_if.wb_cyc_i == 0);
 endproperty
 
 // Property of Rule 3.25 Transfer cycle initiaiton
@@ -43,11 +48,11 @@ property wb_tci;
 endproperty
 
 // Property of Rule 3.35 Transfer cycle initiaiton
-property wb_termination;
-  @(posedge whitebox_if.wb_clk_i)
-  $rose(whitebox_if.wb_stb_i) |-> 
-  $rose(whitebox_if.wb_cyc_i);
-endproperty
+// property wb_termination;
+//   @(posedge whitebox_if.wb_clk_i)
+//   (whitebox_if.wb_cyc_i && whitebox_if.wb_stb_i) |=>
+//   $rose(whitebox_if.wb_ack_o);
+// endproperty
 
 
 // Sdram init assertion
@@ -66,7 +71,7 @@ wb_reset_react: assert property(wb_reset) else $error ("Wishbone Protocol Rule 3
 wb_SRW_RMW: assert property(wb_tci) else $error ("Wishbone Protocol Rule 3.25 violated");
 
 // Rule 3.35
-wb_AND: assert property(wb_termination) else $error ("Wishbone Protocol Rule 3.35 violated");
+// wb_AND: assert property(wb_termination) else $error ("Wishbone Protocol Rule 3.35 violated");
 
 
 endmodule

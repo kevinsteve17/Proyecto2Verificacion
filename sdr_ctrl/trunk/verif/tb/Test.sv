@@ -7,12 +7,12 @@ program testcase(inft_sdrcntrl intf);
   initial 
   begin
     env.drv.reset();
-    tc1_single_read();
-    tc2_single_read();
-    tc3_single_read();
-    tc4_4Write_4Read();
+    //tc1_single_read();
+    //tc2_single_read();
+    //tc3_single_read();
+    //tc4_4Write_4Read();
     tc5_24Write_24Read();
-    tc4_6rndm_Write_2rndm_Read();
+    //tc4_6rndm_Write_2rndm_Read();
     env.mon.Check();
   end
      
