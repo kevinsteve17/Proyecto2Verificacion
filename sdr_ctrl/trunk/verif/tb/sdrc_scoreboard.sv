@@ -1,5 +1,5 @@
 class sdrcSB;
-    int store[$]; // Deprecated for 2 version
+    //int store[$]; // Deprecated for second project.
     int unsigned store[int]; // Modified for aleatory tests
     int unsigned dir[$];
     int unsigned burstLenght[$];
