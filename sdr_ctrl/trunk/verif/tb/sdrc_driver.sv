@@ -35,8 +35,10 @@ class sdrcDrv;
     endtask
 
     task BurstWrite();
-        input [31:0] Address;
-        input [7:0]  bl;
+        // input [31:0] Address;  // Deprecated for second project
+        // input [7:0]  bl;       // Deprecated for second project
+        input int unsigned Address;  
+        input int unsigned bl; 
         int i;
         begin
             sb.dir.push_back(Address);
