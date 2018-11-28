@@ -14,16 +14,20 @@ synopsys::dump -autoflush on -fid VPD0
 set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpHw24Ws
-synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.fparis.2070}
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.fparis.2070}
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpKhRi8G
+synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.fparis.25618}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.fparis.25618}
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
 config syscaddsourcenames
 config syscaddstructtypes
 synopsys::listing -disable
-synopsys::dump -add {top.sdrc_intf top.whitebox_intf } -aggregates  -fid VPD0
+synUtils::sendTool -active {_icl_getAssertions}
+synUtils::sendTool -active {_icl_getAssertions -scopes}
+ucliGUI::vpdAddHierarchy -scope top.assertion -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
+ucliGUI::vpdAddHierarchy -scope top.duv.u_wb2sdrc -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
+synopsys::dump -flush VPD0
 synopsys::run
 set ucliGUI::state
 set ucliGUI::state

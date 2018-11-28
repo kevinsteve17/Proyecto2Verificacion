@@ -1,15 +1,21 @@
 {
-    "testcase": [
-        "testcase",
-        "PATxq",
+    "IS42VM16400K": [
+        "IS42VM16400K",
+        "TzJKa",
         "module",
-        11
+        12
     ],
     "_vcs_unit__2559226825": [
         "_vcs_unit__2559226825",
         "BW0b7",
         "module",
-        12
+        1
+    ],
+    "mt48lc2m32b2": [
+        "mt48lc2m32b2",
+        "a3mSN",
+        "module",
+        10
     ],
     "std": [
         "std",
@@ -17,11 +23,17 @@
         "module",
         2
     ],
-    "mt48lc2m32b2": [
-        "mt48lc2m32b2",
-        "a3mSN",
+    "mt48lc8m8a2": [
+        "mt48lc8m8a2",
+        "Pj51K",
         "module",
-        13
+        11
+    ],
+    "intf_sdram": [
+        "intf_sdram",
+        "RuFh3",
+        "module",
+        3
     ],
     "intf_wishBone": [
         "intf_wishBone",
@@ -33,25 +45,7 @@
         "sdrc_bank_fsm",
         "ChjVu",
         "module",
-        8
-    ],
-    "sdrc_top": [
-        "sdrc_top",
-        "NTNU2",
-        "module",
-        7
-    ],
-    "IS42VM16400K": [
-        "IS42VM16400K",
-        "TzJKa",
-        "module",
         14
-    ],
-    "intf_sdram": [
-        "intf_sdram",
-        "RuFh3",
-        "module",
-        3
     ],
     "inft_sdrcntrl": [
         "inft_sdrcntrl",
@@ -59,15 +53,9 @@
         "module",
         5
     ],
-    "intf_whitebox": [
-        "intf_whitebox",
-        "qtWga",
-        "module",
-        15
-    ],
-    "top": [
-        "top",
-        "Emx8S",
+    "testcase": [
+        "testcase",
+        "PATxq",
         "module",
         6
     ],
@@ -75,18 +63,30 @@
         "Clks",
         "F5CYM",
         "module",
-        16
+        8
     ],
-    "mt48lc8m8a2": [
-        "mt48lc8m8a2",
-        "Pj51K",
+    "intf_whitebox": [
+        "intf_whitebox",
+        "qtWga",
         "module",
-        1
+        7
+    ],
+    "top": [
+        "top",
+        "Emx8S",
+        "module",
+        9
     ],
     "...MASTER...": [
         "SIM",
         "amcQw",
         "module",
-        9
+        15
+    ],
+    "sdrc_top": [
+        "sdrc_top",
+        "NTNU2",
+        "module",
+        13
     ]
 }

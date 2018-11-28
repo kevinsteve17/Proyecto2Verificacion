@@ -41,7 +41,7 @@ class sdrcDrv;
         input int unsigned bl; 
         int i;
         begin
-            //sb.dir.push_back(Address); // Deprecated for second project
+            // sb.dir.push_back(Address); // Deprecated for second project
             sb.burstLenght.push_back(bl);
             
             @ (negedge this.inft.sys_clk);

@@ -27,9 +27,9 @@ endproperty
 
 // Property of Rule 3.05 Reset operation
 property wb_reset_1_cycl;
-  @(posedge whitebox_if.wb_clk_i)
-  $rose(whitebox_if.wb_rst_i) |-> 
-  $stable(!whitebox_if.wb_rst_i)[*1];
+  @(negedge whitebox_if.wb_clk_i)
+  $rose(whitebox_if.wb_rst_i) |=>
+  $stable(whitebox_if.wb_rst_i)[*1];
 endproperty
 
 // Property of Rule 3.10 Reset operation
@@ -48,11 +48,11 @@ property wb_tci;
 endproperty
 
 // Property of Rule 3.35 Transfer cycle initiaiton
-// property wb_termination;
-//   @(posedge whitebox_if.wb_clk_i)
-//   (whitebox_if.wb_cyc_i && whitebox_if.wb_stb_i) |=>
-//   $rose(whitebox_if.wb_ack_o);
-// endproperty
+property wb_termination;
+  @(posedge whitebox_if.wb_clk_i)
+  $rose(whitebox_if.wb_cyc_i && whitebox_if.wb_stb_i) |=>
+  $rose(whitebox_if.wb_ack_o);
+ endproperty
 
 
 // Sdram init assertion
