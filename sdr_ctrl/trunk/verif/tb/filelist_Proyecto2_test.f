@@ -4,6 +4,7 @@
 +incdir+../tb/
 ../tb/sdram_interterface.sv
 ../tb/wb_interface.sv
+../tb/diffBankAndRowStimulus.sv
 ../tb/sdrc_interface.sv
 ../tb/sdrc_scoreboard.sv
 ../tb/sdrc_monitor.sv

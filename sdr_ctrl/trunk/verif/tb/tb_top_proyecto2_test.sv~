@@ -24,7 +24,7 @@ module top();
     logic  sdram_clk;
 
     // clocks 
-    Clocks clks(
+    Clks clks(
         .sys_clk(sys_clk),
         .sdram_clk(sdram_clk)
     );

@@ -1,5 +1,6 @@
 class sdrcDrv;
     sdrcSB sb;
+    diffBankAndRowStimulus diff_bank_row_stim;
     virtual inft_sdrcntrl inft;
 
     function new(virtual inft_sdrcntrl inft,sdrcSB sb);
@@ -10,31 +11,28 @@ class sdrcDrv;
     endfunction
 
     task reset();
-    
-    begin
-        sb.ErrCnt          = 0;
-        this.inft.wb_intf.wb_addr_i      = 0;
-        this.inft.wb_intf.wb_dat_i      = 0;
-        this.inft.wb_intf.wb_sel_i       = 4'h0;
-        this.inft.wb_intf.wb_we_i        = 0;
-        this.inft.wb_intf.wb_stb_i       = 0;
-        this.inft.wb_intf.wb_cyc_i       = 0;
+        begin
+            sb.ErrCnt          = 0;
+            this.inft.wb_intf.wb_addr_i      = 0;
+            this.inft.wb_intf.wb_dat_i      = 0;
+            this.inft.wb_intf.wb_sel_i       = 4'h0;
+            this.inft.wb_intf.wb_we_i        = 0;
+            this.inft.wb_intf.wb_stb_i       = 0;
+            this.inft.wb_intf.wb_cyc_i       = 0;
+            this.inft.resetn    = 1'h1;
 
-        this.inft.resetn    = 1'h1;
-
-	#100
-	// Applying reset
-	this.inft.resetn    = 1'h0;
-	#10000;
-	// Releasing reset
-	this.inft.resetn    = 1'h1;
-	#1000;
-	wait(this.inft.sdram_intf.sdr_init_done == 1);
-	
-    end
-        
-        
-    endtask //
+            #100
+            // Applying reset
+            this.inft.resetn    = 1'h0;
+           
+            #10000;
+            // Releasing reset
+            this.inft.resetn    = 1'h1;
+            
+            #1000;
+            wait(this.inft.sdram_intf.sdr_init_done == 1);
+        end 
+    endtask
 
     task BurstWrite();
         input [31:0] Address;
@@ -72,6 +70,20 @@ class sdrcDrv;
             
         end
         
+    endtask
+
+    // Write With Different Bank and Row
+    task BurstWrite_diff_row_bank();
+        logic  [7:0] burst_size;
+
+        begin
+            diff_bank_row_stim = new();
+
+            if(diff_bank_row_stim.randomize())
+                burst_size = diff_bank_row_stim.bank + 8'h4;
+            
+            this.BurstWrite({diff_bank_row_stim.row, diff_bank_row_stim.bank, 8'h00,2'b00}, burst_size);
+        end
     endtask
 
 endclass
