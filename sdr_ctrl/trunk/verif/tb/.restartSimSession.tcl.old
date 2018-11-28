@@ -1,17 +1,12 @@
 # Begin_DVE_Session_Save_Info
 # DVE restart session
-# Saved on Sat Nov 24 11:43:57 2018
+# Saved on Wed Nov 28 00:44:32 2018
 # Designs open: 1
-#   Sim: /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv
-# Toplevel windows open: 2
+#   Sim: /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv
+# Toplevel windows open: 1
 # 	TopLevel.1
-# 	TopLevel.2
-#   Source.1: _vcs_unit__2343566412
-#   Wave.1: 7 signals
-#   Group count = 3
-#   Group Group1 signal count = 1
-#   Group Group2 signal count = 1
-#   Group Group3 signal count = 7
+#   Source.1: _vcs_unit__2559226825
+#   Group count = 0
 # End_DVE_Session_Save_Info
 
 # DVE version: M-2017.03_Full64
@@ -47,7 +42,6 @@ set DLPane.1 DLPane.1
 set Data.1 Data.1
 set Local.1 Local.1
 set Member.1 Member.1
-set Assertion.1 Assertion.1
 set Console.1 Console.1
 gui_sync_global -id ${TopLevel.1} -option true
 
@@ -58,34 +52,21 @@ gui_update_layout -id ${Source.1} {{show_state maximized} {dock_state undocked} 
 # End MDI window settings
 
 
-# Create and position top-level window: TopLevel.2
-
-set TopLevel.2 TopLevel.2
-
-# Docked window settings
-gui_sync_global -id ${TopLevel.2} -option true
-
-# MDI window settings
-set Wave.1 Wave.1
-gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 376} {child_wave_right 918} {child_wave_colname 186} {child_wave_colvalue 186} {child_wave_col1 0} {child_wave_col2 1}}
-
-# End MDI window settings
-
-
 #</WindowLayout>
 
 #<Database>
 
 gui_set_precision 1ps
 gui_set_time_units 1ps
-dump -add { top.assertion.sdram_initialization top.assertion.whitebox_if top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn }  -depth 0 -scope "."
-
 #</Database>
 
 # DVE Global setting session: 
 
 
 # Global: Breakpoints
+stop -file {/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv}  -line {9}   
+stop -file {/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv}  -line {14}   
+stop -file {/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv}  -line {16}   
 
 # Global: Bus
 
@@ -97,24 +78,6 @@ dump -add { top.assertion.sdram_initialization top.assertion.whitebox_if top.ass
 
 # Global: Signal Groups
 
-
-set _session_group_2 Group1
-gui_sg_create "$_session_group_2"
-set Group1 "$_session_group_2"
-
-gui_sg_addsignal -group "$_session_group_2" { top.assertion.sdram_initialization }
-
-set _session_group_3 Group2
-gui_sg_create "$_session_group_3"
-set Group2 "$_session_group_3"
-
-gui_sg_addsignal -group "$_session_group_3" { top.assertion.sdram_initialization }
-
-set _session_group_4 Group3
-gui_sg_create "$_session_group_4"
-set Group3 "$_session_group_4"
-
-gui_sg_addsignal -group "$_session_group_4" { top.assertion.sdram_initialization top.assertion.whitebox_if top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn }
 
 # Global: Highlighting
 
@@ -144,8 +107,8 @@ gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtP
 gui_list_set_filter -id ${Hier.1} -text {*}
 gui_change_design -id ${Hier.1} -design Sim
 catch {gui_list_expand -id ${Hier.1} top}
-catch {gui_list_select -id ${Hier.1} {top.assertion}}
-gui_view_scroll -id ${Hier.1} -vertical -set 40
+catch {gui_list_select -id ${Hier.1} {top.test1}}
+gui_view_scroll -id ${Hier.1} -vertical -set 15
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Class 'Class.1'
@@ -160,65 +123,24 @@ gui_list_set_filter -id ${Member.1} -text {*}
 # Data 'Data.1'
 gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Data.1} -text {*}
-gui_list_show_data -id ${Data.1} {top.assertion}
-gui_list_expand -id ${Data.1} top.assertion.whitebox_if
-gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {top.assertion.sdram_initialization top.assertion.whitebox_if top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn top.assertion.whitebox_if.sdram_clk top.assertion.whitebox_if.sdr_ras_n top.assertion.whitebox_if.sdr_cas_n top.assertion.whitebox_if.sdr_we_n top.assertion.whitebox_if.sdram_resetn }}
+gui_list_show_data -id ${Data.1} {top.test1}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
-gui_view_scroll -id ${Hier.1} -vertical -set 40
+gui_view_scroll -id ${Hier.1} -vertical -set 15
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Source 'Source.1'
 gui_src_value_annotate -id ${Source.1} -switch false
 gui_set_env TOGGLE::VALUEANNOTATE 0
-gui_open_source -id ${Source.1}  -replace -active _vcs_unit__2343566412 /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/../tb/sdram_interterface.sv
+gui_open_source -id ${Source.1}  -replace -active _vcs_unit__2559226825 /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/../tb/sdram_interterface.sv
 gui_view_scroll -id ${Source.1} -vertical -set 0
 gui_src_set_reusable -id ${Source.1}
 # Warning: Class view not found.
-
-# View 'Assertion.1'
-gui_switch_assert -id ${Assertion.1} -type assertion
-
-# View 'Wave.1'
-gui_wv_sync -id ${Wave.1} -switch false
-set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
-gui_set_pref_value -category Wave -key exclusiveSG -value {false}
-set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
-gui_list_set_height -id Wave -height 25
-set origGroupCreationState [gui_list_create_group_when_add -wave]
-gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 0 299
-gui_list_add_group -id ${Wave.1} -after {New Group} {Group3}
-gui_seek_criteria -id ${Wave.1} {Any Edge}
-
-
-
-gui_set_env TOGGLE::DEFAULT_WAVE_WINDOW ${Wave.1}
-gui_set_pref_value -category Wave -key exclusiveSG -value $groupExD
-gui_list_set_height -id Wave -height $origWaveHeight
-if {$origGroupCreationState} {
-	gui_list_create_group_when_add -wave -enable
-}
-if { $groupExD } {
- gui_msg_report -code DVWW028
-}
-gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
-gui_list_set_filter -id ${Wave.1} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.1} -group Group3  -position in
-
-gui_view_scroll -id ${Wave.1} -vertical -set 0
-gui_show_grid -id ${Wave.1} -enable false
 # Restore toplevel window zorder
 # The toplevel window could be closed if it has no view/pane
 if {[gui_exist_window -window ${TopLevel.1}]} {
 	gui_set_active_window -window ${TopLevel.1}
 	gui_set_active_window -window ${Source.1}
-	gui_set_active_window -window ${DLPane.1}
-}
-if {[gui_exist_window -window ${TopLevel.2}]} {
-	gui_set_active_window -window ${TopLevel.2}
-	gui_set_active_window -window ${Wave.1}
 }
 #</Session>
 

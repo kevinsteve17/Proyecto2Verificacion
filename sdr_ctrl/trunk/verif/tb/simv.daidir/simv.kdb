@@ -1,7 +1,7 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb
+COMPILE_PATH=/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb
 SystemC=FALSE
 UUM=FALSE
 KDB=FALSE

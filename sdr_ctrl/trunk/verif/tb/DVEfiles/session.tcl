@@ -1,11 +1,11 @@
 # Begin_DVE_Session_Save_Info
 # DVE full session
-# Saved on Tue Nov 27 23:00:09 2018
+# Saved on Wed Nov 28 00:54:25 2018
 # Designs open: 1
-#   Sim: /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv
+#   Sim: /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv
 # Toplevel windows open: 1
 # 	TopLevel.1
-#   Source.1: _vcs_unit__2559226825
+#   Source.1: top.test1
 #   Group count = 0
 # End_DVE_Session_Save_Info
 
@@ -13,7 +13,7 @@
 # DVE build date: Feb 15 2017 21:10:45
 
 
-#<Session mode="Full" path="/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/DVEfiles/session.tcl" type="Debug">
+#<Session mode="Full" path="/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/DVEfiles/session.tcl" type="Debug">
 
 gui_set_loading_session_type Post
 gui_continuetime_set
@@ -65,7 +65,7 @@ if {![gui_exist_window -window TopLevel.1]} {
 } else { 
     set TopLevel.1 TopLevel.1
 }
-gui_show_window -window ${TopLevel.1} -show_state normal -rect {{9 77} {1638 964}}
+gui_show_window -window ${TopLevel.1} -show_state normal -rect {{18 67} {1917 921}}
 
 # ToolBar settings
 gui_set_toolbar_attributes -toolbar {TimeOperations} -dock_state top
@@ -112,28 +112,28 @@ gui_show_toolbar -toolbar {Testbench}
 # End ToolBar settings
 
 # Docked window settings
-set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 174]
-catch { set Hier.1 [gui_share_window -id ${HSPane.1} -type Hier] }
-catch { set Stack.1 [gui_share_window -id ${HSPane.1} -type Stack -silent] }
+set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 158]
+catch { set Hier.1 [gui_share_window -id ${HSPane.1} -type Hier -silent] }
+catch { set Stack.1 [gui_share_window -id ${HSPane.1} -type Stack] }
 catch { set Class.1 [gui_share_window -id ${HSPane.1} -type Class -silent] }
 catch { set Object.1 [gui_share_window -id ${HSPane.1} -type Object -silent] }
-gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 174
+gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 158
 gui_set_window_pref_key -window ${HSPane.1} -key dock_height -value_type integer -value -1
 gui_set_window_pref_key -window ${HSPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 173} {height 235} {dock_state left} {dock_on_new_line true} {child_hier_colhier 140} {child_hier_coltype 100} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
-set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 174]
-catch { set Data.1 [gui_share_window -id ${DLPane.1} -type Data] }
-catch { set Local.1 [gui_share_window -id ${DLPane.1} -type Local -silent] }
+gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 157} {height 397} {dock_state left} {dock_on_new_line true} {child_hier_colhier 140} {child_hier_coltype 100} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
+set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 158]
+catch { set Data.1 [gui_share_window -id ${DLPane.1} -type Data -silent] }
+catch { set Local.1 [gui_share_window -id ${DLPane.1} -type Local] }
 catch { set Member.1 [gui_share_window -id ${DLPane.1} -type Member -silent] }
-gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 174
-gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 405
+gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 158
+gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 397
 gui_set_window_pref_key -window ${DLPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 173} {height 235} {dock_state left} {dock_on_new_line true} {child_data_colvariable 140} {child_data_colvalue 100} {child_data_coltype 40} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
-set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 546]
-gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1365
-gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 546
+gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 157} {height 397} {dock_state left} {dock_on_new_line true} {child_data_colvariable 140} {child_data_colvalue 100} {child_data_coltype 40} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
+set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 351]
+gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1860
+gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 351
 gui_set_window_pref_key -window ${Console.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1629} {height 545} {dock_state bottom} {dock_on_new_line true}}
+gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1899} {height 350} {dock_state bottom} {dock_on_new_line true}}
 #### Start - Readjusting docked view's offset / size
 set dockAreaList { top left right bottom }
 foreach dockArea $dockAreaList {
@@ -180,8 +180,8 @@ if { [llength [lindex [gui_get_db -design Sim] 0]] == 0 } {
 gui_set_env SIMSETUP::SIMARGS {{}}
 gui_set_env SIMSETUP::SIMEXE {./simv}
 gui_set_env SIMSETUP::ALLOW_POLL {0}
-if { ![gui_is_db_opened -db {/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv}] } {
-gui_sim_run Ucli -exe simv -args { -ucligui} -dir /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb -nosource
+if { ![gui_is_db_opened -db {/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv}] } {
+gui_sim_run Ucli -exe simv -args { -ucligui} -dir /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb -nosource
 }
 }
 if { ![gui_sim_state -check active] } {error "Simulator did not start correctly" error}
@@ -193,6 +193,9 @@ gui_set_time_units 1ps
 
 
 # Global: Breakpoints
+stop -file {/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv}  -line {9}   
+stop -file {/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv}  -line {14}   
+stop -file {/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/Test.sv}  -line {16}   
 
 # Global: Bus
 
@@ -233,13 +236,13 @@ gui_set_loading_session_type noSession
 
 
 # Hier 'Hier.1'
-gui_show_window -window ${Hier.1}
 gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtPowSwitch 0} {UnnamedProcess 1} {UDP 0} {Function 1} {Block 1} {SrsnAndSpaCell 0} {OVA Unit 1} {LeafScCell 1} {LeafVlgCell 1} {Interface 1} {LeafVhdCell 1} {$unit 1} {NamedBlock 1} {Task 1} {VlgPackage 1} {ClassDef 1} {VirtIsoCell 0} }
 gui_list_set_filter -id ${Hier.1} -text {*}
 gui_hier_list_init -id ${Hier.1}
 gui_change_design -id ${Hier.1} -design Sim
-catch {gui_list_select -id ${Hier.1} {top}}
-gui_view_scroll -id ${Hier.1} -vertical -set 0
+catch {gui_list_expand -id ${Hier.1} top}
+catch {gui_list_select -id ${Hier.1} {top.test1}}
+gui_view_scroll -id ${Hier.1} -vertical -set 15
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Class 'Class.1'
@@ -254,17 +257,15 @@ gui_list_set_filter -id ${Member.1} -text {*}
 # Data 'Data.1'
 gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Data.1} -text {*}
-gui_list_show_data -id ${Data.1} {top}
+gui_list_show_data -id ${Data.1} {top.test1}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
-gui_view_scroll -id ${Hier.1} -vertical -set 0
-gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Source 'Source.1'
 gui_src_value_annotate -id ${Source.1} -switch false
 gui_set_env TOGGLE::VALUEANNOTATE 0
-gui_open_source -id ${Source.1}  -replace -active _vcs_unit__2559226825 /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/../tb/sdram_interterface.sv
-gui_view_scroll -id ${Source.1} -vertical -set 0
+gui_open_source -id ${Source.1}  -replace -active top.test1 /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/../tb/Test.sv
+gui_view_scroll -id ${Source.1} -vertical -set 80
 gui_src_set_reusable -id ${Source.1}
 # Warning: Class view not found.
 # Restore toplevel window zorder
