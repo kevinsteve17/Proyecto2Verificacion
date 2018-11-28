@@ -1,17 +1,13 @@
 Chronologic VCS simulator copyright 1991-2017
 Contains Synopsys proprietary information.
-Compiler version M-2017.03_Full64; Runtime version M-2017.03_Full64;  Nov 28 00:52 2018
+Compiler version M-2017.03_Full64; Runtime version M-2017.03_Full64;  Nov 28 17:49 2018
 VCD+ Writer M-2017.03_Full64 Copyright (c) 1991-2017 by Synopsys Inc.
 The design has assertions or cover properties.
 The assertion browser can be used to view them. Click on the assertion toolbar button or use the menu 'Window->Panes->Assertion' to open it.
-The file '/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd' was opened successfully.
-
-Stop point #1 @ 0 ps;  
+The file '/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd' was opened successfully.
 Creating SDRC Environment
 Creating SDRC Driver
 Creating SDRC Monitor
-
-Stop point #2 @ 13090000 ps;  
 "../../rtl/wb2sdrc/wb2sdrc.v", 254: top.duv.u_wb2sdrc.full_fifo_cmdread: started at 10000ps failed at 10000ps
 	Offending '(!((cmdfifo_empty == 1'b1) && (cmdfifo_rd == 1'b1)))'
 Error: "../../rtl/wb2sdrc/wb2sdrc.v", 254: top.duv.u_wb2sdrc.full_fifo_cmdread: at time 10000 ps
@@ -64,10 +60,6 @@ ERROR:top.duv.u_wb2sdrc.full_fifo_read WRITE DATA FIFO READ OVERFLOW
 	Offending '(!((rddatafifo_full == 1'b1) && (rddatafifo_wr == 1'b1)))'
 Error: "../../rtl/wb2sdrc/wb2sdrc.v", 368: top.duv.u_wb2sdrc.full_fifo_readwrite_overflow: at time 90000 ps
 ERROR:top.duv.u_wb2sdrc.full_fifo_readwrite_overflow READ DATA FIFO WRITE OVERFLOW
-"../tb/assertions.sv", 65: top.assertion.wb_reset_1_clk: started at 105000ps failed at 105000ps
-	Offending '$stable((!whitebox_if.wb_rst_i))'
-Error: "../tb/assertions.sv", 65: top.assertion.wb_reset_1_clk: at time 105000 ps
-Wishbone Protocol Rule 3.05 violated
 "../../rtl/wb2sdrc/wb2sdrc.v", 312: top.duv.u_wb2sdrc.full_fifo_read: started at 110000ps failed at 110000ps
 	Offending '(!((wrdatafifo_empty == 1'b1) && (wrdatafifo_rd == 1'b1)))'
 Error: "../../rtl/wb2sdrc/wb2sdrc.v", 312: top.duv.u_wb2sdrc.full_fifo_read: at time 110000 ps
@@ -92,8 +84,6 @@ top.u_sdram32 :                             CAS Latency      = 3
 top.u_sdram32 :                             Burst Length     = 8
 top.u_sdram32 :                             Burst Type       = Sequential
 top.u_sdram32 :                             Write Burst Mode = Programmed Burst Length
-
-Stop point #3 @ 18140000 ps;  
 ---------------------------------------
  Case:5 24 Write & 24 Read With Different Bank and Row 
 ---------------------------------------
@@ -189,7 +179,13 @@ READ STATUS: Burst-No:           2 Addr: 0379c02 Rxd: 76d457ed
 top.u_sdram32 : at time  18032.00 ns BST  : Burst Terminate
 top.u_sdram32 : at time  18058.00 ns READ : Bank = 0 Row = 1511, Col =   3, Data = 462df78c
 READ STATUS: Burst-No:           3 Addr: 0379c03 Rxd: 462df78c
+TEST EXECUTION FAILED!!!
+  TestCase execution count:           1
+  Error count:           0
+$finish at simulation time  18140.00 ns
+"../tb/assertions.sv", 62: top.assertion.wb_initialization: Antecedent of the implication never satisfied.
+Simulation complete, time is 18140000 ps.
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 18140000 ps
-CPU Time:      0.510 seconds;       Data structure size:   0.2Mb
-Wed Nov 28 00:54:20 2018
+CPU Time:      0.350 seconds;       Data structure size:   0.2Mb
+Wed Nov 28 17:53:17 2018

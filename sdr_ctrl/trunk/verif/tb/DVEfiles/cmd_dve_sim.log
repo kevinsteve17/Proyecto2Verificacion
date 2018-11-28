@@ -9,60 +9,34 @@ synopsys::xml set_string_limit <data limit="1000" />
 synopsys::xml set_only_active_frame <data value="1" />
 synopsys::xml set_variable_frame_id <data value="1" />
 synUtils::setDVEInitPhase 1
-synopsys::dump -type VPD -file /mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd -locking
+synopsys::dump -type VPD -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd -locking
 synopsys::dump -autoflush on -fid VPD0
 set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpr4ZT5P
-synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.kviquez.28841}
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.kviquez.28841}
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpKhRi8G
+synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.fparis.25618}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.fparis.25618}
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
 config syscaddsourcenames
 config syscaddstructtypes
 synopsys::listing -disable
-synopsys::watch  -file  $::env(PWD)/Test.sv  -line  9
-synopsys::watch -raw
-synopsys::watch  -file  $::env(PWD)/Test.sv  -line  14
-synopsys::watch -raw
-synopsys::watch  -file  $::env(PWD)/Test.sv  -line  16
-synopsys::watch -raw
+synUtils::sendTool -active {_icl_getAssertions}
+synUtils::sendTool -active {_icl_getAssertions -scopes}
+ucliGUI::vpdAddHierarchy -scope top.assertion -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
+ucliGUI::vpdAddHierarchy -scope top.duv.u_wb2sdrc -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
+synopsys::dump -flush VPD0
 synopsys::run
-set ucliGUI::state
 set ucliGUI::state
 set ucliGUI::state
 set ucliGUI::state
 set ucliGUI::state
 synopsys::xml get_stop_data
 synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
-synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(14:0:2)" viewId="Local.1" />}
-synopsys::xml {evaluate <data updateType="increment" itemId="114293184" frame_id="frame(top.test1)" viewId="Hidden 1" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
-synopsys::xml {evaluate <data updateType="increment" itemId="114361488" frame_id="frame(top.test1)" viewId="Hidden 2" > <item separator="." expr="env.drv" open="1" name="drv" depth="1" /></data>}
-trigger_hier_stack_context_switch 1
-synopsys::run
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-synopsys::xml get_stop_data
-synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(14:0:2)" viewId="Local.1" />}
-synopsys::run
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-set ucliGUI::state
-synopsys::xml get_stop_data
-synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(top.test1)" /></data>}
-synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(14:0:2)" viewId="Local.1" />}
-synopsys::xml {evaluate <data updateType="increment" itemId="114295488" frame_id="frame(top.test1)" viewId="Hidden 3" > <item separator="." expr="env.mon" open="1" name="mon" depth="1" /></data>}
-synopsys::xml {evaluate <data updateType="increment" itemId="114293184" frame_id="frame(top.test1)" viewId="Hidden 4" > <item separator="." expr="env" open="1" name="env" depth="1" /></data>}
+if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
 synopsys::finish
 set ucliGUI::state
 set ucliGUI::state
-if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
 ucli_exit

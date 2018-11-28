@@ -34,10 +34,10 @@
 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/bin/vcs1
 svaext
 47
-sysc_uni_pwd=/mnt/vol_NFS_Zener/WD_ESPEC/kviquez/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb
+sysc_uni_pwd=/mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb
 XMODIFIERS=@im=none
-XDG_SESSION_COOKIE=7d1e713e61d13a600c6dc60900000019-1543368601.651169-764961946
-XAUTHORITY=/var/run/gdm/auth-for-ESTUDIANTES\kviquez-ZnZIgO/database
+XDG_SESSION_COOKIE=7d1e713e61d13a600c6dc60900000019-1543446963.987110-1290189398
+XAUTHORITY=/var/run/gdm/auth-for-ESTUDIANTES\fparis-UFwCAN/database
 WINDOWPATH=1
 VMR_MODE_FLAG=64
 VCS_MX_HOME_INTERNAL=1
@@ -46,14 +46,14 @@ VCS_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03
 VCS_DEPTH=0
 VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH=linux64
-USERNAME=ESTUDIANTES\kviquez
+USERNAME=ESTUDIANTES\fparis
 UNAME=/bin/uname
 TOOL_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64
 SYNOPSYS_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/
-SSH_AUTH_SOCK=/tmp/keyring-Hkdmsf/socket.ssh
+SSH_AUTH_SOCK=/tmp/keyring-zbJrGR/socket.ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/18372,unix/unix:/tmp/.ICE-unix/18372
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/6389,unix/unix:/tmp/.ICE-unix/6389
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QT_IM_MODULE=xim
@@ -61,60 +61,60 @@ QTLIB=/usr/lib64/qt-3.3/lib
 QTINC=/usr/lib64/qt-3.3/include
 QTDIR=/usr/lib64/qt-3.3
 OVA_UUM=0
-ORBIT_SOCKETDIR=/tmp/orbit-ESTUDIANTES\kviquez
+ORBIT_SOCKETDIR=/tmp/orbit-ESTUDIANTES\fparis
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_ALL=C
-KRB5CCNAME=FILE:/tmp/krb5cc_1160251957_TQ8Sp7
+KRB5CCNAME=FILE:/tmp/krb5cc_1160251947_x5s1je
 IMSETTINGS_MODULE=none
 IMSETTINGS_INTEGRATE_DESKTOP=yes
 HISTCONTROL=ignoredups
 G_BROKEN_FILENAMES=1
-GTK_RC_FILES=/etc/gtk/gtkrc:/home/local/ESTUDIANTES/kviquez/.gtkrc-1.2-gnome2
-GNOME_KEYRING_SOCKET=/tmp/keyring-Hkdmsf/socket
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/local/ESTUDIANTES/fparis/.gtkrc-1.2-gnome2
+GNOME_KEYRING_SOCKET=/tmp/keyring-zbJrGR/socket
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
-GIO_LAUNCHED_DESKTOP_FILE_PID=19135
+GIO_LAUNCHED_DESKTOP_FILE_PID=7315
 GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/gnome-terminal.desktop
 GDM_LANG=en_US.UTF-8
 GDM_KEYBOARD_LAYOUT=us
 GDMSESSION=gnome
 DESKTOP_SESSION=gnome
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-XqrOENzcGu,guid=954aced175927bf4a4758348001a4f5a
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-a6Wvn5C5t4,guid=1ed25aaf7e555d2b4f9c9138001b8174
 CVS_RSH=ssh
 COLORTERM=gnome-terminal
 0
 29
-1541272424 ../../rtl/core/sdrc_define.v
+1541688445 ../../rtl/core/sdrc_define.v
 1487217855 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/etc/sva/rec_ltl_classes_package.svp
-1541272424 ../../rtl/core/sdrc_xfr_ctl.v
-1541272424 ../../rtl/core/sdrc_req_gen.v
-1541272424 ../../rtl/core/sdrc_bs_convert.v
-1541272424 ../../rtl/core/sdrc_bank_fsm.v
-1541272424 ../../rtl/core/sdrc_bank_ctl.v
-1541272424 ../../rtl/core/sdrc_core.v
-1541272424 ../../rtl/lib/async_fifo.v
-1543195936 ../../rtl/wb2sdrc/wb2sdrc.v
-1541272424 ../../rtl/top/sdrc_top.v
-1541272425 ../model/IS42VM16400K.V
-1541272425 ../model/mt48lc8m8a2.v
-1541272425 ../model/mt48lc2m32b2.v
-1543381658 ../tb/tb_top_proyecto2_test.sv
-1543381658 ../tb/Clocks.sv
-1543382140 ../tb/assertions.sv
-1543381658 ../tb/whitebox_interface.sv
-1543381658 ../tb/Test.sv
-1541649798 ../tb/sdrc_environment.sv
-1543387833 ../tb/sdrc_driver.sv
-1543387995 ../tb/sdrc_monitor.sv
-1543383940 ../tb/sdrc_scoreboard.sv
-1541659806 ../tb/sdrc_interface.sv
-1543381658 ../tb/diffBankAndRowStimulus.sv
-1541647338 ../tb/wb_interface.sv
-1541659826 ../tb/sdram_interterface.sv
-1543381658 filelist_Proyecto2_test.f
+1541688445 ../../rtl/core/sdrc_xfr_ctl.v
+1541688445 ../../rtl/core/sdrc_req_gen.v
+1541688445 ../../rtl/core/sdrc_bs_convert.v
+1541688445 ../../rtl/core/sdrc_bank_fsm.v
+1541688445 ../../rtl/core/sdrc_bank_ctl.v
+1541688445 ../../rtl/core/sdrc_core.v
+1541688445 ../../rtl/lib/async_fifo.v
+1543205335 ../../rtl/wb2sdrc/wb2sdrc.v
+1541688445 ../../rtl/top/sdrc_top.v
+1541688445 ../model/IS42VM16400K.V
+1541688445 ../model/mt48lc8m8a2.v
+1541688445 ../model/mt48lc2m32b2.v
+1543206478 ../tb/tb_top_proyecto2_test.sv
+1543206742 ../tb/Clocks.sv
+1543449025 ../tb/assertions.sv
+1543387507 ../tb/whitebox_interface.sv
+1543380261 ../tb/Test.sv
+1541688446 ../tb/sdrc_environment.sv
+1543388701 ../tb/sdrc_driver.sv
+1543388701 ../tb/sdrc_monitor.sv
+1543387507 ../tb/sdrc_scoreboard.sv
+1541688446 ../tb/sdrc_interface.sv
+1543379954 ../tb/diffBankAndRowStimulus.sv
+1541688446 ../tb/wb_interface.sv
+1541688446 ../tb/sdram_interterface.sv
+1543379954 filelist_Proyecto2_test.f
 1487217861 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/vcsdp_lite.tab
 4
 0 
 1487220396 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libvirsim.so
 1487219634 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/liberrorinf.so
 1487219608 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libsnpsmalloc.so
-1543388008 simv.daidir
+1543449051 simv.daidir
