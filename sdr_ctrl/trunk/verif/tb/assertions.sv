@@ -48,11 +48,11 @@ property wb_tci;
 endproperty
 
 // Property of Rule 3.35 Transfer cycle initiaiton
-// property wb_termination;
-//   @(posedge whitebox_if.wb_clk_i)
-//   (whitebox_if.wb_cyc_i && whitebox_if.wb_stb_i) |=>
-//   $rose(whitebox_if.wb_ack_o);
-// endproperty
+property wb_termination;
+  @(posedge whitebox_if.wb_clk_i)
+  $rose(whitebox_if.wb_cyc_i && whitebox_if.wb_stb_i) |=>
+  $rose(whitebox_if.wb_ack_o);
+ endproperty
 
 
 // Sdram init assertion
