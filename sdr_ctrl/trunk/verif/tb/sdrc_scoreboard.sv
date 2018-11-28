@@ -1,34 +1,9 @@
 class sdrcSB;
-    int store[$]; // need modification to support R/W out of order
-    int dir[$];
-    int burstLenght[$];
+    int store[$]; // Deprecated for 2 version
+    int unsigned store[int]; // Modified for aleatory tests
+    int unsigned dir[$];
+    int unsigned burstLenght[$];
     int ErrCnt;
-    mem_base_object mem [*];
-
-
-    task store_write();
-    input mem_base_object  mem_obj;
-
-    begin
-        // write the data in the scoreboard
-        mem[Address] = mem_obj;
-    end
-        
-    endtask //
-
-    task store_read();
-    input [31:0] Address;
-    mem_base_object  read_mem_obj = mem[Address];
-    begin
-        // read the data in the scoreboard
-        // return read_mem_obj;
-
-    end
-    endtask //
-
-
-
-
 
     task clearStore();
         begin

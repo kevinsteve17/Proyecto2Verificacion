@@ -53,7 +53,8 @@ class sdrcDrv;
                 this.inft.wb_intf.wb_sel_i        = 4'b1111;
                 this.inft.wb_intf.wb_addr_i       = Address[31:2]+i;
                 this.inft.wb_intf.wb_dat_i        = $random & 32'hFFFFFFFF;
-                sb.store.push_back(this.inft.wb_intf.wb_dat_i);
+                // sb.store.push_back(this.inft.wb_intf.wb_dat_i); //Deprecated
+                sb.store[this.inft.wb_intf.wb_addr_i] = this.inft.wb_intf.wb_dat_i;
 
                 do begin
                     @ (posedge this.inft.sys_clk);
