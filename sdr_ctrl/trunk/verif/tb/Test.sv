@@ -147,7 +147,18 @@ program testcase(inft_sdrcntrl intf);
         $display("---------------------------------------");
         $display(" Case:5 24 Write & 24 Read With Different Bank and Row ");
         $display("---------------------------------------");
-        env.drv.BurstWrite({12'h000,2'b00,8'h00,2'b00},8'h4);   // Row: 0 Bank : 0
+
+        env.drv.BurstWrite_diff_row_bank();
+        env.drv.BurstWrite_diff_row_bank();
+        env.drv.BurstWrite_diff_row_bank();
+
+        env.mon.BurstRead();  
+        env.mon.BurstRead();  
+        env.mon.BurstRead();
+
+        env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
+
+        /*env.drv.BurstWrite({12'h000,2'b00,8'h00,2'b00},8'h4);   // Row: 0 Bank : 0
         env.drv.BurstWrite({12'h000,2'b01,8'h00,2'b00},8'h5);   // Row: 0 Bank : 1
         env.drv.BurstWrite({12'h000,2'b10,8'h00,2'b00},8'h6);   // Row: 0 Bank : 2
         env.drv.BurstWrite({12'h000,2'b11,8'h00,2'b00},8'h7);   // Row: 0 Bank : 3
@@ -198,9 +209,7 @@ program testcase(inft_sdrcntrl intf);
         env.mon.BurstRead();  
         env.mon.BurstRead();  
         env.mon.BurstRead();  
-        env.mon.BurstRead();
-        
-        env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
+        env.mon.BurstRead();*/
       end
     endtask
 
