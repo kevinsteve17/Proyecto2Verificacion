@@ -10,7 +10,7 @@
 ../tb/sdrc_monitor.sv
 ../tb/sdrc_driver.sv
 ../tb/sdrc_environment.sv
-../tb/Test.sv
+../tb/Test_proyecto2.sv
 ../tb/whitebox_interface.sv
 ../tb/assertions.sv
 ../tb/Clocks.sv
