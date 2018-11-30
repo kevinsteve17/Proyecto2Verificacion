@@ -1,7 +1,10 @@
 class sdrcDrv;
     sdrcSB sb;
-    diffBankAndRowStimulus diff_bank_row_stim;
     virtual inft_sdrcntrl inft;
+
+    // Stimulus objects
+    diffBankAndRowStimulus diff_bank_row_stim;
+    addrStimulus rnd_addr_stim;
 
     function new(virtual inft_sdrcntrl inft,sdrcSB sb);
         $display("Creating SDRC Driver");
@@ -75,7 +78,7 @@ class sdrcDrv;
         
     endtask
 
-    // Write With Different Bank and Row
+    // Write to address with Different Bank and Row
     task BurstWrite_diff_row_bank();
         logic  [7:0] burst_size;
 
@@ -83,9 +86,17 @@ class sdrcDrv;
             diff_bank_row_stim = new();
 
             if(diff_bank_row_stim.randomize())
+            begin
                 burst_size = diff_bank_row_stim.bank + 8'h4;
-            
-            this.BurstWrite({diff_bank_row_stim.row, diff_bank_row_stim.bank, 8'h00,2'b00}, burst_size);
+                this.BurstWrite({diff_bank_row_stim.row, diff_bank_row_stim.bank, 8'h00,2'b00}, burst_size);
+            end
+        end
+    endtask
+
+    // Write to rndm address
+    task BurstWrite_rnd_addr();
+        begin
+            rnd_addr_stim = new();
         end
     endtask
 
