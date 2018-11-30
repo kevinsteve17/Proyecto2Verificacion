@@ -7,13 +7,20 @@ program testcase(inft_sdrcntrl intf);
   
   initial 
   begin
+    // set test execution count
+    env.mon.execTestCasesCount = 3;
+
+    // reset
     env.drv.reset();
+    
+    // Tests to execute
     tc1_single_read();
     tc2_x2_read();
     //tc3_page_cross_over();
     //tc4_x4_Write_4Read();
-    tc5_24Write_24Read();
+    tc5_x24_Write_and_Read_diff_row_bank();
     //tc6_x2_rndm_Write_and_Read();
+
     env.mon.Check();
   end
      
@@ -148,7 +155,7 @@ program testcase(inft_sdrcntrl intf);
   endtask
 
   // Case:5 24 Write & 24 Read With Different Bank and Row
-  task tc5_24Write_24Read();
+  task tc5_x24_Write_and_Read_diff_row_bank();
     begin
       $display("---------------------------------------");
       $display(" Case:5 24 Write & 24 Read With Different Bank and Row ");

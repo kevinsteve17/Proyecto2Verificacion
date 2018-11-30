@@ -1,7 +1,7 @@
 class sdrcMon;
     sdrcSB sb;
     virtual inft_sdrcntrl inft;
-    int execTestCasesCount = 6;
+    int execTestCasesCount = 0;
     
     function new(virtual inft_sdrcntrl inft,sdrcSB sb);
         $display("Creating SDRC Monitor");
