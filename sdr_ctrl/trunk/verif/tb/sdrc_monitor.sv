@@ -20,7 +20,7 @@ class sdrcMon;
                 $display("  Error count: %d", sb.ErrCnt);
             end else begin
                 $display("TEST EXECUTION FAILED!!!");
-                $display("  TestCase execution count: %d", (this.testCasesCoun - this.execTestCasesCount));
+                $display("  TestCase execution count: %d", (this.testCasesCount - this.execTestCasesCount));
                 $display("  Error count: %d", sb.ErrCnt);
             end
         end
