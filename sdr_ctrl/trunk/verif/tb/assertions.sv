@@ -50,7 +50,7 @@ endproperty
 // Property of Rule 3.35 Transfer cycle initiaiton
 property wb_termination;
   @(posedge whitebox_if.wb_clk_i)
-  $rose(whitebox_if.wb_cyc_i && whitebox_if.wb_stb_i) |=>
+  $rose(whitebox_if.wb_cyc_i && whitebox_if.wb_stb_i) |->
   $rose(whitebox_if.wb_ack_o);
  endproperty
 
@@ -71,7 +71,7 @@ wb_reset_react: assert property(wb_reset) else $error ("Wishbone Protocol Rule 3
 wb_SRW_RMW: assert property(wb_tci) else $error ("Wishbone Protocol Rule 3.25 violated");
 
 // Rule 3.35
-// wb_AND: assert property(wb_termination) else $error ("Wishbone Protocol Rule 3.35 violated");
+wb_AND: assert property(wb_termination) else $error ("Wishbone Protocol Rule 3.35 violated");
 
 
 endmodule
