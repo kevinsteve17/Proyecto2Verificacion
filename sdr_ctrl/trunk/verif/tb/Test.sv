@@ -1,6 +1,7 @@
 program testcase(inft_sdrcntrl intf);
 
-  sdrcEnv env = new(intf);
+  // sdrcEnv env = new(intf); // Deprecated for second project.
+  sdrcEnv2 env = new(intf);
   int k;
   reg [31:0] StartAddr;
   
