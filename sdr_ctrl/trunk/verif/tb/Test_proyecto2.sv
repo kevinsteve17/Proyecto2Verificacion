@@ -8,11 +8,11 @@ program testcase(inft_sdrcntrl intf);
   begin
     env.drv.reset();
     tc1_single_read();
-    tc2_single_read();
+    tc2_x2_read();
     //tc3_page_cross_over();
-    //tc4_4Write_4Read();
+    //tc4_x4_Write_4Read();
     tc5_24Write_24Read();
-    //tc4_6rndm_Write_2rndm_Read();
+    //tc6_x2_rndm_Write_and_Read();
     env.mon.Check();
   end
      
@@ -35,7 +35,7 @@ program testcase(inft_sdrcntrl intf);
   endtask
 
   // Test case 2 Single Write/Read Case
-  task tc2_single_read();
+  task tc2_x2_read();
     begin
       $display("-------------------------------------- ");
       $display(" Case-2: x2 Write/Read Case        ");
@@ -57,7 +57,7 @@ program testcase(inft_sdrcntrl intf);
   endtask
 
   // Case:3 Create a Page Cross Over
-  task tc3_single_read();
+  task tc3_page_cross_over();
     begin
       
       $display("----------------------------------------");
@@ -123,10 +123,10 @@ program testcase(inft_sdrcntrl intf);
 
 
   // Case:4 4 Write & 4 Read
-  task tc4_4Write_4Read();
+  task tc4_x4_Write_4Read();
     begin
       $display("----------------------------------------");
-      $display(" Case:4 4 Write & 4 Read                ");
+      $display(" Case:4 x4 Write & Read                ");
       $display("----------------------------------------");
       
       env.drv.BurstWrite_rnd_addr();  
@@ -141,7 +141,7 @@ program testcase(inft_sdrcntrl intf);
       env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
 
       $display("-------------------------------------- ");
-      $display(" End-4 4 Write & 4 Read");
+      $display(" End-4 x4 Write &  Read");
       $display("-------------------------------------- ");  
     end
   endtask
@@ -170,11 +170,12 @@ program testcase(inft_sdrcntrl intf);
   endtask
 
   // Case: 6 Random 2 write and 2 read random
-  task tc4_6rndm_Write_2rndm_Read();
+  task tc6_x2_rndm_Write_and_Read();
     begin
       $display("---------------------------------------------------");
       $display(" Case: 6 Random 2 write and 2 read random");
       $display("---------------------------------------------------");
+      
       for(k=0; k < 20; k++) begin
           StartAddr = $random & 32'h003FFFFF;
           env.drv.BurstWrite(StartAddr,($random & 8'h0f)+1);  
