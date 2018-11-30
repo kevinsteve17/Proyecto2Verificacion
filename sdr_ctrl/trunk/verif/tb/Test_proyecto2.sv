@@ -8,7 +8,8 @@ program testcase(inft_sdrcntrl intf);
   initial 
   begin
     // set test execution count
-    env.mon.execTestCasesCount = 3;
+    env.mon.testCasesCount = 3;
+    env.mon.execTestCasesCount = env.mon.testCasesCount;
 
     // reset
     env.drv.reset();

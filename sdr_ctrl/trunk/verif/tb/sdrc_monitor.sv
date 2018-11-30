@@ -2,6 +2,7 @@ class sdrcMon;
     sdrcSB sb;
     virtual inft_sdrcntrl inft;
     int execTestCasesCount = 0;
+    int testCasesCount = 0;
     
     function new(virtual inft_sdrcntrl inft,sdrcSB sb);
         $display("Creating SDRC Monitor");
@@ -15,11 +16,11 @@ class sdrcMon;
         begin
             if (this.execTestCasesCount==0 && sb.ErrCnt==0) begin
                 $display("TEST EXECUTION PASSED!!!");
-                $display("  TestCase execution count: %d", (6 - this.execTestCasesCount));
+                $display("  TestCase execution count: %d", (this.testCasesCount - this.execTestCasesCount));
                 $display("  Error count: %d", sb.ErrCnt);
             end else begin
                 $display("TEST EXECUTION FAILED!!!");
-                $display("  TestCase execution count: %d", (6 - this.execTestCasesCount));
+                $display("  TestCase execution count: %d", (this.testCasesCoun - this.execTestCasesCount));
                 $display("  Error count: %d", sb.ErrCnt);
             end
         end
