@@ -7,12 +7,12 @@ program testcase(inft_sdrcntrl intf);
   initial 
   begin
     env.drv.reset();
-    //tc1_single_read();
-    //tc2_single_read();
-    //tc3_single_read();
-    //tc4_4Write_4Read();
+    tc1_single_read();
+    tc2_single_read();
+    tc3_single_read();
+    tc4_4Write_4Read();
     tc5_24Write_24Read();
-    //tc4_6rndm_Write_2rndm_Read();
+    tc4_6rndm_Write_2rndm_Read();
     env.mon.Check();
   end
      
@@ -148,17 +148,7 @@ program testcase(inft_sdrcntrl intf);
         $display(" Case:5 24 Write & 24 Read With Different Bank and Row ");
         $display("---------------------------------------");
 
-        env.drv.BurstWrite_diff_row_bank();
-        env.drv.BurstWrite_diff_row_bank();
-        env.drv.BurstWrite_diff_row_bank();
-
-        env.mon.BurstRead();  
-        env.mon.BurstRead();  
-        env.mon.BurstRead();
-
-        env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
-
-        /*env.drv.BurstWrite({12'h000,2'b00,8'h00,2'b00},8'h4);   // Row: 0 Bank : 0
+        env.drv.BurstWrite({12'h000,2'b00,8'h00,2'b00},8'h4);   // Row: 0 Bank : 0
         env.drv.BurstWrite({12'h000,2'b01,8'h00,2'b00},8'h5);   // Row: 0 Bank : 1
         env.drv.BurstWrite({12'h000,2'b10,8'h00,2'b00},8'h6);   // Row: 0 Bank : 2
         env.drv.BurstWrite({12'h000,2'b11,8'h00,2'b00},8'h7);   // Row: 0 Bank : 3
@@ -183,7 +173,6 @@ program testcase(inft_sdrcntrl intf);
         env.drv.BurstWrite({12'h003,2'b01,8'h00,2'b00},8'h5);   // Row: 3 Bank : 1
         env.drv.BurstWrite({12'h003,2'b10,8'h00,2'b00},8'h6);   // Row: 3 Bank : 2
         env.drv.BurstWrite({12'h003,2'b11,8'h00,2'b00},8'h7);   // Row: 3 Bank : 3
-
         env.mon.BurstRead();  
         env.mon.BurstRead();  
         env.mon.BurstRead();  
@@ -201,15 +190,16 @@ program testcase(inft_sdrcntrl intf);
         env.drv.BurstWrite({12'h003,2'b01,8'h05,2'b00},8'h5);   // Row: 3 Bank : 1
         env.drv.BurstWrite({12'h003,2'b10,8'h06,2'b00},8'h6);   // Row: 3 Bank : 2
         env.drv.BurstWrite({12'h003,2'b11,8'h07,2'b00},8'h7);   // Row: 3 Bank : 3
+        env.mon.BurstRead();  
+        env.mon.BurstRead();  
+        env.mon.BurstRead();  
+        env.mon.BurstRead();  
+        env.mon.BurstRead();  
+        env.mon.BurstRead();  
+        env.mon.BurstRead();  
+        env.mon.BurstRead();
 
-        env.mon.BurstRead();  
-        env.mon.BurstRead();  
-        env.mon.BurstRead();  
-        env.mon.BurstRead();  
-        env.mon.BurstRead();  
-        env.mon.BurstRead();  
-        env.mon.BurstRead();  
-        env.mon.BurstRead();*/
+        env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
       end
     endtask
 
