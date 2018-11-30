@@ -9,7 +9,7 @@ program testcase(inft_sdrcntrl intf);
     env.drv.reset();
     tc1_single_read();
     tc2_single_read();
-    //tc3_single_read();
+    //tc3_page_cross_over();
     //tc4_4Write_4Read();
     tc5_24Write_24Read();
     //tc4_6rndm_Write_2rndm_Read();

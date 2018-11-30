@@ -15,14 +15,14 @@ class sdrcDrv;
 
     task reset();
         begin
-            sb.ErrCnt          = 0;
+            sb.ErrCnt                        = 0;
             this.inft.wb_intf.wb_addr_i      = 0;
-            this.inft.wb_intf.wb_dat_i      = 0;
+            this.inft.wb_intf.wb_dat_i       = 0;
             this.inft.wb_intf.wb_sel_i       = 4'h0;
             this.inft.wb_intf.wb_we_i        = 0;
             this.inft.wb_intf.wb_stb_i       = 0;
             this.inft.wb_intf.wb_cyc_i       = 0;
-            this.inft.resetn    = 1'h1;
+            this.inft.resetn                 = 1'h1;
 
             #100
             // Applying reset
@@ -97,6 +97,11 @@ class sdrcDrv;
     task BurstWrite_rnd_addr();
         begin
             rnd_addr_stim = new();
+
+            if(rnd_addr_stim.randomize())
+            begin
+                this.BurstWrite(rnd_addr_stim.address, rnd_addr_stim.burst_size);
+            end
         end
     endtask
 
