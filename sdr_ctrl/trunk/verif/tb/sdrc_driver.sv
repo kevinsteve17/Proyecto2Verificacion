@@ -4,7 +4,7 @@ class sdrcDrv;
 
     // Stimulus objects
     diffBankAndRowStimulus diff_bank_row_stim;
-    addrStimulus rnd_addr_stim;
+    addrStimulus rnd_addr_stim = new();
 
     function new(virtual inft_sdrcntrl inft,sdrcSB sb);
         $display("Creating SDRC Driver");
@@ -56,7 +56,7 @@ class sdrcDrv;
                 this.inft.wb_intf.wb_sel_i        = 4'b1111;
                 this.inft.wb_intf.wb_addr_i       = Address[31:2]+i;
                 this.inft.wb_intf.wb_dat_i        = $random & 32'hFFFFFFFF;
-                // sb.store.push_back(this.inft.wb_intf.wb_dat_i); //Deprecated
+                // sb.store.push_back(this.inft.wb_intf.wb_dat_i); // Deprecated for second project
                 sb.dir.push_back(this.inft.wb_intf.wb_addr_i);
                 sb.store[this.inft.wb_intf.wb_addr_i] = this.inft.wb_intf.wb_dat_i;
 

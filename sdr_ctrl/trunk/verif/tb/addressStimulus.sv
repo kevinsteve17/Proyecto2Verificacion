@@ -1,5 +1,9 @@
 class addrStimulus;
 
+  function new();
+        $display("Creating address stimulus");
+  endfunction
+
   randc logic [31:0] address;
   rand logic  [7:0]  burst_size;
 
