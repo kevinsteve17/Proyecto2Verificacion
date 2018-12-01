@@ -8,7 +8,7 @@ program testcase(inft_sdrcntrl intf);
   initial 
   begin
     // set test execution count
-    env.mon.testCasesCount = 2;
+    env.mon.testCasesCount = 5;
     env.mon.notExecTestCasesCount = env.mon.testCasesCount;
 
     // reset
@@ -16,10 +16,10 @@ program testcase(inft_sdrcntrl intf);
     
     // Tests to execute
     tc1_single_read();
-    //tc2_x2_read();
+    tc2_x2_read();
     //tc3_page_cross_over();
-    //tc5_x24_Write_and_Read_diff_row_bank();
-    //tc4_x4_Write_4Read();
+    tc5_x24_Write_and_Read_diff_row_bank();
+    tc4_x4_Write_Read();
     tc6_write_read_different_order();
 
     // check test exec. results
@@ -133,7 +133,7 @@ program testcase(inft_sdrcntrl intf);
 
 
   // Case:4 4 Write & 4 Read
-  task tc4_x4_Write_4Read();
+  task tc4_x4_Write_Read();
     begin
       $display("----------------------------------------");
       $display(" Case:4 x4 Write & Read                ");
