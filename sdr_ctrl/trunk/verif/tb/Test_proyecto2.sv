@@ -9,7 +9,7 @@ program testcase(inft_sdrcntrl intf);
   begin
     // set test execution count
     env.mon.testCasesCount = 4;
-    env.mon.execTestCasesCount = env.mon.testCasesCount;
+    env.mon.notnotExecTestCasesCount = env.mon.testCasesCount;
 
     // reset
     env.drv.reset();
@@ -20,7 +20,7 @@ program testcase(inft_sdrcntrl intf);
     tc3_page_cross_over();
     tc5_x24_Write_and_Read_diff_row_bank();
     //tc4_x4_Write_4Read();
-    //tc6_x2_rndm_Write_and_Read();
+    //tc6_write_read_different_order();
 
     // check test exec. results
     env.mon.Check();
@@ -36,7 +36,7 @@ program testcase(inft_sdrcntrl intf);
       #1000;
       env.mon.BurstRead();
 
-      env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
+      env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
       
       $display("-------------------------------------- ");
       $display(" End-1: Single Write/Read Case        ");
@@ -58,7 +58,7 @@ program testcase(inft_sdrcntrl intf);
       env.drv.BurstWrite_rnd_addr();
       env.mon.BurstRead();
       
-      env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
+      env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
 
       $display("-------------------------------------- ");
       $display(" End-2: x2 Write/Read Case        ");
@@ -123,7 +123,7 @@ program testcase(inft_sdrcntrl intf);
       env.mon.BurstRead();  
       env.mon.BurstRead();
       
-      env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
+      env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
       
       $display("-------------------------------------- ");
       $display(" End-3 Create a Page Cross Over");
@@ -148,7 +148,7 @@ program testcase(inft_sdrcntrl intf);
       env.mon.BurstRead();  
       env.mon.BurstRead();
       
-      env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
+      env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
 
       $display("-------------------------------------- ");
       $display(" End-4 x4 Write &  Read");
@@ -171,7 +171,7 @@ program testcase(inft_sdrcntrl intf);
       env.mon.BurstRead();  
       env.mon.BurstRead();
 
-      env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
+      env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
 
       $display("-------------------------------------- ");
       $display(" End-5 24 Write & 24 Read With Different Bank and Row");
@@ -179,32 +179,45 @@ program testcase(inft_sdrcntrl intf);
     end
   endtask
 
-  // Case: 6 Random 2 write and 2 read random
-  task tc6_x2_rndm_Write_and_Read();
+  // Case6: Writes/Reads in dofferent order
+  task tc6_write_read_different_order();
     begin
-      $display("---------------------------------------------------");
-      $display(" Case: 6 Random 2 write and 2 read random");
-      $display("---------------------------------------------------");
-      
-      for(k=0; k < 20; k++) begin
-          StartAddr = $random & 32'h003FFFFF;
-          env.drv.BurstWrite(StartAddr,($random & 8'h0f)+1);  
-          #100;
-          StartAddr = $random & 32'h003FFFFF;
-          env.drv.BurstWrite(StartAddr,($random & 8'h0f)+1);  
-          #100;
-          env.mon.BurstRead();  
-          #100;
-          env.mon.BurstRead();  
-          #100;
-        end 
-
-        env.mon.execTestCasesCount = env.mon.execTestCasesCount -1;
-
       $display("-------------------------------------- ");
-      $display(" End- 6 Random 2 write and 2 read random");
-      $display("-------------------------------------- ");        
+      $display(" Case-6: rites/Reads in dofferent order        ");
+      $display("-------------------------------------- ");
+  
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      
+      #1000;
+
+      env.mon.BurstRead();
+      env.mon.BurstRead();
+      env.mon.BurstRead();
+
+      #1000;
+
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+
+       #1000;
+
+      env.mon.BurstRead();
+      env.mon.BurstRead();
+      env.mon.BurstRead();
+      env.mon.BurstRead();
+      env.mon.BurstRead();
+
+      env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
+      
+      $display("-------------------------------------- ");
+      $display(" End-6: rites/Reads in dofferent order ");
+      $display("-------------------------------------- ");
     end
-  endtask    
+  endtask   
 
 endprogram
