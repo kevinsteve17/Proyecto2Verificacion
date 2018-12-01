@@ -1,0 +1,121 @@
+{
+    "reusePaths": {
+        "a3mSN_d": {
+            "icPath": "csrc"
+        },
+        "F5CYM_d": {
+            "icPath": "csrc"
+        },
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "ypVrV_d": {
+            "icPath": "csrc"
+        },
+        "RuFh3_d": {
+            "icPath": "csrc"
+        },
+        "BW0b7_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "qtWga_d": {
+            "icPath": "csrc"
+        },
+        "xqeUE_d": {
+            "icPath": "csrc"
+        },
+        "PATxq_d": {
+            "icPath": "csrc"
+        },
+        "ChjVu_d": {
+            "icPath": "csrc"
+        },
+        "Pj51K_d": {
+            "icPath": "csrc"
+        },
+        "Emx8S_d": {
+            "icPath": "csrc"
+        },
+        "NTNU2_d": {
+            "icPath": "csrc"
+        },
+        "TzJKa_d": {
+            "icPath": "csrc"
+        }
+    },
+    "Modules": {
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "...MASTER...": {},
+        "IS42VM16400K": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "_vcs_unit__2559226825": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "testcase": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "intf_whitebox": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "mt48lc2m32b2": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "Clks": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "mt48lc8m8a2": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        }
+    },
+    "CompUnits": {},
+    "ObjArchives": [
+        {
+            "objects": [
+                [
+                    "amcQwB.o",
+                    160975
+                ]
+            ],
+            "archive": "archive.10/_16411_archive_1.a",
+            "size": 160975
+        }
+    ]
+}

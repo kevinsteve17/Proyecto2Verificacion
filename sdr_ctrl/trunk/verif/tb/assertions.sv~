@@ -4,12 +4,10 @@ module whitebox(intf_whitebox whitebox_if);
 property sdram_init;
   @(negedge whitebox_if.sdram_clk)
   $fell(whitebox_if.sdram_resetn) |=>                                                                      // reset
-  $stable(whitebox_if.sdr_ras_n && whitebox_if.sdr_cas_n &&  whitebox_if.sdr_we_n)[*500]   |-> ##[0:100]   // NOP stable 100us
-  $rose(!whitebox_if.sdr_ras_n &&  whitebox_if.sdr_cas_n && !whitebox_if.sdr_we_n)         |-> ##[0:100]   // recharge LHL
-  $rose( whitebox_if.sdr_ras_n &&  whitebox_if.sdr_cas_n &&  whitebox_if.sdr_we_n)         |-> ##[0:100]   // NOP
-  $rose(!whitebox_if.sdr_ras_n && !whitebox_if.sdr_cas_n &&  whitebox_if.sdr_we_n)         |-> ##[0:100]   // autorefresh LLH
-  $rose( whitebox_if.sdr_ras_n &&  whitebox_if.sdr_cas_n &&  whitebox_if.sdr_we_n);         /*|-> ##[0:100]   // NOP
-  $rose(!whitebox_if.sdr_ras_n && !whitebox_if.sdr_cas_n &&  whitebox_if.sdr_we_n);         */              // autorefresh LLH
+  $stable(whitebox_if.sdr_ras_n && whitebox_if.sdr_cas_n &&  whitebox_if.sdr_we_n)[*500]   |-> ##[0:50]   // NOP stable 100us
+  $rose(!whitebox_if.sdr_ras_n &&  whitebox_if.sdr_cas_n && !whitebox_if.sdr_we_n)         |-> ##[0:50]   // recharge LHL
+  $rose(!whitebox_if.sdr_ras_n && !whitebox_if.sdr_cas_n &&  whitebox_if.sdr_we_n)         |-> ##[0:50]   // autorefresh LLH
+  $rose(!whitebox_if.sdr_ras_n && !whitebox_if.sdr_cas_n &&  whitebox_if.sdr_we_n);                       // autorefresh LLH
 endproperty
 
 // Property of Rule 3.00 Reset operation
@@ -27,13 +25,8 @@ endproperty
 
 // Property of Rule 3.05 Reset operation
 property wb_reset_1_cycl;
-<<<<<<< HEAD
   @(negedge whitebox_if.wb_clk_i)
   $rose(whitebox_if.wb_rst_i) |=>
-=======
-  @(posedge whitebox_if.wb_clk_i)
-  $rose(whitebox_if.wb_rst_i) |-> 
->>>>>>> 7fbb2dedff3989998fd0deac269cfe9a52e2a033
   $stable(whitebox_if.wb_rst_i)[*1];
 endproperty
 
@@ -55,7 +48,7 @@ endproperty
 // Property of Rule 3.35 Transfer cycle initiaiton
 property wb_termination;
   @(posedge whitebox_if.wb_clk_i)
-  $rose(whitebox_if.wb_cyc_i && whitebox_if.wb_stb_i) |=>
+  $rose(whitebox_if.wb_cyc_i && whitebox_if.wb_stb_i) |->
   $rose(whitebox_if.wb_ack_o);
  endproperty
 
@@ -76,7 +69,7 @@ wb_reset_react: assert property(wb_reset) else $error ("Wishbone Protocol Rule 3
 wb_SRW_RMW: assert property(wb_tci) else $error ("Wishbone Protocol Rule 3.25 violated");
 
 // Rule 3.35
-// wb_AND: assert property(wb_termination) else $error ("Wishbone Protocol Rule 3.35 violated");
+wb_AND: assert property(wb_termination) else $error ("Wishbone Protocol Rule 3.35 violated");
 
 
 endmodule

@@ -1,16 +1,16 @@
 # Begin_DVE_Session_Save_Info
 # DVE restart session
-# Saved on Wed Nov 28 17:33:45 2018
+# Saved on Sat Dec 1 10:26:57 2018
 # Designs open: 1
 #   Sim: /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv
 # Toplevel windows open: 2
 # 	TopLevel.1
 # 	TopLevel.2
-#   Source.1: top.assertion
-#   Wave.1: 1 signals
+#   Source.1: _vcs_unit__2559226825
+#   Wave.1: 2 signals
 #   Group count = 2
 #   Group Group1 signal count = 1
-#   Group Group2 signal count = 1
+#   Group Group2 signal count = 2
 # End_DVE_Session_Save_Info
 
 # DVE version: M-2017.03_Full64
@@ -66,7 +66,7 @@ gui_sync_global -id ${TopLevel.2} -option true
 
 # MDI window settings
 set Wave.1 Wave.1
-gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 517} {child_wave_right 1261} {child_wave_colname 256} {child_wave_colvalue 256} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 539} {child_wave_right 1313} {child_wave_colname 267} {child_wave_colvalue 267} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -77,9 +77,6 @@ gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {d
 
 gui_set_precision 1ps
 gui_set_time_units 1ps
-dump -add { top.assertion.wb_reset_1_clk } -depth 0 -scope "."
-dump -add { top.assertion.wb_reset_1_clk }  -depth 0 -scope "."
-
 #</Database>
 
 # DVE Global setting session: 
@@ -102,13 +99,13 @@ set _session_group_1 Group1
 gui_sg_create "$_session_group_1"
 set Group1 "$_session_group_1"
 
-gui_sg_addsignal -group "$_session_group_1" { top.assertion.wb_reset_1_clk }
+gui_sg_addsignal -group "$_session_group_1" { top.assertion.sdram_initialization }
 
 set _session_group_2 Group2
 gui_sg_create "$_session_group_2"
 set Group2 "$_session_group_2"
 
-gui_sg_addsignal -group "$_session_group_2" { top.assertion.wb_reset_1_clk }
+gui_sg_addsignal -group "$_session_group_2" { top.assertion.sdram_initialization top.assertion.whitebox_if }
 
 # Global: Highlighting
 
@@ -139,7 +136,7 @@ gui_list_set_filter -id ${Hier.1} -text {*}
 gui_change_design -id ${Hier.1} -design Sim
 catch {gui_list_expand -id ${Hier.1} top}
 catch {gui_list_select -id ${Hier.1} {top.assertion}}
-gui_view_scroll -id ${Hier.1} -vertical -set 40
+gui_view_scroll -id ${Hier.1} -vertical -set 0
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Class 'Class.1'
@@ -156,17 +153,17 @@ gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linka
 gui_list_set_filter -id ${Data.1} -text {*}
 gui_list_show_data -id ${Data.1} {top.assertion}
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {top.assertion.wb_reset_1_clk }}
+catch { gui_list_select -id ${Data.1} {top.assertion.sdram_initialization top.assertion.whitebox_if }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
-gui_view_scroll -id ${Hier.1} -vertical -set 40
+gui_view_scroll -id ${Hier.1} -vertical -set 0
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Source 'Source.1'
 gui_src_value_annotate -id ${Source.1} -switch false
 gui_set_env TOGGLE::VALUEANNOTATE 0
-gui_open_source -id ${Source.1}  -replace -active top.assertion /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/../tb/assertions.sv
-gui_view_scroll -id ${Source.1} -vertical -set 928
+gui_open_source -id ${Source.1}  -replace -active _vcs_unit__2559226825 /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/../tb/sdram_interterface.sv
+gui_view_scroll -id ${Source.1} -vertical -set 0
 gui_src_set_reusable -id ${Source.1}
 # Warning: Class view not found.
 
@@ -181,9 +178,10 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 0 413
+gui_wv_zoom_timerange -id ${Wave.1} 0 1761281
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group2}
-gui_list_select -id ${Wave.1} {top.assertion.wb_reset_1_clk }
+gui_list_expand -id ${Wave.1} top.assertion.sdram_initialization
+gui_list_expand -id ${Wave.1} top.assertion.whitebox_if
 gui_seek_criteria -id ${Wave.1} {Any Edge}
 
 
