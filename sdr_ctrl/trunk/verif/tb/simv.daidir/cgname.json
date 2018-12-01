@@ -1,27 +1,27 @@
 {
-    "IS42VM16400K": [
-        "IS42VM16400K",
-        "TzJKa",
-        "module",
-        12
-    ],
     "_vcs_unit__2559226825": [
         "_vcs_unit__2559226825",
         "BW0b7",
         "module",
         1
     ],
-    "inft_sdrcntrl": [
-        "inft_sdrcntrl",
-        "xqeUE",
+    "mt48lc8m8a2": [
+        "mt48lc8m8a2",
+        "Pj51K",
         "module",
-        5
+        11
     ],
-    "testcase": [
-        "testcase",
-        "PATxq",
+    "intf_whitebox": [
+        "intf_whitebox",
+        "qtWga",
         "module",
-        6
+        7
+    ],
+    "sdrc_top": [
+        "sdrc_top",
+        "NTNU2",
+        "module",
+        13
     ],
     "std": [
         "std",
@@ -35,23 +35,17 @@
         "module",
         3
     ],
+    "testcase": [
+        "testcase",
+        "PATxq",
+        "module",
+        6
+    ],
     "intf_wishBone": [
         "intf_wishBone",
         "ypVrV",
         "module",
         4
-    ],
-    "intf_whitebox": [
-        "intf_whitebox",
-        "qtWga",
-        "module",
-        7
-    ],
-    "mt48lc2m32b2": [
-        "mt48lc2m32b2",
-        "a3mSN",
-        "module",
-        10
     ],
     "Clks": [
         "Clks",
@@ -59,23 +53,29 @@
         "module",
         8
     ],
+    "inft_sdrcntrl": [
+        "inft_sdrcntrl",
+        "xqeUE",
+        "module",
+        5
+    ],
     "top": [
         "top",
         "Emx8S",
         "module",
         9
     ],
-    "mt48lc8m8a2": [
-        "mt48lc8m8a2",
-        "Pj51K",
+    "mt48lc2m32b2": [
+        "mt48lc2m32b2",
+        "a3mSN",
         "module",
-        11
+        10
     ],
-    "sdrc_top": [
-        "sdrc_top",
-        "NTNU2",
+    "IS42VM16400K": [
+        "IS42VM16400K",
+        "TzJKa",
         "module",
-        13
+        12
     ],
     "sdrc_bank_fsm": [
         "sdrc_bank_fsm",

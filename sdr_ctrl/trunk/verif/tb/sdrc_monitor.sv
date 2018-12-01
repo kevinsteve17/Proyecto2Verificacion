@@ -14,7 +14,7 @@ class sdrcMon;
     
     task Check;
         begin
-            if (this.execTestCasesCount==0 && sb.ErrCnt==0) begin
+            if (this.notExecTestCasesCount==0 && sb.ErrCnt==0) begin
                 $display("TEST EXECUTION PASSED!!!");
                 $display("  TestCase execution count: %d", (this.testCasesCount - this.notExecTestCasesCount));
                 $display("  Error count: %d", sb.ErrCnt);

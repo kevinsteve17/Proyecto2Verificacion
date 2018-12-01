@@ -101,12 +101,12 @@ COLORTERM=gnome-terminal
 1543206742 ../tb/Clocks.sv
 1543683243 ../tb/assertions.sv
 1543387507 ../tb/whitebox_interface.sv
-1543554061 ../tb/Test_proyecto2.sv
+1543684137 ../tb/Test_proyecto2.sv
 1543549403 ../tb/sdrc_environment2.sv
 1541688446 ../tb/sdrc_environment.sv
 1543549403 ../tb/sdrc_driver.sv
 1543549403 ../tb/addressStimulus.sv
-1543550299 ../tb/sdrc_monitor.sv
+1543683971 ../tb/sdrc_monitor.sv
 1543387507 ../tb/sdrc_scoreboard.sv
 1541688446 ../tb/sdrc_interface.sv
 1543549403 ../tb/diffBankAndRowStimulus.sv
@@ -119,4 +119,4 @@ COLORTERM=gnome-terminal
 1487220396 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libvirsim.so
 1487219634 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/liberrorinf.so
 1487219608 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03/linux64/lib/libsnpsmalloc.so
-1543683254 simv.daidir
+1543684144 simv.daidir
