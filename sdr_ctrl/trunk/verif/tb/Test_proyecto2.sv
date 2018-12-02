@@ -8,19 +8,19 @@ program testcase(inft_sdrcntrl intf);
   initial 
   begin
     // set test execution count
-    env.mon.testCasesCount = 1;
+    env.mon.testCasesCount = 5;
     env.mon.notExecTestCasesCount = env.mon.testCasesCount;
 
     // reset
     env.drv.reset();
     
     // Tests to execute
-    //tc1_single_read();
-    //tc2_x2_read();
-    tc3_page_cross_over();
-    //tc5_x24_Write_and_Read_diff_row_bank();
-    //tc4_x4_Write_Read();
-    //tc6_write_read_different_order();
+    tc1_single_read();
+    tc2_x2_read();
+    //tc3_page_cross_over();
+    tc5_x24_Write_and_Read_diff_row_bank();
+    tc4_x4_Write_Read();
+    tc6_write_read_different_order();
 
     // check test exec. results
     env.mon.Check();
