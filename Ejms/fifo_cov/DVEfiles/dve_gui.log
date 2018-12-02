@@ -1,0 +1,20 @@
+Chronologic VCS simulator copyright 1991-2017
+Contains Synopsys proprietary information.
+Compiler version M-2017.03_Full64; Runtime version M-2017.03_Full64;  Nov 15 15:35 2018
+VCD+ Writer M-2017.03_Full64 Copyright (c) 1991-2017 by Synopsys Inc.
+The design has assertions or cover properties.
+The assertion browser can be used to view them. Click on the assertion toolbar button or use the menu 'Window->Panes->Assertion' to open it.
+The file '/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/inter.vpd' was opened successfully.
+"assertion.sv", 7: top.assertion.full_empty_0: started at 0s failed at 0s
+	Offending '(top.dut.empty ^ top.dut.full)'
+Creating environment
+"assertion.sv", 32: top.assertion.full_empty_4: started at 5s failed at 5s
+	Offending '((top.dut.empty ^ top.dut.full) == 1'b1)'
+Error: "assertion.sv", 32: top.assertion.full_empty_4: at time 5
+full xor empty signals violated
+$finish at simulation time                  130
+Simulation complete, time is 130.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 130
+CPU Time:      0.420 seconds;       Data structure size:   0.0Mb
+Thu Nov 15 15:37:13 2018

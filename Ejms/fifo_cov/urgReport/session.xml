@@ -1,0 +1,42 @@
+<session version="1.1" release="M-2017.03" timestp="2018-11-16 01:34:01 GMT">
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Assert" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Group" type="percent" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="25/33" />
+    <metric name="Toggle" value="68/272" />
+    <metric name="Assert" value="5/5" />
+    <metric name="Group" value="35.4167%" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+    <scope type="group" name="$unit::funct_coverage::cov1">
+      <metric name="Group" value="33.3333%" />
+    </scope>
+    <scope type="group" name="$unit::funct_coverage::cov0">
+      <metric name="Group" value="37.5%" />
+    </scope>
+  </scope>
+  <scope type="assert" name="Statistics">
+    <scorelist type="total" name="Design Hierarchy Assert">
+      <score name="Assert" value="5/5" />
+      <score name="Score" value="100.00" />
+    </scorelist>
+    <scorelist type="total" name="Module List Assert">
+      <score name="Assert" value="5/5" />
+      <score name="Score" value="100.00" />
+    </scorelist>
+    <scorelist type="total" name="Assertion">
+      <score name="Assert" value="5/5" />
+      <score name="Score" value="100.00" />
+    </scorelist>
+  </scope>
+  </old_coverage>
+</session>

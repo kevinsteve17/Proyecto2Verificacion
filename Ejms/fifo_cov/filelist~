@@ -1,0 +1,12 @@
+ram_dp_ar_aw.v
+sync_fifo.v
+stimulus.sv
+interface.sv
+scoreboard.sv
+driver.sv
+monitor.sv
+#assertion.sv
+coverage.sv
+env.sv
+
+top.sv
