@@ -1,4 +1,0 @@
-class column_stimulus;
-  rand  logic[7:0] row;
-  //constraint distribution {value dist { 0  := 1 , 1 := 1 }; } 
-endclass

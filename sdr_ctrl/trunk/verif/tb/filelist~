@@ -1,4 +1,0 @@
-sdram_interterface.sv
-wsb_interface.sv
-sdrc_interface.sv
-tb_top.sv
