@@ -1,0 +1,80 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Layout -key child_console_size_x -value 1253
+gui_set_state_value -category Layout -key child_console_size_y -value 174
+gui_set_state_value -category Layout -key child_data_size_x -value 169
+gui_set_state_value -category Layout -key child_data_size_y -value 569
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_size_x -value 169
+gui_set_state_value -category Layout -key child_hier_size_y -value 569
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 918
+gui_set_state_value -category Layout -key child_source_size_y -value 564
+gui_set_state_value -category Layout -key child_wave_colname -value 253
+gui_set_state_value -category Layout -key child_wave_colvalue -value 111
+gui_set_state_value -category Layout -key child_wave_left -value 369
+gui_set_state_value -category Layout -key child_wave_right -value 900
+gui_set_state_value -category Layout -key main_pos_x -value 10
+gui_set_state_value -category Layout -key main_pos_y -value 58
+gui_set_state_value -category Layout -key main_size_x -value 1263
+gui_set_state_value -category Layout -key main_size_y -value 908
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1279
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 385
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 106
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 278
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1380
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 775
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_state_default_create -off
+
+# Begin command logging
+gui_set_pref_value -category {Globals} -key {smart_resize} -value {false}
+gui_set_pref_value -category {Globals} -key {smart_resize} -value {true}
+gui_sim_run Ucli -exe ./simv -args {-ucligui  } -dir .
+gui_list_expand -id  Hier.1   top
+gui_list_select -id Hier.1 -current_item_name top.assertion -current_item_type Scope  -selected  { top.assertion   }
+gui_list_expand -id  Hier.1   top.dut
+gui_list_select -id Hier.1 -current_item_name top -current_item_type Scope  -selected  { top   }
+gui_list_action -id  Hier.1 top
+gui_list_select -id Hier.1 -current_item_name top.test -current_item_type Scope  -selected  { top.test   }
+gui_list_action -id  Hier.1 top.test
+gui_src_highlight_item -id Source.1 -lfrom 2 -idxfrom 14 -fileIdFrom 0 -lto 2 -idxto 17 -fileIdTo 0 -selection {env} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 2 -idxfrom 14 -fileIdFrom 0 -lto 2 -idxto 17 -fileIdTo 0 -selection {env} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 2 -idxfrom 2 -fileIdFrom 0 -lto 2 -idxto 13 -fileIdTo 0 -selection {environment} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 2 -idxfrom 2 -fileIdFrom 0 -lto 2 -idxto 13 -fileIdTo 0 -selection {environment} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 2 -idxfrom 2 -fileIdFrom 0 -lto 2 -idxto 13 -fileIdTo 0 -selection {environment} -selectionId 0 -replace 0
+gui_open_source -id  Source.1  -active  {$class.environment}  -openmode nonactive
+gui_src_highlight_item -id Source.1 -lfrom 15 -idxfrom 4 -fileIdFrom 0 -lto 15 -idxto 12 -fileIdTo 0 -selection {coverage} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 15 -idxfrom 4 -fileIdFrom 0 -lto 15 -idxto 12 -fileIdTo 0 -selection {coverage} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 15 -idxfrom 4 -fileIdFrom 0 -lto 15 -idxto 12 -fileIdTo 0 -selection {coverage} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 15 -idxfrom 4 -fileIdFrom 0 -lto 15 -idxto 12 -fileIdTo 0 -selection {coverage} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 5 -idxfrom 17 -fileIdFrom 0 -lto 5 -idxto 25 -fileIdTo 0 -selection {coverage} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 5 -idxfrom 17 -fileIdFrom 0 -lto 5 -idxto 25 -fileIdTo 0 -selection {coverage} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 5 -idxfrom 17 -fileIdFrom 0 -lto 5 -idxto 25 -fileIdTo 0 -selection {coverage} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 5 -idxfrom 17 -fileIdFrom 0 -lto 5 -idxto 25 -fileIdTo 0 -selection {coverage} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 5 -idxfrom 17 -fileIdFrom 0 -lto 5 -idxto 25 -fileIdTo 0 -selection {coverage} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 5 -idxfrom 17 -fileIdFrom 0 -lto 5 -idxto 25 -fileIdTo 0 -selection {coverage} -selectionId 0 -replace 0
+gui_sim_continue  
+gui_list_select -id Hier.1 -current_item_name top -current_item_type Scope  -selected  { top   }
+gui_list_action -id  Hier.1 top
+gui_src_highlight_item -id Source.1 -lfrom 32 -idxfrom 2 -fileIdFrom 0 -lto 32 -idxto 10 -fileIdTo 0 -selection {testcase} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 32 -idxfrom 2 -fileIdFrom 0 -lto 32 -idxto 10 -fileIdTo 0 -selection {testcase} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 32 -idxfrom 11 -fileIdFrom 0 -lto 32 -idxto 15 -fileIdTo 0 -selection {test} -selectionId 0 -replace 0
+gui_open_source -id Source.1  -active  top.test
+gui_src_highlight_item -id Source.1 -lfrom 2 -idxfrom 14 -fileIdFrom 0 -lto 2 -idxto 17 -fileIdTo 0 -selection {env} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 2 -idxfrom 14 -fileIdFrom 0 -lto 2 -idxto 17 -fileIdTo 0 -selection {env} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 2 -idxfrom 14 -fileIdFrom 0 -lto 2 -idxto 17 -fileIdTo 0 -selection {env} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 2 -idxfrom 14 -fileIdFrom 0 -lto 2 -idxto 17 -fileIdTo 0 -selection {env} -selectionId 0 -replace 0
+gui_src_highlight_item -id Source.1 -lfrom 2 -idxfrom 2 -fileIdFrom 0 -lto 2 -idxto 13 -fileIdTo 0 -selection {environment} -selectionId 0 -replace 0
+gui_open_source -id  Source.1  -active  {$class.environment}  -openmode nonactive

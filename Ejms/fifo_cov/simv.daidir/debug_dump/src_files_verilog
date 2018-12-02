@@ -1,0 +1,12 @@
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/assertion.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/coverage.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/driver.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/env.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/interface.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/monitor.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/ram_dp_ar_aw.v
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/scoreboard.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/stimulus.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/sync_fifo.v
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/test_1.sv
+/mnt/vol_NFS_Zener/WD_ESPEC/gcastro/mp6134_3_2018/fifo_cov/top.sv

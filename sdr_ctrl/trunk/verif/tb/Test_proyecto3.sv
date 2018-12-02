@@ -22,6 +22,7 @@ program testcase(inft_sdrcntrl intf);
     tc4_x4_Write_Read();
     tc6_write_read_different_order();
 
+
     // check test exec. results
     env.mon.Check();
   end
@@ -215,7 +216,7 @@ program testcase(inft_sdrcntrl intf);
       env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
       
       $display("-------------------------------------- ");
-      $display(" End-6: rites/Reads in dofferent order ");
+      $display(" End-6: Writes/Reads in dofferent order ");
       $display("-------------------------------------- ");
     end
   endtask   

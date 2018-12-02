@@ -3,25 +3,24 @@ gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_typ
 
 # State setting overrides
 gui_state_default_create -off -ini
-gui_set_state_value -category Layout -key child_assertion_size_x -value 1919
-gui_set_state_value -category Layout -key child_assertion_size_y -value 448
-gui_set_state_value -category Layout -key child_console_size_x -value 1919
-gui_set_state_value -category Layout -key child_console_size_y -value 173
+gui_set_state_value -category Layout -key child_console_size_x -value 1851
+gui_set_state_value -category Layout -key child_console_size_y -value 179
 gui_set_state_value -category Layout -key child_data_size_x -value 174
-gui_set_state_value -category Layout -key child_data_size_y -value 274
+gui_set_state_value -category Layout -key child_data_size_y -value 665
 gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
 gui_set_state_value -category Layout -key child_hier_colpd -value 0
 gui_set_state_value -category Layout -key child_hier_size_x -value 174
-gui_set_state_value -category Layout -key child_hier_size_y -value 274
+gui_set_state_value -category Layout -key child_hier_size_y -value 665
+gui_set_state_value -category Layout -key child_hier_sort_order -value 1
+gui_set_state_value -category Layout -key child_source_docknewline -value false
 gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
 gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
-gui_set_state_value -category Layout -key child_source_size_x -value 1574
-gui_set_state_value -category Layout -key child_source_size_y -value 269
+gui_set_state_value -category Layout -key child_source_size_x -value 1506
+gui_set_state_value -category Layout -key child_source_size_y -value 660
 gui_set_state_value -category Layout -key main_pos_x -value 7
 gui_set_state_value -category Layout -key main_pos_y -value 51
-gui_set_state_value -category Layout -key main_size_x -value 1926
-gui_set_state_value -category Layout -key main_size_y -value 1054
-gui_set_state_value -category Assertion -key show_assertion_type -value successes
+gui_set_state_value -category Layout -key main_size_x -value 1858
+gui_set_state_value -category Layout -key main_size_y -value 976
 gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
 gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
 gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
@@ -32,9 +31,4 @@ gui_state_default_create -off
 gui_set_pref_value -category {Globals} -key {smart_resize} -value {false}
 gui_set_pref_value -category {Globals} -key {smart_resize} -value {true}
 gui_sim_run Ucli -exe ./simv -args {-ucligui  } -dir .
-gui_open_window Assertion TopLevel.1
 gui_sim_continue  
-gui_list_expand -id  Assertion.1   top.assertion.sdram_initialization
-gui_list_select -id Assertion.1 -selected  { top.assertion.sdram_initialization   }
-gui_list_collapse -id  Assertion.1   top.assertion.sdram_initialization
-gui_list_select -id Assertion.1 -selected  {  }
