@@ -1,0 +1,131 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.33/_18816_archive_1.a",
+            "objects": [
+                [
+                    "Emx8S_d.o",
+                    185289
+                ],
+                [
+                    "amcQwB.o",
+                    161166
+                ]
+            ],
+            "size": 346455
+        }
+    ],
+    "reusePaths": {
+        "ChjVu_d": {
+            "icPath": "csrc"
+        },
+        "BW0b7_d": {
+            "icPath": "csrc"
+        },
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "a3mSN_d": {
+            "icPath": "csrc"
+        },
+        "qtWga_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "PATxq_d": {
+            "icPath": "csrc"
+        },
+        "RuFh3_d": {
+            "icPath": "csrc"
+        },
+        "F5CYM_d": {
+            "icPath": "csrc"
+        },
+        "ypVrV_d": {
+            "icPath": "csrc"
+        },
+        "xqeUE_d": {
+            "icPath": "csrc"
+        },
+        "Pj51K_d": {
+            "icPath": "csrc"
+        },
+        "TzJKa_d": {
+            "icPath": "csrc"
+        },
+        "NTNU2_d": {
+            "icPath": "csrc"
+        }
+    },
+    "Modules": {
+        "...MASTER...": {},
+        "_vcs_unit__2559226825": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "IS42VM16400K": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "intf_whitebox": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "mt48lc2m32b2": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "testcase": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "Clks": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        },
+        "mt48lc8m8a2": {
+            "Compiled": "Yes",
+            "Compiled Times": 29
+        }
+    },
+    "CompUnits": {
+        "Emx8S_d": {
+            "mod": "top",
+            "archive": "archive.33/_18816_archive_1.a",
+            "out": "Emx8S_d.o",
+            "bytes": 185289,
+            "checksum": 0,
+            "mode": 4
+        }
+    }
+}

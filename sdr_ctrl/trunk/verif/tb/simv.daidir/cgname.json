@@ -1,15 +1,57 @@
 {
-    "sdrc_top": [
-        "sdrc_top",
-        "NTNU2",
-        "module",
-        13
-    ],
     "_vcs_unit__2559226825": [
         "_vcs_unit__2559226825",
         "BW0b7",
         "module",
         1
+    ],
+    "inft_sdrcntrl": [
+        "inft_sdrcntrl",
+        "xqeUE",
+        "module",
+        5
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        2
+    ],
+    "sdrc_bank_fsm": [
+        "sdrc_bank_fsm",
+        "ChjVu",
+        "module",
+        14
+    ],
+    "IS42VM16400K": [
+        "IS42VM16400K",
+        "TzJKa",
+        "module",
+        12
+    ],
+    "intf_sdram": [
+        "intf_sdram",
+        "RuFh3",
+        "module",
+        3
+    ],
+    "intf_wishBone": [
+        "intf_wishBone",
+        "ypVrV",
+        "module",
+        4
+    ],
+    "intf_whitebox": [
+        "intf_whitebox",
+        "qtWga",
+        "module",
+        7
+    ],
+    "mt48lc2m32b2": [
+        "mt48lc2m32b2",
+        "a3mSN",
+        "module",
+        10
     ],
     "testcase": [
         "testcase",
@@ -29,59 +71,17 @@
         "module",
         9
     ],
-    "std": [
-        "std",
-        "reYIK",
+    "sdrc_top": [
+        "sdrc_top",
+        "NTNU2",
         "module",
-        2
-    ],
-    "intf_sdram": [
-        "intf_sdram",
-        "RuFh3",
-        "module",
-        3
-    ],
-    "intf_wishBone": [
-        "intf_wishBone",
-        "ypVrV",
-        "module",
-        4
-    ],
-    "inft_sdrcntrl": [
-        "inft_sdrcntrl",
-        "xqeUE",
-        "module",
-        5
+        13
     ],
     "mt48lc8m8a2": [
         "mt48lc8m8a2",
         "Pj51K",
         "module",
         11
-    ],
-    "intf_whitebox": [
-        "intf_whitebox",
-        "qtWga",
-        "module",
-        7
-    ],
-    "mt48lc2m32b2": [
-        "mt48lc2m32b2",
-        "a3mSN",
-        "module",
-        10
-    ],
-    "IS42VM16400K": [
-        "IS42VM16400K",
-        "TzJKa",
-        "module",
-        12
-    ],
-    "sdrc_bank_fsm": [
-        "sdrc_bank_fsm",
-        "ChjVu",
-        "module",
-        14
     ],
     "...MASTER...": [
         "SIM",
