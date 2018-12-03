@@ -305,19 +305,25 @@ end
 endfunction
 
 // synopsys translate_off
-always @(posedge wr_clk) begin
-   if (wr_en && full) begin
-      $display($time, "%m Error! afifo overflow!");
-      $stop;
-   end
-end
+// always @(posedge wr_clk) begin
+//    if (wr_en && full) begin
+//       $display($time, "%m Error! afifo overflow!");
+//       $stop;
+//    end
+// end
 
-always @(posedge rd_clk) begin
-   if (rd_en && empty) begin
-      $display($time, "%m error! afifo underflow!");
-      $stop;
-   end
-end
+async_translate_off_wr: assert property ( @(posedge wr_clk) !(wr_en == 1'b1 && full == 1'b1)) else $error $display($time, "%m Error! afifo overflow!");
+
+
+// always @(posedge rd_clk) begin
+//    if (rd_en && empty) begin
+//       $display($time, "%m error! afifo underflow!");
+//       $stop;
+//    end
+// end
+
+async_translate_off_rd: assert property ( @(posedge rd_clk) !(rd_en == 1'b1 && empty == 1'b1)) else $error $display($time, "%m Error! afifo underflow!");
+
 // synopsys translate_on
 
 endmodule
