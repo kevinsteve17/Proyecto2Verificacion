@@ -188,19 +188,39 @@ program testcase(inft_sdrcntrl intf);
   
       env.drv.BurstWrite_rnd_addr();
       env.drv.BurstWrite_rnd_addr();
+
+      env.mon.BurstRead();
+
       env.drv.BurstWrite_rnd_addr();
       env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();      
       
       #1000;
 
       env.mon.BurstRead();
       env.mon.BurstRead();
+
+      env.drv.BurstWrite_rnd_addr();
+
+      env.mon.BurstRead();
       env.mon.BurstRead();
 
       #1000;
 
       env.drv.BurstWrite_rnd_addr();
       env.drv.BurstWrite_rnd_addr();
+
+      #1000;
+
+      env.mon.BurstRead();
+      env.mon.BurstRead();
+      env.mon.BurstRead();
+
+      #1000;
+
       env.drv.BurstWrite_rnd_addr();
       env.drv.BurstWrite_rnd_addr();
 
