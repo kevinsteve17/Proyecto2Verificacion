@@ -11,15 +11,16 @@ property sdram_init;
 endproperty
 
 // Property of Rule 3.00 Reset operation
-property wb_init_1;
-  @(posedge whitebox_if.wb_rst_i)
-  ##[1] $fell(whitebox_if.wb_stb_i & whitebox_if.wb_cyc_i);
-endproperty
-
-// Property of Rule 3.00 Reset operation
-property wb_init_2;
-  @(negedge whitebox_if.wb_rst_i)
-  ##[1] $isunknown(whitebox_if.wb_stb_i & whitebox_if.wb_cyc_i) == 0 ;
+property wb_init;
+  @(posedge whitebox_if.wb_clk_i)
+  $rose(whitebox_if.wb_clk_i)           |-> 
+  $rose(whitebox_if.wb_rst_i)           |->
+  $stable(whitebox_if.wb_rst_i)         |-> ##1
+  $rose(whitebox_if.wb_clk_i)           |->
+  $isunknown(whitebox_if.wb_stb_i) == 0 |->
+  $isunknown(whitebox_if.wb_cyc_i) == 0 |->
+  $isunknown(whitebox_if.wb_ack_o) == 0 |->
+  $isunknown(whitebox_if.wb_we_i)  == 0;
 endproperty
 
 // Property of Rule 3.05 Reset operation
@@ -56,7 +57,7 @@ property wb_termination;
 sdram_initialization: assert property (sdram_init) else $error ("SDRAM_INIT FAILED!!!!!!!!!");
 
 // Rule 3.00
-wb_initialization: assert property (wb_init_1 & wb_init_2) else $error ("Wishbone Protocol Rule 3.00 violated");
+wb_initialization: assert property (wb_init) else $error ("Wishbone Protocol Rule 3.00 violated");
 
 // Rule 3.05
 wb_reset_1_clk: assert property(wb_reset_1_cycl) else $error ("Wishbone Protocol Rule 3.05 violated");
