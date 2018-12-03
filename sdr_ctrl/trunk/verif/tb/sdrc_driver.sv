@@ -3,8 +3,9 @@ class sdrcDrv;
     virtual inft_sdrcntrl inft;
 
     // Stimulus objects
-    diffBankAndRowStimulus diff_bank_row_stim;
-    addrStimulus rnd_addr_stim = new();
+    diffBankAndRowStimulus diff_bank_row_stim        = new();
+    addrStimulus rnd_addr_stim                       = new();
+    pageCrossOverStimulus rand_pco_stim  = new();
 
     function new(virtual inft_sdrcntrl inft,sdrcSB sb);
         $display("Creating SDRC Driver");
@@ -72,23 +73,19 @@ class sdrcDrv;
             this.inft.wb_intf.wb_we_i         = 'hx;
             this.inft.wb_intf.wb_sel_i        = 'hx;
             this.inft.wb_intf.wb_addr_i       = 'hx;
-            this.inft.wb_intf.wb_dat_i        = 'hx;
-            
+            this.inft.wb_intf.wb_dat_i        = 'hx;       
         end
         
     endtask
 
     // Write to address with Different Bank and Row
     task BurstWrite_diff_row_bank();
-        logic  [7:0] burst_size;
-
         begin
-            diff_bank_row_stim = new();
-
             if(diff_bank_row_stim.randomize())
             begin
-                burst_size = diff_bank_row_stim.bank + 8'h4;
-                this.BurstWrite({diff_bank_row_stim.row, diff_bank_row_stim.bank, 8'h00,2'b00}, burst_size);
+                diff_bank_row_stim.generateAddress();
+                this.BurstWrite({diff_bank_row_stim.row, diff_bank_row_stim.bank, 8'h00,2'b00},     // address
+                                diff_bank_row_stim.burst_size);                                     // burst size
             end
         end
     endtask
@@ -96,11 +93,22 @@ class sdrcDrv;
     // Write to rndm address
     task BurstWrite_rnd_addr();
         begin
-            rnd_addr_stim = new();
-
             if(rnd_addr_stim.randomize())
             begin
-                this.BurstWrite(rnd_addr_stim.address, rnd_addr_stim.burst_size);
+                this.BurstWrite(rnd_addr_stim.address,          // address
+                                rnd_addr_stim.burst_size);      // burst size
+            end
+        end
+    endtask
+
+    // Page cross over 
+    task BurstWrite_page_cross_over();
+        begin
+            if(rand_pco_stim.randomize())
+            begin
+		        rand_pco_stim.generatePageCrossOverAddress();
+                this.BurstWrite({rand_pco_stim.row, rand_pco_stim.bank, rand_pco_stim.column, 2'b00},   // address
+                                rand_pco_stim.burst_size);                                              // burst size
             end
         end
     endtask

@@ -5,11 +5,11 @@
         "module",
         1
     ],
-    "intf_sdram": [
-        "intf_sdram",
-        "RuFh3",
+    "inft_sdrcntrl": [
+        "inft_sdrcntrl",
+        "xqeUE",
         "module",
-        3
+        5
     ],
     "std": [
         "std",
@@ -17,59 +17,11 @@
         "module",
         2
     ],
-    "Clks": [
-        "Clks",
-        "F5CYM",
+    "sdrc_bank_fsm": [
+        "sdrc_bank_fsm",
+        "ChjVu",
         "module",
-        8
-    ],
-    "intf_wishBone": [
-        "intf_wishBone",
-        "ypVrV",
-        "module",
-        4
-    ],
-    "top": [
-        "top",
-        "Emx8S",
-        "module",
-        9
-    ],
-    "inft_sdrcntrl": [
-        "inft_sdrcntrl",
-        "xqeUE",
-        "module",
-        5
-    ],
-    "intf_whitebox": [
-        "intf_whitebox",
-        "qtWga",
-        "module",
-        7
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        15
-    ],
-    "testcase": [
-        "testcase",
-        "PATxq",
-        "module",
-        6
-    ],
-    "mt48lc2m32b2": [
-        "mt48lc2m32b2",
-        "a3mSN",
-        "module",
-        10
-    ],
-    "mt48lc8m8a2": [
-        "mt48lc8m8a2",
-        "Pj51K",
-        "module",
-        11
+        14
     ],
     "IS42VM16400K": [
         "IS42VM16400K",
@@ -77,16 +29,64 @@
         "module",
         12
     ],
+    "intf_sdram": [
+        "intf_sdram",
+        "RuFh3",
+        "module",
+        3
+    ],
+    "intf_wishBone": [
+        "intf_wishBone",
+        "ypVrV",
+        "module",
+        4
+    ],
+    "intf_whitebox": [
+        "intf_whitebox",
+        "qtWga",
+        "module",
+        7
+    ],
+    "mt48lc2m32b2": [
+        "mt48lc2m32b2",
+        "a3mSN",
+        "module",
+        10
+    ],
+    "testcase": [
+        "testcase",
+        "PATxq",
+        "module",
+        6
+    ],
+    "Clks": [
+        "Clks",
+        "F5CYM",
+        "module",
+        8
+    ],
+    "top": [
+        "top",
+        "Emx8S",
+        "module",
+        9
+    ],
     "sdrc_top": [
         "sdrc_top",
         "NTNU2",
         "module",
         13
     ],
-    "sdrc_bank_fsm": [
-        "sdrc_bank_fsm",
-        "ChjVu",
+    "mt48lc8m8a2": [
+        "mt48lc8m8a2",
+        "Pj51K",
         "module",
-        14
+        11
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        15
     ]
 }
