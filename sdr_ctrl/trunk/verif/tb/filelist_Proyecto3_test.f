@@ -9,6 +9,7 @@
 ../tb/sdrc_scoreboard.sv
 ../tb/sdrc_monitor.sv
 ../tb/addressStimulus.sv
+../tb/pageCrossOverStimulus.sv
 ../tb/sdrc_driver.sv
 ../tb/sdrc_environment.sv
 ../tb/sdrc_environment2.sv

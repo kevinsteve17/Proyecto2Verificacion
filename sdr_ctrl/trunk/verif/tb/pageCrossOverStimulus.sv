@@ -1,0 +1,25 @@
+class pageCrossOverStimulus;
+
+  function new();
+        $display("Creating page cross-over stimulus");
+  endfunction
+
+  // const signals
+  logic [1:0]  bank;
+  logic [7:0]  column_ms_byte;
+  logic [7:0]  column;
+
+  // random data types/signals
+  randc logic [11:0] row;
+  rand  logic [7:0]  column_ls_byte;
+  rand  logic [7:0]  burst_size;
+
+  // constraints
+  constraint column_less_significant_byte_range  { column_ls_byte inside {[10:13]}; }       
+  constraint burst_range { burst_size inside {[8:15]}; }        
+
+  //assignations
+  assign bank = 2'b11;
+  assign column_ms_byte = 8'hF0;
+  assign column = column_ms_byte | column_ls_byte;
+endclass

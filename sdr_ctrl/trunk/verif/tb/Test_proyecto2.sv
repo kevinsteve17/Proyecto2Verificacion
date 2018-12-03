@@ -74,9 +74,9 @@ program testcase(inft_sdrcntrl intf);
       $display(" Case-3 Create a Page Cross Over        ");
       $display("----------------------------------------");
 
-      env.drv.BurstWrite(32'h0000_0FF0,8'h8);  
-      env.drv.BurstWrite(32'h0001_0FF4,8'hF);  
-      env.drv.BurstWrite(32'h0002_0FF8,8'hF);  
+      env.drv.BurstWrite_page_cross_over();  
+      env.drv.BurstWrite_page_cross_over();  
+      env.drv.BurstWrite_page_cross_over();  
       /*env.drv.BurstWrite(32'h0003_0FFC,8'hF);  
       env.drv.BurstWrite(32'h0004_0FE0,8'hF);  
       env.drv.BurstWrite(32'h0005_0FE4,8'hF);  
@@ -183,7 +183,7 @@ program testcase(inft_sdrcntrl intf);
   task tc6_write_read_different_order();
     begin
       $display("-------------------------------------- ");
-      $display(" Case-6: rites/Reads in dofferent order        ");
+      $display(" Case-6: Writes/Reads in different order        ");
       $display("-------------------------------------- ");
   
       env.drv.BurstWrite_rnd_addr();
@@ -235,7 +235,7 @@ program testcase(inft_sdrcntrl intf);
       env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
       
       $display("-------------------------------------- ");
-      $display(" End-6: rites/Reads in dofferent order ");
+      $display(" End-6: Writes/Reads in different order ");
       $display("-------------------------------------- ");
     end
   endtask   
