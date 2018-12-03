@@ -80,14 +80,12 @@ class sdrcDrv;
 
     // Write to address with Different Bank and Row
     task BurstWrite_diff_row_bank();
-        logic  [7:0] burst_size;
-
         begin
             if(diff_bank_row_stim.randomize())
             begin
-                burst_size = diff_bank_row_stim.bank + 8'h4;
+                diff_bank_row_stim.bank.generateAddress();
                 this.BurstWrite({diff_bank_row_stim.row, diff_bank_row_stim.bank, 8'h00,2'b00},     // address
-                                burst_size);                                                        // burst size
+                                diff_bank_row_stim.burst_size);                                     // burst size
             end
         end
     endtask
@@ -108,8 +106,8 @@ class sdrcDrv;
         begin
             if(rand_pco_stim.randomize())
             begin
-		rand_pco_stim.generatePageCrossOverAddress();
-                this.BurstWrite({rand_pco_stim.row, rand_pco_stim.bank, rand_pco_stim.column,2'b00},    // address
+		        rand_pco_stim.generatePageCrossOverAddress();
+                this.BurstWrite({rand_pco_stim.row, rand_pco_stim.bank, rand_pco_stim.column, 2'b00},   // address
                                 rand_pco_stim.burst_size);                                              // burst size
             end
         end

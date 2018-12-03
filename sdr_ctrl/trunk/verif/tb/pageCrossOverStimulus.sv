@@ -4,7 +4,7 @@ class pageCrossOverStimulus;
         $display("Creating page cross-over stimulus");
   endfunction
 
-  // const signals
+  // non random signals
   logic [1:0]  bank;
   logic [7:0]  column_ms_byte;
   logic [7:0]  column;

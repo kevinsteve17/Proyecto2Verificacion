@@ -8,20 +8,19 @@ program testcase(inft_sdrcntrl intf);
   initial 
   begin
     // set test execution count
-    env.mon.testCasesCount = 1;
+    env.mon.testCasesCount = 6;
     env.mon.notExecTestCasesCount = env.mon.testCasesCount;
 
     // reset
     env.drv.reset();
     
     // Tests to execute
-    /*tc1_single_read();
+    tc1_single_read();
     tc2_x2_read();
     tc3_page_cross_over();
     tc5_x24_Write_and_Read_diff_row_bank();
     tc4_x4_Write_Read();
-    tc6_write_read_different_order();*/
-    tc3_page_cross_over();
+    tc6_write_read_different_order();
 
     // check test exec. results
     env.mon.Check();
@@ -78,51 +77,10 @@ program testcase(inft_sdrcntrl intf);
       env.drv.BurstWrite_page_cross_over();  
       env.drv.BurstWrite_page_cross_over();  
       env.drv.BurstWrite_page_cross_over();  
-      /*env.drv.BurstWrite(32'h0003_0FFC,8'hF);  
-      env.drv.BurstWrite(32'h0004_0FE0,8'hF);  
-      env.drv.BurstWrite(32'h0005_0FE4,8'hF);  
-      env.drv.BurstWrite(32'h0006_0FE8,8'hF);  
-      env.drv.BurstWrite(32'h0007_0FEC,8'hF);  
-      env.drv.BurstWrite(32'h0008_0FD0,8'hF);  
-      env.drv.BurstWrite(32'h0009_0FD4,8'hF);  
-      env.drv.BurstWrite(32'h000A_0FD8,8'hF);  
-      env.drv.BurstWrite(32'h000B_0FDC,8'hF);  
-      env.drv.BurstWrite(32'h000C_0FC0,8'hF);  
-      env.drv.BurstWrite(32'h000D_0FC4,8'hF);  
-      env.drv.BurstWrite(32'h000E_0FC8,8'hF);  
-      env.drv.BurstWrite(32'h000F_0FCC,8'hF);  
-      env.drv.BurstWrite(32'h0010_0FB0,8'hF);  
-      env.drv.BurstWrite(32'h0011_0FB4,8'hF);  
-      env.drv.BurstWrite(32'h0012_0FB8,8'hF);  
-      env.drv.BurstWrite(32'h0013_0FBC,8'hF);  
-      env.drv.BurstWrite(32'h0014_0FA0,8'hF);  
-      env.drv.BurstWrite(32'h0015_0FA4,8'hF);  
-      env.drv.BurstWrite(32'h0016_0FA8,8'hF);  
-      env.drv.BurstWrite(32'h0017_0FAC,8'hF);*/  
+
       env.mon.BurstRead();  
       env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      /*env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();*/
+      env.mon.BurstRead();
       
       env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
       
