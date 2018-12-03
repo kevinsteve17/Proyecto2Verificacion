@@ -14,9 +14,9 @@ synopsys::dump -autoflush on -fid VPD0
 set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpxbAyTS
-synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.fparis.26839}
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.fparis.26839}
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpJBjtFJ
+synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.fparis.308}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.fparis.308}
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
@@ -30,7 +30,6 @@ set ucliGUI::state
 set ucliGUI::state
 synopsys::xml get_stop_data
 synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
-ucliCore::getToolPID
 if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
 synopsys::finish
 set ucliGUI::state
