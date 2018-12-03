@@ -83,7 +83,7 @@ class sdrcDrv;
         begin
             if(diff_bank_row_stim.randomize())
             begin
-                diff_bank_row_stim.bank.generateAddress();
+                diff_bank_row_stim.generateAddress();
                 this.BurstWrite({diff_bank_row_stim.row, diff_bank_row_stim.bank, 8'h00,2'b00},     // address
                                 diff_bank_row_stim.burst_size);                                     // burst size
             end
