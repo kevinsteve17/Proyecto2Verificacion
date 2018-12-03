@@ -134,7 +134,7 @@ assign  rd_data = mem[rd_ptr];
    //    end
    // end
 
-   sync_translate_off_wr: assert property ( @(posedge clk) !(wr_en == 1'b1 && full == 1'b1)) else $error $display("%m : Error! sfifo overflow!");
+   sync_translate_off_wr: assert property ( @(posedge clk) !(wr_en == 1'b1 && full == 1'b1)) else $error("%m : Error! sfifo overflow!");
 
 
    // always @(posedge clk) begin
@@ -143,7 +143,7 @@ assign  rd_data = mem[rd_ptr];
    //    end
    // end
 
-   sync_translate_off_rd: assert property ( @(posedge clk) !(rd_en == 1'b1 && empty == 1'b1)) else $error $display("%m : error! sfifo underflow!");
+   sync_translate_off_rd: assert property ( @(posedge clk) !(rd_en == 1'b1 && empty == 1'b1)) else $error("%m : error! sfifo underflow!");
 
 
 // synopsys translate_on
