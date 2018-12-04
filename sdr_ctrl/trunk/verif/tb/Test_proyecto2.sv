@@ -123,8 +123,8 @@ program testcase(inft_sdrcntrl intf);
       $display("---------------------------------------");
 
       env.drv.BurstWrite_diff_row_bank();
-      env.drv.BurstWrite_diff_row_bank();
-      env.drv.BurstWrite_diff_row_bank();
+      env.drv.BurstWrite_diff_row_bank(666);
+      env.drv.BurstWrite_diff_row_bank(,1);
 
       env.mon.BurstRead();  
       env.mon.BurstRead();  
