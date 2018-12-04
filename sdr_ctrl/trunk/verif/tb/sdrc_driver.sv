@@ -79,14 +79,28 @@ class sdrcDrv;
     endtask
 
     // Write to address with Different Bank and Row
-    task BurstWrite_diff_row_bank();
+    task BurstWrite_diff_row_bank(input int row_arg  = -1, int bank_arg = -1);
+        logic [11:0] row;
+        logic [1:0]  bank;
+
         begin
             if(diff_bank_row_stim.randomize())
             begin
                 diff_bank_row_stim.generateAddress();
-                this.BurstWrite({diff_bank_row_stim.row, diff_bank_row_stim.bank, 8'h00,2'b00},     // address
-                                diff_bank_row_stim.burst_size);                                     // burst size
+                bank = diff_bank_row_stim.bank;
+                row  = diff_bank_row_stim.row;
             end
+
+            if (row_arg != -1) begin
+                row  = row_arg;
+            end
+
+            if (bank_arg == -1) begin
+                bank = bank_arg;
+            end
+
+            this.BurstWrite({row, bank, 8'h00,2'b00},           // address
+                            diff_bank_row_stim.burst_size);     // burst size
         end
     endtask
 
