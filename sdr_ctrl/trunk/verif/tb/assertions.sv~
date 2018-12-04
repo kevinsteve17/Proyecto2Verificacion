@@ -58,7 +58,7 @@ property wb_termination;
 sdram_initialization: assert property (sdram_init) else $error ("SDRAM_INIT FAILED!!!!!!!!!");
 
 // Rule 3.00
-wb_initialization: assert property (wb_init_1) else $error ("Wishbone Protocol Rule 3.00 violated");
+wb_initialization: assert property (wb_init_1 /*wb_init_1 and wb_init_2*/) else $error ("Wishbone Protocol Rule 3.00 violated");
 
 // Rule 3.05
 wb_reset_1_clk: assert property(wb_reset_1_cycl) else $error ("Wishbone Protocol Rule 3.05 violated");
