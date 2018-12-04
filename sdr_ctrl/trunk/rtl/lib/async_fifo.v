@@ -82,10 +82,13 @@ module async_fifo (wr_clk,
    // synopsys translate_off
 
    initial begin
-      if (AW == 0) begin
-         $display ("%m : ERROR!!! Fifo depth %d not in range 2 to 256", DP);
-      end // if (AW == 0)
+      // if (AW == 0) begin
+      //    $display ("%m : ERROR!!! Fifo depth %d not in range 2 to 256", DP);
+      // end // if (AW == 0)
+      assert(AW!=0) else $error("%m : ERROR!!! Fifo depth %d not in range 2 to 256", DP);
    end // initial begin
+
+
 
    // synopsys translate_on
 
