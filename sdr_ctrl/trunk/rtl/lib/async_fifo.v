@@ -315,7 +315,7 @@ endfunction
 //    end
 // end
 
-async_translate_off_wr: assert property ( @(posedge wr_clk) !(wr_en == 1'b1 && full == 1'b1)) else $error ($time, "%m Error! afifo overflow!");
+async_translate_off_wr: assert property ( @(posedge wr_clk) wr_en |-> full) else $error ($time, "%m Error! afifo overflow!");
 
 
 // always @(posedge rd_clk) begin
@@ -325,7 +325,7 @@ async_translate_off_wr: assert property ( @(posedge wr_clk) !(wr_en == 1'b1 && f
 //    end
 // end
 
-async_translate_off_rd: assert property ( @(posedge rd_clk) !(rd_en == 1'b1 && empty == 1'b1)) else $error ($time, "%m Error! afifo underflow!");
+async_translate_off_rd: assert property ( @(posedge rd_clk) rd_en |-> !empty) else $error ($time, "%m Error! afifo underflow!");
 
 // synopsys translate_on
 
