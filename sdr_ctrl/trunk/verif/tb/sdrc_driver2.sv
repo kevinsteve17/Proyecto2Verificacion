@@ -1,5 +1,5 @@
 class sdrcDrv;
-    sdrcSB sb;
+    sdrcSB2 sb;
     virtual inft_sdrcntrl inft;
 
     // Stimulus objects

@@ -1,8 +1,7 @@
-class sdrcSB2;
-    //int store[$]; // Deprecated for second project.
-    int unsigned store[int]; // Modified for aleatory tests
-    int unsigned dir[$];
-    int unsigned burstLenght[$];
+class sdrcSB;
+    int store[$]; // Deprecated for second project.
+    int dir[$];
+    int burstLenght[$];
     int ErrCnt;
 
     task clearStore();

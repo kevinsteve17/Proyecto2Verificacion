@@ -1,5 +1,5 @@
-class sdrcMon2;
-    sdrcSB2 sb;
+class sdrcMon;
+    sdrcSB sb;
     virtual inft_sdrcntrl inft;
     int notExecTestCasesCount = 0;
     int testCasesCount = 0;
@@ -27,17 +27,16 @@ class sdrcMon2;
     endtask
 
     task BurstRead();
-    // reg [31:0] Address; Deprecated for second project
-    int unsigned Address;
+    reg [31:0] Address; 
     reg [7:0]  bl;
         // TO DO implementation
 
-    // reg [31:0]   exp_data; Deprecated for second project
+    reg [31:0]   exp_data; 
     int unsigned   exp_data;
     int j;
     begin
 
-        // Address = sb.dir.pop_front(); // Deprecated for second project.
+        Address = sb.dir.pop_front(); 
         bl      = sb.burstLenght.pop_front(); 
         @ (negedge this.inft.sys_clk);
 
@@ -46,16 +45,8 @@ class sdrcMon2;
             this.inft.wb_intf.wb_stb_i        = 1;
             this.inft.wb_intf.wb_cyc_i        = 1;
             this.inft.wb_intf.wb_we_i         = 0;
-            // this.inft.wb_intf.wb_addr_i       = Address[31:2]+j; // Deprecated for second project.
-            this.inft.wb_intf.wb_addr_i       = Address;
-
-            // exp_data = sb.store.pop_front(); // Expected Read Data address - Deprecated for second project.
-            if (sb.store.exists(Address)) begin
-                exp_data = sb.store[Address];
-            end else begin
-                $display("READ ERROR: Burst-No: %d Addr: %d does not exist.",j,Address);
-            end
-
+            this.inft.wb_intf.wb_addr_i       = Address[31:2]+j; 
+            
             do begin
                 @ (posedge this.inft.sys_clk);
             end while(this.inft.wb_intf.wb_ack_o == 1'b0);
