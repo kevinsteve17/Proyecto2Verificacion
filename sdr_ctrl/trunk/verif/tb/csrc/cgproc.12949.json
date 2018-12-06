@@ -1,0 +1,156 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "intf_whitebox": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "Clks": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "intf_wishBone": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "sdrc_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "_vcs_unit__2559226825": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "intf_sdram": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "testcase": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "mt48lc2m32b2": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "inft_sdrcntrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "mt48lc8m8a2": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "IS42VM16400K": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        },
+        "sdrc_core": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        },
+        "sdrc_bank_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 34
+        }
+    },
+    "CompUnits": {
+        "BW0b7_d": {
+            "mod": "_vcs_unit__2559226825",
+            "out": "BW0b7_d.o",
+            "bytes": 144259,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.38/_12949_archive_1.a"
+        },
+        "PATxq_d": {
+            "mod": "testcase",
+            "out": "PATxq_d.o",
+            "bytes": 71735,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.38/_12949_archive_1.a"
+        },
+        "Emx8S_d": {
+            "mod": "top",
+            "out": "Emx8S_d.o",
+            "bytes": 423161,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.38/_12949_archive_1.a"
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "qtWga_d": {
+            "icPath": "csrc"
+        },
+        "RuFh3_d": {
+            "icPath": "csrc"
+        },
+        "a3mSN_d": {
+            "icPath": "csrc"
+        },
+        "TzJKa_d": {
+            "icPath": "csrc"
+        },
+        "xqeUE_d": {
+            "icPath": "csrc"
+        },
+        "ypVrV_d": {
+            "icPath": "csrc"
+        },
+        "ChjVu_d": {
+            "icPath": "csrc"
+        },
+        "F5CYM_d": {
+            "icPath": "csrc"
+        },
+        "Pj51K_d": {
+            "icPath": "csrc"
+        },
+        "NTNU2_d": {
+            "icPath": "csrc"
+        },
+        "yYhTI_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.38/_12949_archive_1.a",
+            "size": 802504,
+            "objects": [
+                [
+                    "BW0b7_d.o",
+                    144259
+                ],
+                [
+                    "PATxq_d.o",
+                    71735
+                ],
+                [
+                    "Emx8S_d.o",
+                    423161
+                ],
+                [
+                    "amcQwB.o",
+                    163349
+                ]
+            ]
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+export SNPSLMD_LICENSE_FILE=27000@172.21.16.253  -> VENCIDA!!!
+
+export SNPSLMD_LICENSE_FILE=27000@172.21.9.209 
+export SYNOPSYS_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/
+export VCS_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03
+export PATH=$PATH:$VCS_HOME/linux64/bin
+export LOGNAME=fparis
+
+************* compilar proyecto 1 ******************
+vcs -f filelist_Proyecto1.f +define+SDR_32BIT  -sverilog -full64 -gui -debug_access+all
+
+************* compilar proyecto 2 ******************
+vcs -f filelist_Proyecto2_test.f +define+SDR_32BIT -sverilog -full64 -gui -debug_access+all -assert svaext
+
+************* compilar proyecto 3 ******************
+vcs -f filelist_Proyecto3_test.f +define+SDR_32BIT +define+8_BIT_COL -sverilog -full64 -gui -debug_access+all -assert svaext
+
+
