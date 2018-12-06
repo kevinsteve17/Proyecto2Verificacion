@@ -44,7 +44,7 @@ module top();
     sdrc_top #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW)) duv(
         // system
         .cfg_sdr_width      (CNFG_SDR_WDITH),
-        .cfg_colbits        (2'b00),    // double check, org top mentioned only 8bit case
+        .cfg_colbits        (2'b00),   
         
         // wish bone
         .wb_rst_i           (!sdrc_intf.resetn), 

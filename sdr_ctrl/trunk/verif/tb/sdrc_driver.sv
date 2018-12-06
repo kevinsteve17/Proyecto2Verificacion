@@ -79,7 +79,7 @@ class sdrcDrv;
     endtask
 
     // Write to address with Different Bank and Row
-    task BurstWrite_diff_row_bank(input int row_arg  = -1, int bank_arg = -1);
+    task BurstWrite_diff_row_bank(input int row_arg  = -1, input int bank_arg = -1);
         logic [11:0] row;
         logic [1:0]  bank;
 
@@ -95,7 +95,7 @@ class sdrcDrv;
                 row  = row_arg;
             end
 
-            if (bank_arg == -1) begin
+            if (bank_arg != -1) begin
                 bank = bank_arg;
             end
 
