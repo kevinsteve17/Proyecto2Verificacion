@@ -202,7 +202,7 @@ program testcase(inft_sdrcntrl intf);
   endtask
 
   // Case:7 Diff row, bank and column
-  task tc7_page_cross_over();
+  task tc7_prog_col();
     begin
       
       $display("----------------------------------------");
