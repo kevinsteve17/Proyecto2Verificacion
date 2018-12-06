@@ -8,7 +8,7 @@ program testcase(inft_sdrcntrl intf);
   initial 
   begin
     // set test execution count
-    env.mon.testCasesCount = 5;
+    env.mon.testCasesCount = 6;
     env.mon.notExecTestCasesCount = env.mon.testCasesCount;
 
     // reset
@@ -17,11 +17,10 @@ program testcase(inft_sdrcntrl intf);
     // Tests to execute
     tc1_single_read();
     tc2_x2_read();
-    //tc3_page_cross_over();
+    tc3_page_cross_over();
     tc5_x24_Write_and_Read_diff_row_bank();
     tc4_x4_Write_Read();
     tc6_write_read_different_order();
-
 
     // check test exec. results
     env.mon.Check();
@@ -75,51 +74,10 @@ program testcase(inft_sdrcntrl intf);
       $display(" Case-3 Create a Page Cross Over        ");
       $display("----------------------------------------");
 
-      env.drv.BurstWrite(32'h0000_0FF0,8'h8);  
-      env.drv.BurstWrite(32'h0001_0FF4,8'hF);  
-      env.drv.BurstWrite(32'h0002_0FF8,8'hF);  
-      env.drv.BurstWrite(32'h0003_0FFC,8'hF);  
-      env.drv.BurstWrite(32'h0004_0FE0,8'hF);  
-      env.drv.BurstWrite(32'h0005_0FE4,8'hF);  
-      env.drv.BurstWrite(32'h0006_0FE8,8'hF);  
-      env.drv.BurstWrite(32'h0007_0FEC,8'hF);  
-      env.drv.BurstWrite(32'h0008_0FD0,8'hF);  
-      env.drv.BurstWrite(32'h0009_0FD4,8'hF);  
-      env.drv.BurstWrite(32'h000A_0FD8,8'hF);  
-      env.drv.BurstWrite(32'h000B_0FDC,8'hF);  
-      env.drv.BurstWrite(32'h000C_0FC0,8'hF);  
-      env.drv.BurstWrite(32'h000D_0FC4,8'hF);  
-      env.drv.BurstWrite(32'h000E_0FC8,8'hF);  
-      env.drv.BurstWrite(32'h000F_0FCC,8'hF);  
-      env.drv.BurstWrite(32'h0010_0FB0,8'hF);  
-      env.drv.BurstWrite(32'h0011_0FB4,8'hF);  
-      env.drv.BurstWrite(32'h0012_0FB8,8'hF);  
-      env.drv.BurstWrite(32'h0013_0FBC,8'hF);  
-      env.drv.BurstWrite(32'h0014_0FA0,8'hF);  
-      env.drv.BurstWrite(32'h0015_0FA4,8'hF);  
-      env.drv.BurstWrite(32'h0016_0FA8,8'hF);  
-      env.drv.BurstWrite(32'h0017_0FAC,8'hF);  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
-      env.mon.BurstRead();  
+      env.drv.BurstWrite_page_cross_over();  
+      env.drv.BurstWrite_page_cross_over();  
+      env.drv.BurstWrite_page_cross_over();  
+
       env.mon.BurstRead();  
       env.mon.BurstRead();  
       env.mon.BurstRead();
@@ -164,9 +122,9 @@ program testcase(inft_sdrcntrl intf);
       $display(" Case:5 24 Write & 24 Read With Different Bank and Row ");
       $display("---------------------------------------");
 
-      env.drv.BurstWrite_diff_row_bank();
-      env.drv.BurstWrite_diff_row_bank();
-      env.drv.BurstWrite_diff_row_bank();
+      env.drv.BurstWrite_diff_row_bank();     // addr=rnd, bank=rand
+      env.drv.BurstWrite_diff_row_bank(555);  // addr=555, bank=rnd
+      env.drv.BurstWrite_diff_row_bank(,1);   // addr=rnd, bank=1
 
       env.mon.BurstRead();  
       env.mon.BurstRead();  
@@ -184,24 +142,44 @@ program testcase(inft_sdrcntrl intf);
   task tc6_write_read_different_order();
     begin
       $display("-------------------------------------- ");
-      $display(" Case-6: rites/Reads in dofferent order        ");
+      $display(" Case-6: Writes/Reads in different order        ");
       $display("-------------------------------------- ");
   
       env.drv.BurstWrite_rnd_addr();
       env.drv.BurstWrite_rnd_addr();
+
+      env.mon.BurstRead();
+
       env.drv.BurstWrite_rnd_addr();
       env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();
+      env.drv.BurstWrite_rnd_addr();      
       
       #1000;
 
       env.mon.BurstRead();
       env.mon.BurstRead();
+
+      env.drv.BurstWrite_rnd_addr();
+
+      env.mon.BurstRead();
       env.mon.BurstRead();
 
       #1000;
 
       env.drv.BurstWrite_rnd_addr();
       env.drv.BurstWrite_rnd_addr();
+
+      #1000;
+
+      env.mon.BurstRead();
+      env.mon.BurstRead();
+      env.mon.BurstRead();
+
+      #1000;
+
       env.drv.BurstWrite_rnd_addr();
       env.drv.BurstWrite_rnd_addr();
 
@@ -216,7 +194,31 @@ program testcase(inft_sdrcntrl intf);
       env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
       
       $display("-------------------------------------- ");
-      $display(" End-6: Writes/Reads in dofferent order ");
+      $display(" End-6: Writes/Reads in different order ");
+      $display("-------------------------------------- ");
+    end
+  endtask
+
+  // Case:7 Diff row, bank and column
+  task tc7_page_cross_over();
+    begin
+      
+      $display("----------------------------------------");
+      $display(" Case-7 Diff row, bank and column        ");
+      $display("----------------------------------------");
+
+      env.drv.BurstWrite_diff_col_row_bank(,,22);  
+      env.drv.BurstWrite_diff_col_row_bank(,,33);  
+      env.drv.BurstWrite_diff_col_row_bank(,,100);  
+
+      env.mon.BurstRead();  
+      env.mon.BurstRead();  
+      env.mon.BurstRead();
+      
+      env.mon.notExecTestCasesCount = env.mon.notExecTestCasesCount -1;
+      
+      $display("-------------------------------------- ");
+      $display(" End-7 Diff row, bank and column");
       $display("-------------------------------------- ");
     end
   endtask   

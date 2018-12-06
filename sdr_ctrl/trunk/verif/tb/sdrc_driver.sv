@@ -3,11 +3,11 @@ class sdrcDrv;
     virtual inft_sdrcntrl inft;
 
     // Stimulus objects
-    diffBankAndRowStimulus diff_bank_row_stim        = new();
-    addrStimulus rnd_addr_stim                       = new();
-    pageCrossOverStimulus rand_pco_stim  = new();
+    diffBankAndRowStimulus diff_bank_row_stim   = new();
+    addrStimulus rnd_addr_stim                  = new();
+    pageCrossOverStimulus rand_pco_stim         = new();
 
-    function new(virtual inft_sdrcntrl inft,sdrcSB sb);
+    function new(virtual inft_sdrcntrl inft, sdrcSB sb);
         $display("Creating SDRC Driver");
         this.sb = sb;
         this.inft = inft;
@@ -124,6 +124,38 @@ class sdrcDrv;
                 this.BurstWrite({rand_pco_stim.row, rand_pco_stim.bank, rand_pco_stim.column, 2'b00},   // address
                                 rand_pco_stim.burst_size);                                              // burst size
             end
+        end
+    endtask
+
+    // Write to address with Different Bank and Row
+    task BurstWrite_diff_col_row_bank(input int row_arg  = -1, input int bank_arg = -1, input int col_arg = -1);
+        logic [11:0] row;
+        logic [1:0]  bank;   this.inft
+        logic [7+this.inft.CNFG_COL_BITS : 0]  column;
+        
+        begin
+            if(diff_bank_row_stim.randomize())
+            begin
+                diff_bank_row_stim.generateAddress();
+                bank   = diff_bank_row_stim.bank;
+                row    = diff_bank_row_stim.row;
+                //column = diff_bank_row_stim.column;
+            end
+
+            if (row_arg != -1) begin
+                row  = row_arg;
+            end
+
+            if (bank_arg != -1) begin
+                bank = bank_arg;
+            end
+
+            if (col_arg != -1) begin
+                column = col_arg;
+            end            
+
+            this.BurstWrite({row, bank, column, 2'b00},           // address
+                            diff_bank_row_stim.burst_size);       // burst size
         end
     endtask
 
