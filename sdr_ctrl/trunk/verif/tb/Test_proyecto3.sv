@@ -8,7 +8,7 @@ program testcase(inft_sdrcntrl intf);
   initial 
   begin
     // set test execution count
-    env.mon.testCasesCount = 8;
+    env.mon.testCasesCount = 9;
     env.mon.notExecTestCasesCount = env.mon.testCasesCount;
 
     // CAS Latency case 1 (invalid value)
@@ -39,7 +39,7 @@ program testcase(inft_sdrcntrl intf);
     tc5_x24_Write_and_Read_diff_row_bank();
     tc4_x4_Write_Read();
     tc6_write_read_different_order();
-    tc7_page_cross_over();
+    tc7_prog_col();
 
     // check test exec. results
     env.mon.Check();
