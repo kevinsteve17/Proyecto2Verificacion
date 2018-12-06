@@ -154,6 +154,7 @@ class sdrcDrv;
                 column = col_arg;
             end            
 
+	    $display("############# BurstWrite_diff_col_row_bank, COL:%d", column);
             this.BurstWrite({row, bank, column, 2'b00},           // address
                             diff_bank_row_stim.burst_size);       // burst size
         end

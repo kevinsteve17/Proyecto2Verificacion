@@ -54,7 +54,7 @@ module top();
     sdrc_top #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW)) duv(
         // system
         .cfg_sdr_width      (CNFG_SDR_WDITH),
-        .cfg_colbits        (CNFG_COL_BITS),   
+        .cfg_colbits        (2'b01),   
         
         // wish bone
         .wb_rst_i           (!sdrc_intf.resetn), 
