@@ -12,6 +12,7 @@ program testcase(inft_sdrcntrl intf);
     env.mon.notExecTestCasesCount = env.mon.testCasesCount;
 
     // reset
+    env.drv.ModifyModeRegister(13'h033);
     env.drv.reset();
     
     // Tests to execute
