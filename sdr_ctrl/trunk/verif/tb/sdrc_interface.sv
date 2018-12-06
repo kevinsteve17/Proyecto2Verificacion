@@ -2,7 +2,8 @@
 
 interface inft_sdrcntrl #(parameter SDR_DW = 32,
                           parameter SDR_BW = 2,
-                          parameter APP_AW = 26)
+                          parameter APP_AW = 26,
+                          parameter CNFG_COL_BITS=2'b00)
                           (sys_clk, sdram_clk);
 
     logic resetn;

@@ -122,9 +122,9 @@ program testcase(inft_sdrcntrl intf);
       $display(" Case:5 24 Write & 24 Read With Different Bank and Row ");
       $display("---------------------------------------");
 
-      env.drv.BurstWrite_diff_row_bank();
-      env.drv.BurstWrite_diff_row_bank(666);
-      env.drv.BurstWrite_diff_row_bank(,1);
+      env.drv.BurstWrite_diff_row_bank();     // addr=rnd, bank=rand
+      env.drv.BurstWrite_diff_row_bank(555);  // addr=555, bank=rnd
+      env.drv.BurstWrite_diff_row_bank(,1);   // addr=rnd, bank=1
 
       env.mon.BurstRead();  
       env.mon.BurstRead();  

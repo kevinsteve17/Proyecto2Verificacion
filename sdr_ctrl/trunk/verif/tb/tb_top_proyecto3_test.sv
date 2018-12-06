@@ -17,6 +17,16 @@ module top();
     parameter CNFG_SDR_WDITH = 2'b10;
 `endif
 
+`ifdef 8_BIT_COL
+    parameter CNFG_COL_BITS = 2'b00;
+ `elsif 9_BIT_COL    
+    parameter CNFG_COL_BITS = 2'b01;;
+ `elsif 10_BIT_COL
+    parameter CNFG_COL_BITS = 2'b10;
+ `elsif 11_BIT_COL
+    parameter CNFG_COL_BITS = 2'b11;
+`endif
+
     parameter APP_AW = 26;
 
     // General
@@ -30,7 +40,7 @@ module top();
     );
 
     // Interface instance
-    inft_sdrcntrl #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW), .APP_AW(APP_AW)) sdrc_intf(
+    inft_sdrcntrl #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW), .APP_AW(APP_AW), .CNFG_COL_BITS(CNFG_COL_BITS)) sdrc_intf(
         sys_clk,
         sdram_clk
     );
@@ -44,7 +54,7 @@ module top();
     sdrc_top #(.SDR_DW(SDR_DW), .SDR_BW(SDR_BW)) duv(
         // system
         .cfg_sdr_width      (CNFG_SDR_WDITH),
-        .cfg_colbits        (2'b00),    // double check, org top mentioned only 8bit case
+        .cfg_colbits        (CNFG_COL_BITS),   
         
         // wish bone
         .wb_rst_i           (!sdrc_intf.resetn), 
