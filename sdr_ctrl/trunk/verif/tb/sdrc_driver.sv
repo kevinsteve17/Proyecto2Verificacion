@@ -130,7 +130,7 @@ class sdrcDrv;
     // Write to address with Different Bank and Row
     task BurstWrite_diff_col_row_bank(input int row_arg  = -1, input int bank_arg = -1, input int col_arg = -1);
         logic [11:0] row;
-        logic [1:0]  bank;   this.inft
+        logic [1:0]  bank;
         logic [7+this.inft.CNFG_COL_BITS : 0]  column;
         
         begin
