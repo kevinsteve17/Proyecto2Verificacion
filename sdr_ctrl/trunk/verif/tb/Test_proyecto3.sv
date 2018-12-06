@@ -8,13 +8,30 @@ program testcase(inft_sdrcntrl intf);
   initial 
   begin
     // set test execution count
-    env.mon.testCasesCount = 6;
+    env.mon.testCasesCount = 8;
     env.mon.notExecTestCasesCount = env.mon.testCasesCount;
 
+    // CAS Latency case 1 (invalid value)
+    // reset
+    env.drv.ModifyModeRegister(13'h013);
+    env.drv.reset();
+    
+    // Tests to execute
+    tc1_single_read();
+
+    // CAS Latency case 2 (2 cycles)
+    // reset
+    env.drv.ModifyModeRegister(13'h023);
+    env.drv.reset();
+    
+    // Tests to execute
+    tc1_single_read();
+    
+    // CAS Latency case 3 (3 cycles)
     // reset
     env.drv.ModifyModeRegister(13'h033);
     env.drv.reset();
-    
+
     // Tests to execute
     tc1_single_read();
     tc2_x2_read();
@@ -30,7 +47,7 @@ program testcase(inft_sdrcntrl intf);
   task tc1_single_read();
     begin
       $display("-------------------------------------- ");
-      $display(" Case-1: Single Write/Read Case        ");
+      $display(" Case-1a: Single Write/Read Case        ");
       $display("-------------------------------------- ");
   
       env.drv.BurstWrite_rnd_addr();

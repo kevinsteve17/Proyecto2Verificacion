@@ -15,8 +15,8 @@ interface intf_whitebox (sdram_clk);
     logic wb_ack_o;
     logic wb_we_i;
     logic wb_sel_i;
-    logic cfg_sdr_mode_reg;
-
+    logic [12:0] cfg_sdr_mode_reg;
+    logic [31-1:0] sdr_dq;
 
     assign sdr_ras_n = `DUV_PATH.sdr_ras_n;
     assign sdr_cas_n = `DUV_PATH.sdr_cas_n;
@@ -30,6 +30,8 @@ interface intf_whitebox (sdram_clk);
     assign wb_we_i  = `DUV_PATH.wb_we_i;
     assign wb_sel_i = `DUV_PATH.wb_sel_i;
     assign cfg_sdr_mode_reg = `DUV_PATH.cfg_sdr_mode_reg;
+    assign sdr_dq = `DUV_PATH.sdr_dq;
+
 
     /*logic [SDR_BW-1:0]  sdr_dqm;
     logic [1:0]         sdr_ba;
