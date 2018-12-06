@@ -1,4 +1,22 @@
 {
+    "intf_wishBone": [
+        "intf_wishBone",
+        "ypVrV",
+        "module",
+        4
+    ],
+    "Clks": [
+        "Clks",
+        "F5CYM",
+        "module",
+        8
+    ],
+    "sdrc_top": [
+        "sdrc_top",
+        "NTNU2",
+        "module",
+        13
+    ],
     "_vcs_unit__2559226825": [
         "_vcs_unit__2559226825",
         "BW0b7",
@@ -11,29 +29,11 @@
         "module",
         3
     ],
-    "intf_wishBone": [
-        "intf_wishBone",
-        "ypVrV",
+    "testcase": [
+        "testcase",
+        "PATxq",
         "module",
-        4
-    ],
-    "sdrc_bank_fsm": [
-        "sdrc_bank_fsm",
-        "ChjVu",
-        "module",
-        14
-    ],
-    "std": [
-        "std",
-        "reYIK",
-        "module",
-        2
-    ],
-    "IS42VM16400K": [
-        "IS42VM16400K",
-        "TzJKa",
-        "module",
-        12
+        6
     ],
     "mt48lc2m32b2": [
         "mt48lc2m32b2",
@@ -41,17 +41,29 @@
         "module",
         10
     ],
+    "top": [
+        "top",
+        "Emx8S",
+        "module",
+        9
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        2
+    ],
     "inft_sdrcntrl": [
         "inft_sdrcntrl",
         "xqeUE",
         "module",
         5
     ],
-    "testcase": [
-        "testcase",
-        "PATxq",
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module",
-        6
+        15
     ],
     "intf_whitebox": [
         "intf_whitebox",
@@ -59,29 +71,17 @@
         "module",
         7
     ],
-    "Clks": [
-        "Clks",
-        "F5CYM",
-        "module",
-        8
-    ],
-    "top": [
-        "top",
-        "Emx8S",
-        "module",
-        9
-    ],
     "mt48lc8m8a2": [
         "mt48lc8m8a2",
         "Pj51K",
         "module",
         11
     ],
-    "sdrc_top": [
-        "sdrc_top",
-        "NTNU2",
+    "IS42VM16400K": [
+        "IS42VM16400K",
+        "TzJKa",
         "module",
-        13
+        12
     ],
     "sdrc_core": [
         "sdrc_core",
@@ -89,10 +89,10 @@
         "module",
         16
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
+    "sdrc_bank_fsm": [
+        "sdrc_bank_fsm",
+        "ChjVu",
         "module",
-        15
+        14
     ]
 }

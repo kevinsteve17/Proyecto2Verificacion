@@ -1,4 +1,3 @@
-ucliGUI::start /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv -ucligui 
 set ucliGUI::state
 set ucliGUI::state
 ucliCore::getToolPID
@@ -11,88 +10,21 @@ synopsys::xml set_only_active_frame <data value="1" />
 synopsys::xml set_variable_frame_id <data value="1" />
 synUtils::setDVEInitPhase 1
 synopsys::dump -type VPD -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd -locking
-synopsys::dump -autoflush on -fid VPD1
-set ::dve_fid VPD1
+synopsys::dump -autoflush on -fid VPD0
+set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpRmSitg
-synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.fparis.11456}
-ucliGUI::vpdAddHierarchy -scope top.assertion -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
-ucliGUI::vpdAddHierarchy -scope top.duv.u_wb2sdrc -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
-ucliGUI::vpdAddHierarchy -scope top.duv.u_wb2sdrc.u_cmdfifo -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
-ucliGUI::vpdAddHierarchy -scope top.duv.u_wb2sdrc.u_rddatafifo -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
-ucliGUI::vpdAddHierarchy -scope top.duv.u_wb2sdrc.u_wrdatafifo -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/inter.vpd
-synopsys::dump -flush VPD1
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.fparis.11456}
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpPNfdZO
+synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03_Full64" -sync_file /tmp/vcs_dve_rpc.fparis.13480}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.fparis.13480}
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
 config syscaddsourcenames
 config syscaddstructtypes
 synopsys::listing -disable
-# Begin_DVE_Session_Save_Info
-# DVE restart session
-# Saved on Mon Dec 3 23:06:15 2018
-# Designs open: 1
-#   Sim: /mnt/vol_NFS_Zener/WD_ESPEC/fparis/MP6134_SDRAM_Controller/sdr_ctrl/trunk/verif/tb/simv
-# Toplevel windows open: 1
-# 	TopLevel.1
-#   Source.1: _vcs_unit__2559226825
-#   Group count = 0
-# End_DVE_Session_Save_Info
-# DVE version: M-2017.03_Full64
-# DVE build date: Feb 15 2017 21:10:45
-#<Session mode="Restart" path=".restartSimSession.tcl" type="Debug">
-# Application preferences
-#<WindowLayout>
-# DVE top-level session
-# Create and position top-level window: TopLevel.1
-set TopLevel.1 TopLevel.1
-# Docked window settings
-set HSPane.1 HSPane.1
-set Hier.1 Hier.1
-set Stack.1 Stack.1
-set Class.1 Class.1
-set Object.1 Object.1
-set DLPane.1 DLPane.1
-set Data.1 Data.1
-set Local.1 Local.1
-set Member.1 Member.1
-set Assertion.1 Assertion.1
-set Console.1 Console.1
-# MDI window settings
-set Source.1 Source.1
-# End MDI window settings
-#</WindowLayout>
-#<Database>
-#</Database>
-# DVE Global setting session:
-# Global: Breakpoints
-# Global: Bus
-# Global: Expressions
-# Global: Signal Time Shift
-# Global: Signal Compare
-# Global: Signal Groups
-# Global: Highlighting
-# Global: Stack
-# Post database loading setting...
-# Save global setting...
-# Wave/List view global setting
-# Close all empty TopLevel windows
-foreach __top [gui_ekki_get_window_ids -type TopLevel] {     if { [llength [gui_ekki_get_window_ids -parent $__top]] == 0} {         gui_close_window -window $__top     } }
-# DVE View/pane content session:
-# Hier 'Hier.1'
-catch {gui_list_select -id ${Hier.1} {top}}
-# Class 'Class.1'
-# Member 'Member.1'
-# Data 'Data.1'
-# Source 'Source.1'
-# Warning: Class view not found.
-# View 'Assertion.1'
-# Restore toplevel window zorder
-# The toplevel window could be closed if it has no view/pane
-if {[gui_exist_window -window ${TopLevel.1}]} { 	gui_set_active_window -window ${TopLevel.1} 	gui_set_active_window -window ${Source.1} }
-#</Session>
+synopsys::dump -add {top.sdrc_intf top.whitebox_intf } -aggregates  -fid VPD0
+synopsys::dump -add {top.sdrc_intf.sdram_intf top.sdrc_intf.wb_intf } -aggregates  -fid VPD0
 synopsys::run
 set ucliGUI::state
 set ucliGUI::state
