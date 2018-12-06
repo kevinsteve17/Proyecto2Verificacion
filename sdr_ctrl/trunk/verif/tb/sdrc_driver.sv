@@ -2,11 +2,6 @@ class sdrcDrv;
     sdrcSB sb;
     virtual inft_sdrcntrl inft;
 
-    // Stimulus objects
-    diffBankAndRowStimulus diff_bank_row_stim        = new();
-    addrStimulus rnd_addr_stim                       = new();
-    pageCrossOverStimulus rand_pco_stim  = new();
-
     function new(virtual inft_sdrcntrl inft,sdrcSB sb);
         $display("Creating SDRC Driver");
         this.sb = sb;

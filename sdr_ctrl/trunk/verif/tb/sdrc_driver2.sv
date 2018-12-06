@@ -1,4 +1,4 @@
-class sdrcDrv;
+class sdrcDrv2;
     sdrcSB2 sb;
     virtual inft_sdrcntrl inft;
 
@@ -7,7 +7,7 @@ class sdrcDrv;
     addrStimulus rnd_addr_stim                  = new();
     pageCrossOverStimulus rand_pco_stim         = new();
 
-    function new(virtual inft_sdrcntrl inft, sdrcSB sb);
+    function new(virtual inft_sdrcntrl inft, sdrcSB2 sb);
         $display("Creating SDRC Driver");
         this.sb = sb;
         this.inft = inft;
