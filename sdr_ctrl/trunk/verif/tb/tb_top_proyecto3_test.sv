@@ -86,7 +86,7 @@ module top();
         .sdr_init_done      (sdrc_intf.sdram_intf.sdr_init_done),
         .cfg_req_depth      (2'h3),  //how many req. buffer should hold
         .cfg_sdr_en         (1'b1),
-        .cfg_sdr_mode_reg   (13'h033),
+        .cfg_sdr_mode_reg   (sdrc_intf.sdram_intf.cfg_sdr_mode_reg),   //(13'h033),
         .cfg_sdr_tras_d     (4'h4),
         .cfg_sdr_trp_d      (4'h2),
         .cfg_sdr_trcd_d     (4'h2),

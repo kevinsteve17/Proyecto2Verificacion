@@ -16,14 +16,14 @@ class sdrcDrv;
 
     task reset();
         begin
-            sb.ErrCnt                        = 0;
-            this.inft.wb_intf.wb_addr_i      = 0;
-            this.inft.wb_intf.wb_dat_i       = 0;
-            this.inft.wb_intf.wb_sel_i       = 4'h0;
-            this.inft.wb_intf.wb_we_i        = 0;
-            this.inft.wb_intf.wb_stb_i       = 0;
-            this.inft.wb_intf.wb_cyc_i       = 0;
-            this.inft.resetn                 = 1'h1;
+            sb.ErrCnt                             = 0;
+            this.inft.wb_intf.wb_addr_i           = 0;
+            this.inft.wb_intf.wb_dat_i            = 0;
+            this.inft.wb_intf.wb_sel_i            = 4'h0;
+            this.inft.wb_intf.wb_we_i             = 0;
+            this.inft.wb_intf.wb_stb_i            = 0;
+            this.inft.wb_intf.wb_cyc_i            = 0;
+            this.inft.resetn                      = 1'h1;
 
             #100
             // Applying reset
@@ -37,6 +37,14 @@ class sdrcDrv;
             wait(this.inft.sdram_intf.sdr_init_done == 1);
         end 
     endtask
+
+    task ModifyModeRegister(input int registerValue);
+        begin
+	    this.inft.sdram_intf.cfg_sdr_mode_reg = registerValue;
+        end 
+    endtask
+
+
 
     task BurstWrite();
         // input [31:0] Address;  // Deprecated for second project
