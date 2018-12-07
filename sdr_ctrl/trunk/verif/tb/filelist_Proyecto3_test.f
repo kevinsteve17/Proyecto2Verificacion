@@ -6,6 +6,7 @@
 ../tb/wb_interface.sv
 ../tb/diffBankAndRowStimulus.sv
 ../tb/sdrc_interface.sv
+../tb/sdrc_scoreboard.sv
 ../tb/sdrc_scoreboard2.sv
 ../tb/sdrc_monitor2.sv
 ../tb/addressStimulus.sv
