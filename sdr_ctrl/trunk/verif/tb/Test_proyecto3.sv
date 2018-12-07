@@ -1,4 +1,4 @@
-program testcase(inft_sdrcntrl intf);
+program testcase2(inft_sdrcntrl intf);
 
   // sdrcEnv env = new(intf); // Deprecated for second project.
   sdrcEnv2 env2 = new(intf);
