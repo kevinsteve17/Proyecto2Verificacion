@@ -3,7 +3,7 @@ class sdram_coverage;
  
   virtual inft_sdrcntrl intf;
  
-  covergroup Sdram_Coverage @(intf.sdram_clk);
+  covergroup sdram_coverage @(intf.sdram_clk);
 
     bank: coverpoint intf.sdram_intf.sdr_ba
     {
@@ -52,9 +52,6 @@ class sdram_coverage;
 				4'b0010  // LOADMODEREGISTER
 			};
 		}
-
-
-
   endgroup
   
  
@@ -99,7 +96,7 @@ class sdram_coverage;
     
   function new(virtual inft_sdrcntrl intf);
     this.intf = intf;
-    Sdram_Coverage    =new();
+    sdram_coverage    =new();
     //Wishbone_Coverage =new();
     // cov1 =new();
   endfunction
